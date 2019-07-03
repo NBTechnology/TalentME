@@ -1,25 +1,52 @@
-import React from 'react'
-import styles from './button.css'
-import dubai from 'assets/img/Boton_DUBAI.jpg'
+import React from "react";
+import "./Button.css";
 
-const button = props => {
-
-    let gradient;
-    if(props.gradient){
-        gradient = "linear-gradient(-180deg, rgba(252,255,252,0.00) 40%, rgba(0,0,0,0.74) 100%)";
-    }else{
-        gradient = ""
-    }
-
-    let content;
-    if(props.bg) { 
-        content = <div className={props.classes} style={{width:props.width, height:props.height, background: `url(${dubai})` + " center no-repeat",backgroundSize:"100% auto"}}><p>{props.children}</p></div>;
-    }else {
-        content =  <div className={props.classes} style={{width:props.width, height:props.height}}><p>{props.children}</p></div>;
-    }
-    //  <div style={{width:props.width, height:props.height}}>{props.children}</div>
-return content;
+const Button = props => {
+  let classButton;
+  switch (props.type) {
+    case "primary":
+      classButton = "btnPrimary";
+      break;
+    case "secondary":
+      classButton = "btnSecondary";
+      break;
+    case "image":
+      classButton = "btnImage";
+      break;
+    default:
+      classButton = "btnPrimary";
+      break;
+  }
+  let content;
+  if (props.type === "image" && props.bg) {
+    let path = require("assets/img/" + props.bg);
+    content = (
+      <div
+        className={classButton}
+        style={{
+          width: props.width,
+          height: props.height,
+          background:
+            "linear-gradient(-180deg, rgba(252,255,252,0.00) 20%, rgba(0,0,0,0.74) 100%),url('" +
+            path +
+            "') center no-repeat",
+          backgroundSize: "100% auto"
+        }}
+      >
+        <p>{props.children}</p>
+      </div>
+    );
+  } else {
+    content = (
+      <div
+        className={props.classes}
+        style={{ width: props.width, height: props.height }}
+      >
+        <p>{props.children}</p>
+      </div>
+    );
+  }
+  return content;
 };
 
-
-export default button;
+export default Button;
