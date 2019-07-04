@@ -17,12 +17,12 @@ const App = () => {
       <Button classes="btnPrimary" width="450px" height="38px">
         quiero inscribirme a ofertas
       </Button>
-      <Button classes="btnPrimary" width="127px" height="38px">
+      <Button classes="btnPrimary" width="127px" height="38px" isBold>
         enviar
       </Button>
 
       {/* como funciona */}
-      <Button classes="btnPrimary" width="189px" height="51px">
+      <Button classes="btnPrimary" width="189px" height="51px" isBold>
         inscribirse
       </Button>
 
@@ -30,7 +30,13 @@ const App = () => {
       <Button classes="btnPrimary" width="270px" height="51px">
         todas las ofertas
       </Button>
-      <Button type="image" width="260px" height="108px" bg="Boton_DUBAI.jpg">
+      <Button
+        type="image"
+        width="260px"
+        height="108px"
+        bg="Boton_DUBAI.jpg"
+        isBold
+      >
         DUBAI
       </Button>
     </div>

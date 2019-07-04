@@ -1,6 +1,6 @@
 import React from "react";
 import "./Button.css";
-
+import Text from "components/Text/Text";
 const Button = props => {
   let classButton;
   switch (props.type) {
@@ -33,7 +33,7 @@ const Button = props => {
           backgroundSize: "100% auto"
         }}
       >
-        <p>{props.children}</p>
+        <Text weight={props.isBold}>{props.children}</Text>
       </div>
     );
   } else {
@@ -42,7 +42,13 @@ const Button = props => {
         className={props.classes}
         style={{ width: props.width, height: props.height }}
       >
-        <p>{props.children}</p>
+        <Text
+          weight={props.isBold}
+          size={props.fontSize}
+          spacing={props.letterSpacing}
+        >
+          {props.children}
+        </Text>
       </div>
     );
   }
