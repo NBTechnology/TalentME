@@ -52,7 +52,7 @@ const Text = props => {
       content = <p style={style}>{props.children}</p>;
       break;
   }
-  return { content };
+  return content;
 };
 
 export default Text;

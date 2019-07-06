@@ -43,6 +43,7 @@ const Button = props => {
         style={{ width: props.width, height: props.height }}
       >
         <Text
+          variant={props.variant}
           weight={props.isBold}
           size={props.fontSize}
           spacing={props.letterSpacing}
