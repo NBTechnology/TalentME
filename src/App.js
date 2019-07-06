@@ -2,6 +2,7 @@ import React from "react";
 import logo from "logo.svg";
 import "./App.css";
 import Button from "components/Atoms/Button/Button";
+import HeaderCard from "components/Molecules/Card/HeaderCard/HeaderCard";
 const App = () => {
   return (
     <div>
@@ -39,6 +40,7 @@ const App = () => {
       >
         DUBAI
       </Button>
+      <HeaderCard />
     </div>
   );
 };

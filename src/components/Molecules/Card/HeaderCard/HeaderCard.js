@@ -18,6 +18,7 @@ const HeaderCard = props => {
         bg="Boton_DUBAI.jpg"
         isBold
         letterSpacing="2.4px"
+        fontSize="12px"
       >
         DUBAI
       </Button>
