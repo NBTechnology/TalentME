@@ -1,26 +1,27 @@
 import React from "react";
 import Button from "components/Atoms/Button/Button";
 import Text from "components/Atoms/Text/Text";
+import "./HeaderCard.css";
 
 const HeaderCard = props => {
   return (
     <div className="headerCard">
       <div className="textHeadercard">
-        <Text weight fontSize="14px">
-          Camarero
+        <Text weight fontSize={props.sizeTitle}>
+          {props.title}
         </Text>
-        <Text fontSize="12px">Marriot Dubai</Text>
+        <Text fontSize={props.sizeSubtitle}>{props.subtitle}</Text>
       </div>
       <Button
         type="image"
-        width="85px"
-        height="37px"
-        bg="Boton_DUBAI.jpg"
+        width={props.widthButton}
+        height={props.heightButton}
+        bg={props.imageButton}
         isBold
-        letterSpacing="2.4px"
-        fontSize="12px"
+        letterSpacing={props.letterSpacingButton}
+        fontSize={props.fontSizeButton}
       >
-        DUBAI
+        {props.labelButton}
       </Button>
     </div>
   );
