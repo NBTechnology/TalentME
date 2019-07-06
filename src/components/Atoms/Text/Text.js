@@ -5,8 +5,8 @@ const Text = props => {
 
   let style = {
     fontWeight: props.weight ? "700" : "400",
-    fontSize: props.size,
-    letterSpacing: props.spacing
+    fontSize: props.fontSize,
+    letterSpacing: props.letterSpacing
   };
   switch (props.variant) {
     case "h1":

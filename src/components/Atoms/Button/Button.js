@@ -33,7 +33,14 @@ const Button = props => {
           backgroundSize: "100% auto"
         }}
       >
-        <Text weight={props.isBold}>{props.children}</Text>
+        <Text
+          variant={props.variant}
+          weight={props.isBold}
+          fontSize={props.fontSize}
+          letterSpacing={props.letterSpacing}
+        >
+          {props.children}
+        </Text>
       </div>
     );
   } else {
@@ -45,8 +52,8 @@ const Button = props => {
         <Text
           variant={props.variant}
           weight={props.isBold}
-          size={props.fontSize}
-          spacing={props.letterSpacing}
+          fontSize={props.fontSize}
+          letterSpacing={props.letterSpacing}
         >
           {props.children}
         </Text>
