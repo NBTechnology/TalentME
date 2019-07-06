@@ -1,6 +1,6 @@
 import React from "react";
 import "./Button.css";
-import Text from "components/Text/Text";
+import Text from "components/Atoms/Text/Text";
 const Button = props => {
   let classButton;
   switch (props.type) {
