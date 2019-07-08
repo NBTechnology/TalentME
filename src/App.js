@@ -36,6 +36,8 @@ const App = () => {
         height="108px"
         bg="Boton_DUBAI.jpg"
         isBold
+        fontSize="20px"
+        letterSpacing="4px"
       >
         DUBAI
       </Button>
