@@ -1,11 +1,11 @@
 import React from "react";
-import logo from "logo.svg";
+
 import "./App.css";
 import Button from "components/Atoms/Button/Button";
 import HeaderCard from "components/Molecules/Card/HeaderCard/HeaderCard";
 import BodyCard from "components/Molecules/Card/BodyCard/BodyCard";
 import FooterCard from "components/Molecules/Card/FooterCard/FooterCard";
-
+import Card from "components/Organisms/Card/Card";
 const App = () => {
   return (
     <div>
@@ -53,6 +53,7 @@ const App = () => {
       <HeaderCard />
       <BodyCard />
       <FooterCard />
+      <Card />
     </div>
   );
 };

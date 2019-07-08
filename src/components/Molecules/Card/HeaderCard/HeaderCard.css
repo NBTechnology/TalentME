@@ -1,4 +1,9 @@
-.headerCard {
+.headerCardOffer hr {
+    margin-top:32px;
+    border: 1px solid #DBDBDB
+}
+
+.headerCardContentOffer {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between
