@@ -8,7 +8,8 @@ const Button = props => {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    borderRadius: "8px"
+    borderRadius: "8px",
+    cursor: "pointer"
   };
   switch (props.variant) {
     case "primary":

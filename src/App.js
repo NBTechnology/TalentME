@@ -4,6 +4,7 @@ import "./App.css";
 import Button from "components/Atoms/Button/Button";
 import HeaderCard from "components/Molecules/Card/HeaderCard/HeaderCard";
 import BodyCard from "components/Molecules/Card/BodyCard/BodyCard";
+import FooterCard from "components/Molecules/Card/FooterCard/FooterCard";
 
 const App = () => {
   return (
@@ -51,6 +52,7 @@ const App = () => {
       </Button>
       <HeaderCard />
       <BodyCard />
+      <FooterCard />
     </div>
   );
 };
