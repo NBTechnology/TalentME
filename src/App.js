@@ -6,6 +6,8 @@ import HeaderCard from "components/Molecules/Card/HeaderCard/HeaderCard";
 import BodyCard from "components/Molecules/Card/BodyCard/BodyCard";
 import FooterCard from "components/Molecules/Card/FooterCard/FooterCard";
 import Card from "components/Organisms/Card/Card";
+import ArrowForwardRounded from "@material-ui/icons/ArrowForwardRounded";
+
 const App = () => {
   return (
     <div>
@@ -49,6 +51,16 @@ const App = () => {
         letterSpacing="4px"
       >
         DUBAI
+      </Button>
+      <Button
+        variant="icon"
+        width="356px"
+        height="56px"
+        icon={<ArrowForwardRounded className="btnIcon"></ArrowForwardRounded>}
+        fontSize="20px"
+        btnBorder="1px solid #FFC80A"
+      >
+        COMO FUNCIONA
       </Button>
       <HeaderCard />
       <BodyCard />
