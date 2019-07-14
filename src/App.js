@@ -9,6 +9,7 @@ import Card from "components/Organisms/Card/Card";
 import ArrowForwardRounded from "@material-ui/icons/ArrowForwardRounded";
 import Imagen from "components/Atoms/Imagen/Imagen";
 import LeftNavBar from "components/Molecules/NavBar/LeftNavBar/LeftNavBar";
+import RightNavBar from "components/Molecules/NavBar/RightNavBar/RightNavBar";
 
 const App = () => {
   return (
@@ -74,6 +75,7 @@ const App = () => {
       <Card />
       <Imagen url="oficial_talentme_black.png" width="100px" />
       <LeftNavBar />
+      <RightNavBar />
     </div>
   );
 };
