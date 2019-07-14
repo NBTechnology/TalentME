@@ -1,7 +1,6 @@
 import React from "react";
 import "./Button.css";
 import Text from "components/Atoms/Text/Text";
-import Icon from "@material-ui/core/Icon";
 
 const Button = props => {
   let style = {

@@ -7,10 +7,15 @@ import BodyCard from "components/Molecules/Card/BodyCard/BodyCard";
 import FooterCard from "components/Molecules/Card/FooterCard/FooterCard";
 import Card from "components/Organisms/Card/Card";
 import ArrowForwardRounded from "@material-ui/icons/ArrowForwardRounded";
+import Imagen from "components/Atoms/Imagen/Imagen";
+import LeftNavBar from "components/Molecules/NavBar/LeftNavBar/LeftNavBar";
+import RightNavBar from "components/Molecules/NavBar/RightNavBar/RightNavBar";
+import NavBar from "components/Organisms/NavBar/NavBar";
 
 const App = () => {
   return (
     <div>
+      <NavBar />
       <Button
         variant="secondary"
         width="202px"
@@ -70,6 +75,7 @@ const App = () => {
       <BodyCard />
       <FooterCard />
       <Card />
+      <Imagen url="oficial_talentme_black.png" width="100px" />
     </div>
   );
 };

@@ -9,8 +9,8 @@ const Text = props => {
     letterSpacing: props.letterSpacing
   };
 
-  if (props.padding) style.padding= props.padding;
-  
+  if (props.padding) style.padding = props.padding;
+  if (props.margin) style.margin = props.margin;
   switch (props.variant) {
     case "h1":
       style.fontWeight = "700";
