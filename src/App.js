@@ -8,6 +8,7 @@ import FooterCard from "components/Molecules/Card/FooterCard/FooterCard";
 import Card from "components/Organisms/Card/Card";
 import ArrowForwardRounded from "@material-ui/icons/ArrowForwardRounded";
 import Imagen from "components/Atoms/Imagen/Imagen";
+import LeftNavBar from "components/Molecules/NavBar/LeftNavBar/LeftNavBar";
 
 const App = () => {
   return (
@@ -72,6 +73,7 @@ const App = () => {
       <FooterCard />
       <Card />
       <Imagen url="oficial_talentme_black.png" width="100px" />
+      <LeftNavBar />
     </div>
   );
 };
