@@ -6,8 +6,40 @@ import Button from "components/Atoms/Button/Button";
 import ArrowForwardRounded from "@material-ui/icons/ArrowForwardRounded";
 import Header from "components/Molecules/Header/Header";
 import SectionImage from "components/Molecules/SectionImage/SectionImage";
+import Offers from "components/Organisms/Offers/Offers";
 
 class DestinoDubai extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      offers: [
+        {
+          title: "Camarero",
+          subTitle: "Marriot Dubai",
+          image: "Boton_DUBAI.jpg",
+          label: "DUBAI"
+        },
+        {
+          title: "Camarero",
+          subTitle: "Marriot Dubai",
+          image: "Boton_DUBAI.jpg",
+          label: "DUBAI"
+        },
+        {
+          title: "Camarero",
+          subTitle: "Marriot Dubai",
+          image: "Boton_DUBAI.jpg",
+          label: "DUBAI"
+        },
+        {
+          title: "Camarero",
+          subTitle: "Marriot Dubai",
+          image: "Boton_DUBAI.jpg",
+          label: "DUBAI"
+        }
+      ]
+    };
+  }
   render() {
     return (
       <div>
@@ -67,6 +99,27 @@ class DestinoDubai extends Component {
         </div>
         {/* SECTION TESTIMONIO */}
         <SectionImage />
+        {/* SECTION OFFERS */}
+        <Offers title="Ofertas en Dubai" offers={this.state.offers} />
+        <div
+          style={{
+            position: "relative",
+            top: "60px",
+            display: "flex",
+            justifyContent: "center"
+          }}
+        >
+          <Button
+            variant="primary"
+            width="270px"
+            height="51px"
+            fontSize="16px"
+            isBold
+            letterSpacing="3.2px"
+          >
+            TODAS LAS OFERTAS
+          </Button>
+        </div>
       </div>
     );
   }

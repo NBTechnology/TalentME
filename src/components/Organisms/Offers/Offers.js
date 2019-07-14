@@ -9,19 +9,28 @@ const Offers = props => {
         key={offer.key}
         title={offer.title}
         subTitle={offer.subTitle}
-        imageButton={props.image}
-        labelButton={props.label}
+        imageButton={offer.image}
+        labelButton={offer.label}
       />
     );
   });
   return (
-    <div style={{ textAlign: "center" }}>
-      <Text variant="h2">{props.title}</Text>
+    <div
+      style={{
+        position: "relative",
+        top: "48px",
+        width: "80%",
+        marginLeft: "10%"
+      }}
+    >
+      <div style={{ textAlign: "center" }}>
+        <Text variant="h2">{props.title}</Text>
+      </div>
       <div
         style={{
           display: "flex",
           flexDirection: "row",
-          justifyContent: "space.between"
+          justifyContent: "space-around"
         }}
       >
         {offers}
