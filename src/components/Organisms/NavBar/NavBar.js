@@ -8,8 +8,12 @@ const NavBar = props => {
       style={{
         display: "flex",
         flexDirection: "row",
-        margin: "35px 160px 0px 156px",
-        justifyContent: "space-around"
+        position: "absolute",
+        top: "35px",
+        left: "160px",
+        right: "156px",
+        justifyContent: "space-between",
+        zIndex: "999"
       }}
     >
       <LeftNavBar />

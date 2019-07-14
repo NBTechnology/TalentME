@@ -59,6 +59,7 @@ const RightNavBar = props => {
         isBold
         fontSize="12px"
         letterSpacing="2.4px"
+        margin="0px 96px 0 0"
       >
         INSCRIBIRSE
       </Button>

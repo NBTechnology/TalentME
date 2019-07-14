@@ -10,13 +10,14 @@ const Card = props => {
         widthButton="85px"
         heightButton="37px"
         sizeTitle="14px"
-        title="Camarero"
+        title={props.title}
         sizeSubtitle="12px"
-        subtitle="W Doha"
-        imageButton="Boton_DUBAI.jpg"
+        subtitle={props.subTitle}
+        imageButton={props.imageButton}
         letterSpacingButton="2.4px"
         fontSizeButton="12px"
-        labelButton="DUBAI"
+        labelButton={props.labelButton}
+        key={props.key}
       />
       <BodyCard />
       <FooterCard />
