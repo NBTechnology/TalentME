@@ -1,7 +1,7 @@
 import React from "react";
 import "./Button.css";
 import Text from "components/Atoms/Text/Text";
-import Icon from '@material-ui/core/Icon';
+import Icon from "@material-ui/core/Icon";
 
 const Button = props => {
   let style = {
@@ -49,35 +49,20 @@ const Button = props => {
       if (props.btnBorderRadius) style.borderRadius = props.btnBorderRadius;
       break;
   }
-    if(props.variant === "icon"){
-      return (
-        <div style={style}>
-          <Text
-            variant={props.textVariant}
-            weight={props.isBold}
-            fontSize={props.fontSize}
-            letterSpacing={props.letterSpacing}
-          >
-            {props.children}
-          </Text>
-          {props.icon}
-        </div>
-      );
-    }else {
-      return (
-        <div style={style}>
-          <Text
-            variant={props.textVariant}
-            weight={props.isBold}
-            fontSize={props.fontSize}
-            letterSpacing={props.letterSpacing}
-          >
-            {props.children}
-          </Text>
-          
-        </div>
-      );
-    }
+
+  return (
+    <div style={style}>
+      <Text
+        variant={props.textVariant}
+        weight={props.isBold}
+        fontSize={props.fontSize}
+        letterSpacing={props.letterSpacing}
+      >
+        {props.children}
+      </Text>
+      {props.icon}
+    </div>
+  );
 };
 
 export default Button;

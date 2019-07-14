@@ -56,7 +56,11 @@ const App = () => {
         variant="icon"
         width="356px"
         height="56px"
-        icon={<ArrowForwardRounded className="btnIcon"></ArrowForwardRounded>}
+        icon={
+          <ArrowForwardRounded
+            style={{ color: "red", position: "relative", right: "-30px" }}
+          />
+        }
         fontSize="20px"
         btnBorder="1px solid #FFC80A"
       >
