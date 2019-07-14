@@ -1,7 +1,6 @@
 import React from "react";
 import Imagen from "components/Atoms/Imagen/Imagen";
 import Text from "components/Atoms/Text/Text";
-import { width } from "@material-ui/system";
 
 const SectionImage = props => {
   return (
