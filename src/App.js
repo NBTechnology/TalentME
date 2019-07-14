@@ -12,6 +12,7 @@ import LeftNavBar from "components/Molecules/NavBar/LeftNavBar/LeftNavBar";
 import RightNavBar from "components/Molecules/NavBar/RightNavBar/RightNavBar";
 import NavBar from "components/Organisms/NavBar/NavBar";
 import DestinoDubai from "containers/DestinoDubai/DestinoDubai";
+import Header from "components/Molecules/Header/Header";
 
 const App = () => {
   return (

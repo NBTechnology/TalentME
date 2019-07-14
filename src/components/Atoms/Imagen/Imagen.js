@@ -46,7 +46,9 @@ const Imagen = props => {
             width: props.width,
             height: props.height,
             borderRadius: props.borderRadius,
-            float: props.float
+            float: props.float,
+            position: props.position,
+            top: props.top
           }}
         >
           {props.children}
