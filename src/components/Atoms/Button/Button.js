@@ -1,6 +1,8 @@
 import React from "react";
 import "./Button.css";
 import Text from "components/Atoms/Text/Text";
+import Icon from "@material-ui/core/Icon";
+
 const Button = props => {
   let style = {
     width: props.width,
@@ -17,6 +19,12 @@ const Button = props => {
       if (props.btnBorderRadius) style.borderRadius = props.btnBorderRadius;
       break;
     case "secondary":
+      style.background = props.btnBackground ? props.btnBackground : "#FFFFFF";
+      if (props.btnBorderRadius) style.borderRadius = props.btnBorderRadius;
+      if (props.btnBorder) style.border = props.btnBorder;
+      if (props.color) style.color = props.color;
+      break;
+    case "icon":
       style.background = props.btnBackground ? props.btnBackground : "#FFFFFF";
       if (props.btnBorderRadius) style.borderRadius = props.btnBorderRadius;
       if (props.btnBorder) style.border = props.btnBorder;
@@ -52,6 +60,7 @@ const Button = props => {
       >
         {props.children}
       </Text>
+      {props.icon}
     </div>
   );
 };
