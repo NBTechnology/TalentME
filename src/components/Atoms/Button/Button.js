@@ -12,6 +12,9 @@ const Button = props => {
     borderRadius: "8px",
     cursor: "pointer"
   };
+
+  if (props.margin) style.margin = props.margin;
+
   switch (props.variant) {
     case "primary":
       style.background = props.btnBackground ? props.btnBackground : "#FFC80A";

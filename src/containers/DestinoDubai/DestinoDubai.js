@@ -4,6 +4,7 @@ import Imagen from "components/Atoms/Imagen/Imagen";
 import Text from "components/Atoms/Text/Text";
 import Button from "components/Atoms/Button/Button";
 import ArrowForwardRounded from "@material-ui/icons/ArrowForwardRounded";
+import Header from "components/Molecules/Header/Header";
 
 class DestinoDubai extends Component {
   render() {
@@ -11,12 +12,14 @@ class DestinoDubai extends Component {
       <div>
         <NavBar />
         {/* SECCION HEADER */}
+        <Header image="Destino_Dubai_Header.jpg" />
         {/* SECCION TRABAJA EN DUBAI */}
         <div
           style={{
             display: "flex",
             flexDirection: "row",
-            justifyContent: "center"
+            justifyContent: "center",
+            marginTop: "48px"
           }}
         >
           <Imagen

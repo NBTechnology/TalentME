@@ -11,7 +11,7 @@ const Header = props => {
       width="100%"
       height="580px"
       position="relative"
-      top="-73px"
+      top="0px"
     >
       <div
         style={{
