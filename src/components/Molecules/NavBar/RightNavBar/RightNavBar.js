@@ -12,11 +12,46 @@ const RightNavBar = props => {
         justifyContent: "space-between"
       }}
     >
-      <Text variant="p3">DESTINOS</Text>
-      <Text variant="p3">COMO FUNCIONA</Text>
-      <Text variant="p3">NOSOTROS</Text>
-      <Text variant="p3">CONTACTO</Text>
-      <Text variant="p3">OFERTAS</Text>
+      <Text
+        variant="customize"
+        fontSize="12px"
+        letterSpacing="2.88px"
+        margin="0px 23px 0px 0px"
+      >
+        DESTINOS
+      </Text>
+      <Text
+        variant="customize"
+        fontSize="12px"
+        letterSpacing="2.88px"
+        margin="0px 23px 0px 0px"
+      >
+        COMO FUNCIONA
+      </Text>
+      <Text
+        variant="customize"
+        fontSize="12px"
+        letterSpacing="2.88px"
+        margin="0px 23px 0px 0px"
+      >
+        NOSOTROS
+      </Text>
+      <Text
+        variant="customize"
+        fontSize="12px"
+        letterSpacing="2.88px"
+        margin="0px 23px 0px 0px"
+      >
+        CONTACTO
+      </Text>
+      <Text
+        variant="customize"
+        fontSize="12px"
+        letterSpacing="2.88px"
+        margin="0px 31px 0px 0px"
+      >
+        OFERTAS
+      </Text>
       <Button
         variant="primary"
         width="127px"

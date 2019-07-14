@@ -10,10 +10,12 @@ import ArrowForwardRounded from "@material-ui/icons/ArrowForwardRounded";
 import Imagen from "components/Atoms/Imagen/Imagen";
 import LeftNavBar from "components/Molecules/NavBar/LeftNavBar/LeftNavBar";
 import RightNavBar from "components/Molecules/NavBar/RightNavBar/RightNavBar";
+import NavBar from "components/Organisms/NavBar/NavBar";
 
 const App = () => {
   return (
     <div>
+      <NavBar />
       <Button
         variant="secondary"
         width="202px"
@@ -74,8 +76,6 @@ const App = () => {
       <FooterCard />
       <Card />
       <Imagen url="oficial_talentme_black.png" width="100px" />
-      <LeftNavBar />
-      <RightNavBar />
     </div>
   );
 };
