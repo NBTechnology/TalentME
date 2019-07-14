@@ -8,6 +8,7 @@ import Header from "components/Molecules/Header/Header";
 import SectionImage from "components/Molecules/SectionImage/SectionImage";
 import Offers from "components/Organisms/Offers/Offers";
 import Places from "components/Organisms/Places/Places";
+import Footer from "components/Organisms/Footer/Footer";
 
 class DestinoDubai extends Component {
   constructor(props) {
@@ -140,7 +141,8 @@ class DestinoDubai extends Component {
             display: "flex",
             justifyContent: "center",
             flexDirection: "row",
-            marginTop: "56px"
+            marginTop: "56px",
+            marginBottom: "67px"
           }}
         >
           <div style={{ marginRight: "57px", width: "621px" }}>
@@ -184,6 +186,7 @@ class DestinoDubai extends Component {
             isBackground
           />
         </div>
+        <Footer />
       </div>
     );
   }
