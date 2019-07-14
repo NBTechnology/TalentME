@@ -7,6 +7,7 @@ import BodyCard from "components/Molecules/Card/BodyCard/BodyCard";
 import FooterCard from "components/Molecules/Card/FooterCard/FooterCard";
 import Card from "components/Organisms/Card/Card";
 import ArrowForwardRounded from "@material-ui/icons/ArrowForwardRounded";
+import Imagen from "components/Atoms/Imagen/Imagen";
 
 const App = () => {
   return (
@@ -70,6 +71,7 @@ const App = () => {
       <BodyCard />
       <FooterCard />
       <Card />
+      <Imagen url="oficial_talentme_black.png" width="100px" />
     </div>
   );
 };
