@@ -49,7 +49,7 @@ const Text = props => {
       content = <p style={style}>{props.children}</p>;
       break;
     case "customize":
-      style.color = "#000000";
+      style.color = props.color;
       content = <p style={style}>{props.children}</p>;
       break;
     default:

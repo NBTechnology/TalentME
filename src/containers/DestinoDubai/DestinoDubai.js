@@ -5,6 +5,7 @@ import Text from "components/Atoms/Text/Text";
 import Button from "components/Atoms/Button/Button";
 import ArrowForwardRounded from "@material-ui/icons/ArrowForwardRounded";
 import Header from "components/Molecules/Header/Header";
+import SectionImage from "components/Molecules/SectionImage/SectionImage";
 
 class DestinoDubai extends Component {
   render() {
@@ -64,6 +65,8 @@ class DestinoDubai extends Component {
             </Button>
           </div>
         </div>
+        {/* SECTION TESTIMONIO */}
+        <SectionImage />
       </div>
     );
   }

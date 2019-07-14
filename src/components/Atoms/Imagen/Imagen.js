@@ -38,14 +38,26 @@ const Imagen = props => {
     console.log(props);
     const path = require("assets/img/" + props.url);
     if (props.isBackground) {
+      let radius;
+      let size;
+      if (props.isCircle) {
+        radius = props.width;
+        size = "200%";
+      } else {
+        radius = props.borderRadius;
+        size = "100%";
+      }
+      let gradient = props.isGradient
+        ? "linear-gradient(-180deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%), "
+        : "";
       content = (
         <div
           style={{
-            background: "url('" + path + "') center no-repeat",
-            backgroundSize: "100% auto",
+            background: gradient + "url('" + path + "') center no-repeat",
+            backgroundSize: size + " auto",
             width: props.width,
             height: props.height,
-            borderRadius: props.borderRadius,
+            borderRadius: radius,
             float: props.float,
             position: props.position,
             top: props.top
