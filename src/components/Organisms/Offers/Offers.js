@@ -6,7 +6,7 @@ const Offers = props => {
   const offers = props.offers.map(offer => {
     return (
       <Card
-        key={offer.key}
+        key={offer.id}
         title={offer.title}
         subTitle={offer.subTitle}
         imageButton={offer.image}
