@@ -55,7 +55,11 @@ class DestinoDubai extends Component {
       <div>
         <NavBar />
         {/* SECCION HEADER */}
-        <Header image="Destino_Dubai_Header.jpg" />
+        <Header
+          image="Destino_Dubai_Header.jpg"
+          title="La magia de Dubai"
+          btnText="INSCRIBIRSE"
+        />
         {/* SECCION TRABAJA EN DUBAI */}
         <div
           style={{

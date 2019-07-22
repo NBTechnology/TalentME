@@ -55,8 +55,13 @@ class DestinoDoha extends Component {
       <div>
         <NavBar />
         {/* SECCION HEADER */}
-        <Header image="Destino_Dubai_Header.jpg" />
-        {/* SECCION TRABAJA EN DUBAI */}
+        <Header
+          image="Destino_Doha_Header.jpg"
+          title="Explora Doha"
+          titleColor="#fff"
+          btnText="INSCRIBIRSE"
+        />
+        {/* SECCION TRABAJA EN DOHA */}
         <div
           style={{
             display: "flex",
@@ -69,13 +74,13 @@ class DestinoDoha extends Component {
             width="580px"
             height="445px"
             borderRadius="8px"
-            url="Destino_Dubai_Trabaja.jpg"
+            url="Destino_Doha_Trabaja.jpg"
             isBackground
             float="left"
           />
           <div style={{ marginLeft: "57px", width: "521px" }}>
             <Text variant="h2" margin="0px 0px 47px" isBold>
-              Trabaja en Dubai
+              Trabaja en Doha
             </Text>
             <Text variant="p3" lineHeight="26px" margin="0 0 75px">
               Oriente Medio representa los más altos estándares de servicio en
@@ -110,7 +115,7 @@ class DestinoDoha extends Component {
         {/* SECTION TESTIMONIO */}
         <SectionImage />
         {/* SECTION OFFERS */}
-        <Offers title="Ofertas en Dubai" offers={this.state.offers} />
+        <Offers title="Ofertas en Doha" offers={this.state.offers} />
         <div
           style={{
             marginTop: "60px",

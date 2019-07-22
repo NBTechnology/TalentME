@@ -13,10 +13,11 @@ import RightNavBar from "components/Molecules/NavBar/RightNavBar/RightNavBar";
 import NavBar from "components/Organisms/NavBar/NavBar";
 import DestinoDubai from "containers/DestinoDubai/DestinoDubai";
 import Header from "components/Molecules/Header/Header";
+import DestinoDoha from "containers/DestinoDoha/DestinoDoha";
 
 const App = () => {
   return (
-    <DestinoDubai />
+    <DestinoDoha />
     // <div>
     //   <NavBar />
     //   <Button

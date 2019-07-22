@@ -21,8 +21,8 @@ const Header = props => {
           width: "300px"
         }}
       >
-        <Text variant="h1" isBold>
-          La magia de Dubai
+        <Text variant="h1" color={props.titleColor} isBold>
+          {props.title}
         </Text>
         <Button
           variant="primary"
@@ -32,7 +32,7 @@ const Header = props => {
           fontSize="12px"
           letterSpacing="2.4px"
         >
-          INSCRIBIRSE
+          {props.btnText}
         </Button>
       </div>
     </Imagen>
