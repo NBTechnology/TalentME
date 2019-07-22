@@ -12,7 +12,7 @@ const Header = props => {
       height="580px"
       position="relative"
       top="0px"
-      isGradient
+      isGradient={props.gradient}
     >
       <div
         style={{
