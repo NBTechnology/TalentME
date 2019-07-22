@@ -45,11 +45,16 @@ class DestinoAbuDhabi extends Component {
         }
       ],
       places: [
-        { image: "Boton_DUBAI.jpg", label: "DUBAI" },
-        { image: "Boton_DOHA.jpg", label: "DOHA" }
+        { image: "Boton_DUBAI.jpg", label: "DUBAI", link: "/dubai" },
+        { image: "Boton_DOHA.jpg", label: "DOHA", link: "/doha" }
       ]
     };
   }
+
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
   render() {
     return (
       <div>

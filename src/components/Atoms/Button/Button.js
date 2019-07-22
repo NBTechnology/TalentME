@@ -2,6 +2,8 @@ import React from "react";
 import "./Button.css";
 import Text from "components/Atoms/Text/Text";
 
+import { Link } from "react-router-dom";
+
 const Button = props => {
   let style = {
     width: props.width,
@@ -51,8 +53,7 @@ const Button = props => {
       if (props.btnBorderRadius) style.borderRadius = props.btnBorderRadius;
       break;
   }
-
-  return (
+  let contentButton = (
     <div style={style}>
       <Text
         variant={props.textVariant}
@@ -65,6 +66,13 @@ const Button = props => {
       {props.icon}
     </div>
   );
+
+  let finalButton = props.link ? (
+    <Link to={props.link}>{contentButton}</Link>
+  ) : (
+    contentButton
+  );
+  return finalButton;
 };
 
 export default Button;

@@ -45,11 +45,16 @@ class DestinoDubai extends Component {
         }
       ],
       places: [
-        { image: "Boton_DOHA.jpg", label: "DOHA" },
-        { image: "Boton_ABU_DHABI.jpg", label: "ABU DHABI" }
+        { image: "Boton_DOHA.jpg", label: "DOHA", link: "/doha" },
+        { image: "Boton_ABU_DHABI.jpg", label: "ABU DHABI", link: "/abu-dhabi" }
       ]
     };
   }
+
+  componentDidMount() {
+    window.scrollTo(0, 0);
+  }
+
   render() {
     return (
       <div>

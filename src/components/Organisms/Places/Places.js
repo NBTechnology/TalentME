@@ -14,6 +14,7 @@ const Places = props => {
           isBold
           letterSpacing={props.letterSpacingButton}
           fontSize={props.fontSizeButton}
+          link={place.link}
         >
           {place.label}
         </Button>
