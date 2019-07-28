@@ -1,5 +1,5 @@
 .headerCardOffer hr {
-    margin-top:32px;
+    margin-top: 32px;
     border: 1px solid #DBDBDB
 }
 
@@ -7,4 +7,11 @@
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between
+}
+
+.headerCardFacilities {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column
 }

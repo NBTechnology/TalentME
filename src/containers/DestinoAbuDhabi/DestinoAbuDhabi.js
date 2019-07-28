@@ -20,28 +20,36 @@ class DestinoAbuDhabi extends Component {
           title: "Camarero",
           subTitle: "Marriot Dubai",
           image: "Boton_DOHA.jpg",
-          label: "DUBAI"
+          label: "DUBAI",
+          infoOffer:
+            "Idealmente gente joven con ganas de una experiencia única en el mundo. Inglés fluido, con muchas corvas y que las tengan hidratadas para un correcto bien estar."
         },
         {
           id: "offer1",
           title: "Camarero",
           subTitle: "Marriot Dubai",
           image: "Boton_DOHA.jpg",
-          label: "DUBAI"
+          label: "DUBAI",
+          infoOffer:
+            "Idealmente gente joven con ganas de una experiencia única en el mundo. Inglés fluido, con muchas corvas y que las tengan hidratadas para un correcto bien estar."
         },
         {
           id: "offer2",
           title: "Camarero",
           subTitle: "Marriot Dubai",
           image: "Boton_DOHA.jpg",
-          label: "DUBAI"
+          label: "DUBAI",
+          infoOffer:
+            "Idealmente gente joven con ganas de una experiencia única en el mundo. Inglés fluido, con muchas corvas y que las tengan hidratadas para un correcto bien estar."
         },
         {
           id: "offer3",
           title: "Camarero",
           subTitle: "Marriot Dubai",
           image: "Boton_DOHA.jpg",
-          label: "DUBAI"
+          label: "DUBAI",
+          infoOffer:
+            "Idealmente gente joven con ganas de una experiencia única en el mundo. Inglés fluido, con muchas corvas y que las tengan hidratadas para un correcto bien estar."
         }
       ],
       places: [
