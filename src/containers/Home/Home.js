@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import NavBar from "components/Organisms/NavBar/NavBar";
 import Header from "components/Molecules/Header/Header";
 import Places from "components/Organisms/Places/Places";
+import Facilities from "components/Organisms/Facilities/Facilities";
+import Footer from "components/Organisms/Footer/Footer";
 
 class Home extends Component {
   constructor(props) {
@@ -34,6 +36,8 @@ class Home extends Component {
           letterSpacing="4px"
           fontSize="20px"
         />
+        <Facilities />
+        <Footer />
       </div>
     );
   }

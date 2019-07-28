@@ -12,6 +12,7 @@ const Text = props => {
   if (props.padding) style.padding = props.padding;
   if (props.margin) style.margin = props.margin;
   if (props.lineHeight) style.lineHeight = props.lineHeight;
+  if (props.textAlign) style.textAlign = props.textAlign;
   switch (props.variant) {
     case "h1":
       style.fontWeight = "700";

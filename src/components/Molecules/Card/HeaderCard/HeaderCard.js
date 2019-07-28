@@ -40,7 +40,9 @@ const HeaderCard = props => {
       content = (
         <div className="headerCardFacilities">
           <Imagen width="60px" height="60px" url={props.url} />
-          <Text variant="p1">{props.title}</Text>
+          <Text variant="p1" margin="18px 0 0 0">
+            {props.title}
+          </Text>
         </div>
       );
       break;
