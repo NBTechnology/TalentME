@@ -7,6 +7,7 @@ import DestinoDubai from "containers/DestinoDubai/DestinoDubai";
 import DestinoDoha from "containers/DestinoDoha/DestinoDoha";
 import DestinoAbuDhabi from "containers/DestinoAbuDhabi/DestinoAbuDhabi";
 import Home from "containers/Home/Home";
+import TestCharly from "containers/TestCharly/TestCharly";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
       <Route path="/dubai" exact component={DestinoDubai} />
       <Route path="/doha" exact component={DestinoDoha} />
       <Route path="/abu-dhabi" exact component={DestinoAbuDhabi} />
+      <Route path="/testCharly" exact component={TestCharly} />
     </Switch>
   );
 };
