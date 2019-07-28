@@ -11,6 +11,8 @@ const Offers = props => {
         subTitle={offer.subTitle}
         imageButton={offer.image}
         labelButton={offer.label}
+        variant="cardOffer"
+        infoOffer={offer.infoOffer}
       />
     );
   });

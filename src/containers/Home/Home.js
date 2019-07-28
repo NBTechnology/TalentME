@@ -2,19 +2,21 @@ import React, { Component } from "react";
 import NavBar from "components/Organisms/NavBar/NavBar";
 import Header from "components/Molecules/Header/Header";
 import Places from "components/Organisms/Places/Places";
+import Facilities from "components/Organisms/Facilities/Facilities";
+import Footer from "components/Organisms/Footer/Footer";
 
 class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
       places: [
+        { image: "Boton_DUBAI.jpg", label: "DUBAI", link: "/dubai" },
         { image: "Boton_DOHA.jpg", label: "DOHA", link: "/doha" },
         {
           image: "Boton_ABU_DHABI.jpg",
           label: "ABU DHABI",
           link: "/abu-dhabi"
-        },
-        { image: "Boton_DUBAI.jpg", label: "DUBAI", link: "/dubai" }
+        }
       ]
     };
   }
@@ -27,6 +29,15 @@ class Home extends Component {
           title="Vive la experiencia de tu vida"
           btnText="INSCRIBIRSE"
         />
+        <Places
+          places={this.state.places}
+          widthButton="260px"
+          heightButton="108px"
+          letterSpacing="4px"
+          fontSize="20px"
+        />
+        <Facilities />
+        <Footer />
       </div>
     );
   }

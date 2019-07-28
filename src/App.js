@@ -6,11 +6,12 @@ import { Switch, Route } from "react-router-dom";
 import DestinoDubai from "containers/DestinoDubai/DestinoDubai";
 import DestinoDoha from "containers/DestinoDoha/DestinoDoha";
 import DestinoAbuDhabi from "containers/DestinoAbuDhabi/DestinoAbuDhabi";
+import Home from "containers/Home/Home";
 
 const App = () => {
   return (
     <Switch>
-      <Route path="/" exact component={DestinoDubai} />
+      <Route path="/" exact component={Home} />
       <Route path="/dubai" exact component={DestinoDubai} />
       <Route path="/doha" exact component={DestinoDoha} />
       <Route path="/abu-dhabi" exact component={DestinoAbuDhabi} />
