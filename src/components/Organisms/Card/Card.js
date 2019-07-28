@@ -24,7 +24,7 @@ const Card = props => {
             variant="cardOffer"
           />
           <BodyCard variant="cardOffer" text={props.infoOffer} />
-          <FooterCard />
+          <FooterCard variant="cardOffer" />
         </div>
       );
       break;

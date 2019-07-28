@@ -8,13 +8,13 @@ class Home extends Component {
     super(props);
     this.state = {
       places: [
+        { image: "Boton_DUBAI.jpg", label: "DUBAI", link: "/dubai" },
         { image: "Boton_DOHA.jpg", label: "DOHA", link: "/doha" },
         {
           image: "Boton_ABU_DHABI.jpg",
           label: "ABU DHABI",
           link: "/abu-dhabi"
-        },
-        { image: "Boton_DUBAI.jpg", label: "DUBAI", link: "/dubai" }
+        }
       ]
     };
   }
@@ -26,6 +26,13 @@ class Home extends Component {
           image="Home_Header.jpg"
           title="Vive la experiencia de tu vida"
           btnText="INSCRIBIRSE"
+        />
+        <Places
+          places={this.state.places}
+          widthButton="260px"
+          heightButton="108px"
+          letterSpacing="4px"
+          fontSize="20px"
         />
       </div>
     );
