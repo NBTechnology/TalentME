@@ -4,10 +4,11 @@ import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import { BrowserRouter as Router } from "react-router-dom";
 import "./index.css";
+import Stepper from "./components/Organisms/Stepper/Stepper"
 
 ReactDOM.render(
   <Router primary={false}>
-    <App />
+    <Stepper type={""} data={[{title:"Titulo1", image:"Porque_ME.jpg"},{title:"Titulin 2", image:"Porque_ME.jpg"},{title:"Titulo1", image:"Porque_ME.jpg"},{title:"Titulin 2", image:"Porque_ME.jpg"}]}/>
   </Router>,
   document.getElementById("root")
 );
