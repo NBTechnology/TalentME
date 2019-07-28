@@ -1,14 +1,17 @@
 import React, { Component } from "react";
-import Stepper from "../../components/Organisms/Stepper/Stepper"
+//import Stepper from "../../components/Organisms/Stepper/Stepper"
+import EasySteps from "components/Organisms/EasySteps/EasySteps";
+
 
 class TestCharly extends Component {
     constructor(props) {
         super(props);
     }
     render() {
-        return (
-            <Stepper type={""} data={[{ title: "Titulo1", image: "Porque_ME.jpg" }, { title: "Titulin 2", image: "Porque_ME.jpg" }, { title: "Titulo1", image: "Porque_ME.jpg" }, { title: "Titulin 2", image: "Porque_ME.jpg" }]} />
-        );
+        const contain =
+            <EasySteps type={""} data={[{ title: "Inscripcion", image: "Porque_ME.jpg" }, { title: "Recibe ofertas", image: "Home_Header.jpg" },{ title: "Entrevista", image: "Porque_ME.jpg" }, { title: "¡Vuela!", image: "Porque_ME.jpg" }]} />
+
+        return contain;
     }
 
 }
