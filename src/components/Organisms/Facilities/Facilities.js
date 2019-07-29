@@ -8,21 +8,21 @@ const Facilities = props => {
     {
       id: "facility0",
       title: "SIN PAGAR NADA",
-      url: "icons/Home_Free.eps",
+      url: "icons/Home_Free.svg",
       text:
         "No tendrás que pagarnos absolutamente nada en ningún momento. Nuestra misión será que crezcas tanto personal como profesionalmente."
     },
     {
       id: "facility1",
       title: "ASESORAMIENTO",
-      url: "icons/Home_Asesoramiento.eps",
+      url: "icons/Home_Asesoramiento.svg",
       text:
         "Gestionamos contigo todo el papeleo necesario para trabajar y vivir en Oriente Medio. Te asesoramos en todas las posibles dudas que conlleva este gran cambio."
     },
     {
       id: "facility2",
       title: "PACK BENEFICIOS",
-      url: "icons/Home_Beneficios.eps",
+      url: "icons/Home_Beneficios.svg",
       text:
         "Vuelo a destino, alojamiento y comida incluidos. También gozarás de transporte gratuito y grandes descuentos. Y por supuesto, un salario mensual."
     }

@@ -36,27 +36,31 @@ const Card = props => {
             url={props.url}
             variant={"cardFacility"}
           />
-          <BodyCard text={props.text} />
+          <BodyCard text={props.text} variant="cardFacility" />
         </div>
       );
       break;
     case "cardCarrousel":
       content = (
-        <div className="cardCarrousel" >
+        <div className="cardCarrousel">
           <HeaderCard
-            title={props.title
-            }
+            title={props.title}
             url={props.url}
             variant={"cardCarrousel"}
           />
-          <hr style={{
-            marginLeft: "45%",
-            width: "10%", display: "block", height: "2px",
-            border: "0", borderTop: "2px solid #ffc80a",
-            padding: "0",
-          }} />
+          <hr
+            style={{
+              marginLeft: "45%",
+              width: "10%",
+              display: "block",
+              height: "2px",
+              border: "0",
+              borderTop: "2px solid #ffc80a",
+              padding: "0"
+            }}
+          />
           <BodyCard variant="cardCarrousel" text={props.text} />
-        </div >
+        </div>
       );
       break;
     default:

@@ -39,7 +39,7 @@ const HeaderCard = props => {
     case "cardFacility":
       content = (
         <div className="headerCardFacilities">
-          <Imagen width="60px" height="60px" url={props.url} />
+          <Imagen width="80px" height="80px" url={props.url} />
           <Text variant="p1" margin="18px 0 0 0">
             {props.title}
           </Text>

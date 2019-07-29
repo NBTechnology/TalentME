@@ -86,7 +86,7 @@ class Home extends Component {
         {/* Experiences :D */}
         <Experiences />
         {/* Inicio feature charly */}
-        <EasySteps type={""} data={[{ title: "Inscripcion", image: "Porque_ME.jpg" }, { title: "Recibe ofertas", image: "Home_Header.jpg" }, { title: "Entrevista", image: "Porque_ME.jpg" }, { title: "¡Vuela!", image: "Porque_ME.jpg" }]} />
+        <EasySteps type={""} data={[{ title: "Inscripcion", image: "icons/Home_inscripcion.svg" }, { title: "Recibe ofertas", image: "icons/Home_jobs.svg" }, { title: "Entrevista", image: "icons/Home_entrevista.svg" }, { title: "¡Vuela!", image: "icons/Home_vuela.svg" }]} />
 
         {/* SECTION OFFERS */}
         <Offers title="Ofertas" offers={this.state.offers} />
