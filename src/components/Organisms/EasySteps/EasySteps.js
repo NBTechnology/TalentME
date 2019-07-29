@@ -38,7 +38,13 @@ const EasySteps = props => {
               marginTop: "124px"
             }}
           >
-            <Button style={{ zIndex: "1" }} width="188px" height="51px">
+            <Button
+              style={{ zIndex: "1" }}
+              width="188px"
+              height="51px"
+              isBold
+              letterSpacing="3.2px"
+            >
               INSCRIBIRSE
             </Button>
           </div>
