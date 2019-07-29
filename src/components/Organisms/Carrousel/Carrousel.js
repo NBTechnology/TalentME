@@ -10,15 +10,26 @@ const Carrousel = props => {
     //console.log(this.props.settings);ç
     const content = <Slider {...props.settings}>
         <div>
-            <div className="slide-2">
+            <div className="carrousel-core">
                 <Card variant={"cardCarrousel"} title="Mark Holden" text="A major turning point in the history of early philosophical science was the controversial" url="Destino_Doha_Trabaja.jpg" />
                 <Card variant={"cardCarrousel"} title="Mark Holden" text="A major turning point in the history of early philosophical science was the controversial" url="Destino_Doha_Trabaja.jpg" />
                 <Card variant={"cardCarrousel"} title="Mark Holden" text="A major turning point in the history of early philosophical science was the controversial" url="Destino_Doha_Trabaja.jpg" />
             </div>
         </div>
-        <div className="slide-0"><h3>Graph 2</h3></div>
-        <div className="slide-1"><h3>Graph 3</h3></div>
-        <div className="slide-3"><h3>Set Up</h3></div>
+        <div>
+            <div className="carrousel-core">
+                <Card variant={"cardCarrousel"} title="Mark Holden" text="A major turning point in the history of early philosophical science was the controversial" url="Destino_Doha_Trabaja.jpg" />
+                <Card variant={"cardCarrousel"} title="Mark Holden" text="A major turning point in the history of early philosophical science was the controversial" url="Destino_Doha_Trabaja.jpg" />
+                <Card variant={"cardCarrousel"} title="Mark Holden" text="A major turning point in the history of early philosophical science was the controversial" url="Destino_Doha_Trabaja.jpg" />
+            </div>
+        </div>
+        <div>
+            <div className="carrousel-core">
+                <Card variant={"cardCarrousel"} title="Mark Holden" text="A major turning point in the history of early philosophical science was the controversial" url="Destino_Doha_Trabaja.jpg" />
+                <Card variant={"cardCarrousel"} title="Mark Holden" text="A major turning point in the history of early philosophical science was the controversial" url="Destino_Doha_Trabaja.jpg" />
+                <Card variant={"cardCarrousel"} title="Mark Holden" text="A major turning point in the history of early philosophical science was the controversial" url="Destino_Doha_Trabaja.jpg" />
+            </div>
+        </div>
     </Slider >
 
     return content;
