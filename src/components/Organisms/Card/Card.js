@@ -40,6 +40,24 @@ const Card = props => {
         </div>
       );
       break;
+    case "cardCarrousel":
+      content = (
+        <div style={{ backgroundColor: "#" + Math.floor((Math.random() * 99) + 1) + "" + Math.floor((Math.random() * 99) + 1) + "" + Math.floor((Math.random() * 99) + 1) }} className="cardCarrousel" >
+          <HeaderCard
+            title={props.title}
+            url={props.url}
+            variant={"cardCarrousel"}
+          />
+          <hr style={{
+            marginLeft: "45%",
+            width: "10%", display: "block", height: "2px",
+            border: "0", borderTop: "1px solid #ffc80a",
+            padding: "0",
+          }} />
+          <BodyCard variant="cardCarrousel" text={props.text} />
+        </div >
+      );
+      break;
     default:
       content = (
         <div className="cardOffer">
