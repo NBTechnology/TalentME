@@ -37,6 +37,72 @@ const Experiences = props => {
             slidesToScroll: 1,
             dotsClass: "slick-dots-c"
           }}
+          iterator={3}
+          data={[
+            {
+              id: 0,
+              title: "Mark Holden",
+              text:
+                "A major turning point in the history of early philosophical science was the controversial",
+              url: "Destino_Doha_Trabaja.jpg"
+            },
+            {
+              id: 1,
+              title: "Mark Holden",
+              text:
+                "A major turning point in the history of early philosophical science was the controversial",
+              url: "Destino_Doha_Trabaja.jpg"
+            },
+            {
+              id: 2,
+              title: "Mark Holden",
+              text:
+                "A major turning point in the history of early philosophical science was the controversial",
+              url: "Destino_Doha_Trabaja.jpg"
+            },
+            {
+              id: 3,
+              title: "Mark Holden",
+              text:
+                "A major turning point in the history of early philosophical science was the controversial",
+              url: "Destino_Doha_Trabaja.jpg"
+            },
+            {
+              id: 4,
+              title: "Mark Holden",
+              text:
+                "A major turning point in the history of early philosophical science was the controversial",
+              url: "Destino_Doha_Trabaja.jpg"
+            },
+            {
+              id: 5,
+              title: "Mark Holden",
+              text:
+                "A major turning point in the history of early philosophical science was the controversial",
+              url: "Destino_Doha_Trabaja.jpg"
+            },
+            {
+              id: 6,
+              title: "Mark Holden",
+              text:
+                "A major turning point in the history of early philosophical science was the controversial",
+              url: "Destino_Doha_Trabaja.jpg"
+            },
+            {
+              id: 7,
+              title: "Mark Holden",
+              text:
+                "A major turning point in the history of early philosophical science was the controversial",
+              url: "Destino_Doha_Trabaja.jpg"
+            },
+            {
+              id: 8,
+              title: "Mark Holden",
+              text:
+                "A major turning point in the history of early philosophical science was the controversial",
+              url: "Destino_Doha_Trabaja.jpg"
+            }
+          ]}
         />
       </div>
     </Imagen>

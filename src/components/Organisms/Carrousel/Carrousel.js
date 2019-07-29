@@ -5,41 +5,52 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Card from "../Card/Card";
 
-
 const Carrousel = props => {
-    //console.log(this.props.settings);ç
-    const content =
-        <div style={{ backgroundColor: "rgba(255, 255, 255, 0.5)" }}>
-
-            <Slider {...props.settings}>
-                <div>
-                    <div className="carrousel-core">
-                        <Card variant={"cardCarrousel"} title="Mark Holden" text="A major turning point in the history of early philosophical science was the controversial" url="Destino_Doha_Trabaja.jpg" />
-                        <Card variant={"cardCarrousel"} title="Mark Holden" text="A major turning point in the history of early philosophical science was the controversial" url="Destino_Doha_Trabaja.jpg" />
-                        <Card variant={"cardCarrousel"} title="Mark Holden" text="A major turning point in the history of early philosophical science was the controversial" url="Destino_Doha_Trabaja.jpg" />
-                    </div>
-                </div>
-                <div>
-                    <div className="carrousel-core">
-                        <Card variant={"cardCarrousel"} title="Mark Holden" text="A major turning point in the history of early philosophical science was the controversial" url="Destino_Doha_Trabaja.jpg" />
-                        <Card variant={"cardCarrousel"} title="Mark Holden" text="A major turning point in the history of early philosophical science was the controversial" url="Destino_Doha_Trabaja.jpg" />
-                        <Card variant={"cardCarrousel"} title="Mark Holden" text="A major turning point in the history of early philosophical science was the controversial" url="Destino_Doha_Trabaja.jpg" />
-                    </div>
-                </div>
-                <div>
-                    <div className="carrousel-core">
-                        <Card variant={"cardCarrousel"} title="Mark Holden" text="A major turning point in the history of early philosophical science was the controversial" url="Destino_Doha_Trabaja.jpg" />
-                        <Card variant={"cardCarrousel"} title="Mark Holden" text="A major turning point in the history of early philosophical science was the controversial" url="Destino_Doha_Trabaja.jpg" />
-                        <Card variant={"cardCarrousel"} title="Mark Holden" text="A major turning point in the history of early philosophical science was the controversial" url="Destino_Doha_Trabaja.jpg" />
-                    </div>
-                </div>
-            </Slider >
+  let contentCarousel = [];
+  let idItem = 0;
+  for (
+    let page = 0;
+    page < Math.ceil(props.data.length / props.iterator);
+    page++
+  ) {
+    contentCarousel.push(
+      <div>
+        <div className="carrousel-core">
+          {props.data
+            .slice(
+              idItem,
+              idItem + props.iterator > props.data.length
+                ? props.data.length
+                : (idItem = idItem + props.iterator)
+            )
+            .map(item => {
+              console.log("item", item);
+              return (
+                <Card
+                  key={item.id + "experience"}
+                  variant="cardCarrousel"
+                  title={item.title}
+                  text={item.text}
+                  url={item.url}
+                />
+              );
+            })}
         </div>
+      </div>
+    );
+  }
+  const content = (
+    <div
+      style={{
+        backgroundColor: "rgba(255, 255, 255, 0.5)",
+        borderRadius: "18px"
+      }}
+    >
+      <Slider {...props.settings}>{contentCarousel}</Slider>
+    </div>
+  );
 
-    return content;
-}
-
-
-
+  return content;
+};
 
 export default Carrousel;
