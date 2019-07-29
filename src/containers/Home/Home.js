@@ -9,6 +9,7 @@ import Imagen from "components/Atoms/Imagen/Imagen";
 import ArrowForwardRounded from "@material-ui/icons/ArrowForwardRounded";
 import Footer from "components/Organisms/Footer/Footer";
 import Text from "components/Atoms/Text/Text";
+import EasySteps from "components/Organisms/EasySteps/EasySteps";
 
 class Home extends Component {
   constructor(props) {
@@ -81,8 +82,11 @@ class Home extends Component {
         />
         <Facilities />
 
+        {/* Inicio feature charly */}
+        <EasySteps type={""} data={[{ title: "Inscripcion", image: "Porque_ME.jpg" }, { title: "Recibe ofertas", image: "Home_Header.jpg" },{ title: "Entrevista", image: "Porque_ME.jpg" }, { title: "¡Vuela!", image: "Porque_ME.jpg" }]} />
+
         {/* SECTION OFFERS */}
-        <Offers title="Ofertas en Abu Dhabi" offers={this.state.offers} />
+        <Offers title="Ofertas" offers={this.state.offers} />
         <div
           style={{
             marginTop: "60px",
@@ -153,7 +157,7 @@ class Home extends Component {
         </div>
 
         <Footer />
-      </div>
+        </div>
     );
   }
 }

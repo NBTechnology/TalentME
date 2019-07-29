@@ -10,7 +10,6 @@ class TestCharly extends Component {
     render() {
         const contain =
             <EasySteps type={""} data={[{ title: "Inscripcion", image: "Porque_ME.jpg" }, { title: "Recibe ofertas", image: "Home_Header.jpg" },{ title: "Entrevista", image: "Porque_ME.jpg" }, { title: "¡Vuela!", image: "Porque_ME.jpg" }]} />
-
         return contain;
     }
 
