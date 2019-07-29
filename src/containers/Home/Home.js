@@ -10,6 +10,7 @@ import ArrowForwardRounded from "@material-ui/icons/ArrowForwardRounded";
 import Footer from "components/Organisms/Footer/Footer";
 import Text from "components/Atoms/Text/Text";
 import EasySteps from "components/Organisms/EasySteps/EasySteps";
+import Experiences from "components/Organisms/Experiences/Experiences";
 
 class Home extends Component {
   constructor(props) {
@@ -82,8 +83,10 @@ class Home extends Component {
         />
         <Facilities />
 
+        {/* Experiences :D */}
+        <Experiences />
         {/* Inicio feature charly */}
-        <EasySteps type={""} data={[{ title: "Inscripcion", image: "Porque_ME.jpg" }, { title: "Recibe ofertas", image: "Home_Header.jpg" },{ title: "Entrevista", image: "Porque_ME.jpg" }, { title: "¡Vuela!", image: "Porque_ME.jpg" }]} />
+        <EasySteps type={""} data={[{ title: "Inscripcion", image: "Porque_ME.jpg" }, { title: "Recibe ofertas", image: "Home_Header.jpg" }, { title: "Entrevista", image: "Porque_ME.jpg" }, { title: "¡Vuela!", image: "Porque_ME.jpg" }]} />
 
         {/* SECTION OFFERS */}
         <Offers title="Ofertas" offers={this.state.offers} />
@@ -157,7 +160,7 @@ class Home extends Component {
         </div>
 
         <Footer />
-        </div>
+      </div>
     );
   }
 }
