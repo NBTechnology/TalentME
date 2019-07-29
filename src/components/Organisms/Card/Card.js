@@ -52,7 +52,7 @@ const Card = props => {
           <hr style={{
             marginLeft: "45%",
             width: "10%", display: "block", height: "2px",
-            border: "0", borderTop: "1px solid #ffc80a",
+            border: "0", borderTop: "2px solid #ffc80a",
             padding: "0",
           }} />
           <BodyCard variant="cardCarrousel" text={props.text} />
