@@ -47,9 +47,24 @@ const Imagen = props => {
         radius = props.borderRadius;
         size = "100%";
       }
-      let gradient = props.isGradient
-        ? "linear-gradient(-180deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%), "
-        : "";
+
+      let gradient;
+      switch (props.isGradient) {
+        case "black":
+          gradient =
+            "linear-gradient(-180deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%), ";
+          break;
+        case "white":
+          gradient =
+            "linear-gradient(-180deg, rgba(255,255,255,.5) 0%, rgba(255,255,255,.5) 100%), ";
+          break;
+        default:
+          gradient =
+            "linear-gradient(-180deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%), ";
+
+          break;
+      }
+
       content = (
         <div
           style={{
