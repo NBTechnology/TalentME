@@ -42,9 +42,10 @@ const Card = props => {
       break;
     case "cardCarrousel":
       content = (
-        <div style={{ backgroundColor: "#" + Math.floor((Math.random() * 99) + 1) + "" + Math.floor((Math.random() * 99) + 1) + "" + Math.floor((Math.random() * 99) + 1) }} className="cardCarrousel" >
+        <div className="cardCarrousel" >
           <HeaderCard
-            title={props.title}
+            title={props.title
+            }
             url={props.url}
             variant={"cardCarrousel"}
           />
