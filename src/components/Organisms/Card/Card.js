@@ -42,9 +42,7 @@ const Card = props => {
       break;
     case "cardCarrousel":
       content = (
-        <div style={{
-          backgroundColor: "rgba(255, 255, 255, 0.2)"
-        }} className="cardCarrousel" >
+        <div className="cardCarrousel" >
           <HeaderCard
             title={props.title
             }
