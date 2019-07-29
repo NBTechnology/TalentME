@@ -15,11 +15,25 @@ const Footer = props => {
           marginLeft: "15%"
         }}
       >
-        <List title="TalentMe" items={["Nosotros", "Contacto"]} />
-        <List title="Ofertas" items={["Dubai", "Doha", "Abu Dhabi"]} />
         <List
           title="TalentMe"
-          items={["Como funciona", "FAQ", "¿Por qué Middle East?"]}
+          items={[{ label: "Nosotros" }, { label: "Contacto" }]}
+        />
+        <List
+          title="Ofertas"
+          items={[
+            { label: "Dubai", link: "/dubai" },
+            { label: "Doha", link: "/doha" },
+            { label: "Abu Dhabi", link: "/abu-dhabi" }
+          ]}
+        />
+        <List
+          title="TalentMe"
+          items={[
+            { label: "Como funciona" },
+            { label: "FAQ" },
+            { label: "¿Por qué Middle East?" }
+          ]}
         />
         <div>
           <List title="Nuestras Redes" items={[]} />

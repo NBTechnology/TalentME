@@ -68,7 +68,9 @@ const Button = props => {
   );
 
   let finalButton = props.link ? (
-    <Link to={props.link}>{contentButton}</Link>
+    <Link to={props.link} style={{ textDecoration: "none" }}>
+      {contentButton}
+    </Link>
   ) : (
     contentButton
   );
