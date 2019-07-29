@@ -73,6 +73,7 @@ class DestinoAbuDhabi extends Component {
           title="La experiencia de Abu Dhabi"
           titleColor="#fff"
           btnText="INSCRIBIRSE"
+          gradient="header-white"
         />
         {/* SECCION TRABAJA EN DOHA */}
         <div

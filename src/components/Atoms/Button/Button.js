@@ -40,7 +40,7 @@ const Button = props => {
         style.boxShadow =
           "0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23)";
 
-        let gradient = props.isGradient
+        let gradient = props.gradient
           ? "linear-gradient(-180deg, rgba(252,255,252,0.00) 20%, rgba(0,0,0,0.74) 100%),"
           : "";
         style.background = gradient + "url('" + path + "') center no-repeat";

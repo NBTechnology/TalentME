@@ -73,6 +73,7 @@ class Home extends Component {
           image="Home_Header.jpg"
           title="Vive la experiencia de tu vida"
           btnText="INSCRIBIRSE"
+          gradient="header-white"
         />
         <Places
           places={this.state.places}
@@ -86,7 +87,15 @@ class Home extends Component {
         {/* Experiences :D */}
         <Experiences />
         {/* Inicio feature charly */}
-        <EasySteps type={""} data={[{ title: "Inscripcion", image: "icons/Home_inscripcion.svg" }, { title: "Recibe ofertas", image: "icons/Home_jobs.svg" }, { title: "Entrevista", image: "icons/Home_entrevista.svg" }, { title: "¡Vuela!", image: "icons/Home_vuela.svg" }]} />
+        <EasySteps
+          type={""}
+          data={[
+            { title: "Inscripcion", image: "icons/Home_inscripcion.svg" },
+            { title: "Recibe ofertas", image: "icons/Home_jobs.svg" },
+            { title: "Entrevista", image: "icons/Home_entrevista.svg" },
+            { title: "¡Vuela!", image: "icons/Home_vuela.svg" }
+          ]}
+        />
 
         {/* SECTION OFFERS */}
         <Offers title="Ofertas" offers={this.state.offers} />

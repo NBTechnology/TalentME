@@ -45,11 +45,11 @@ const Imagen = props => {
         size = "200%";
       } else {
         radius = props.borderRadius;
-        size = "100%";
+        size = props.sizeImage || "100%";
       }
 
       let gradient;
-      switch (props.isGradient) {
+      switch (props.gradient) {
         case "black":
           gradient =
             "linear-gradient(-180deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%), ";
@@ -57,6 +57,10 @@ const Imagen = props => {
         case "white":
           gradient =
             "linear-gradient(-180deg, rgba(255,255,255,.5) 0%, rgba(255,255,255,.5) 100%), ";
+          break;
+        case "header-white":
+          gradient =
+            "linear-gradient(-180deg, rgba(255,255,255,0.6) 10%, rgba(255,255,255,0) 39%), ";
           break;
         default:
           gradient = "";

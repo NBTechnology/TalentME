@@ -7,7 +7,7 @@ const Places = props => {
       <div key={place.id} style={{ marginRight: "16px" }}>
         <Button
           variant="image"
-          isGradient="black"
+          gradient
           width={props.widthButton}
           height={props.heightButton}
           bg={place.image}

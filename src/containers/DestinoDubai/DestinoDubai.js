@@ -72,6 +72,7 @@ class DestinoDubai extends Component {
           image="Destino_Dubai_Header.jpg"
           title="La magia de Dubai"
           btnText="INSCRIBIRSE"
+          gradient="header-white"
         />
         {/* SECCION TRABAJA EN DUBAI */}
         <div

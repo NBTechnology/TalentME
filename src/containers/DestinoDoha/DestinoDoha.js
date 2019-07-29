@@ -62,6 +62,7 @@ class DestinoDoha extends Component {
   componentDidMount() {
     window.scrollTo(0, 0);
   }
+
   render() {
     return (
       <div>
@@ -72,6 +73,7 @@ class DestinoDoha extends Component {
           title="Explora Doha"
           titleColor="#fff"
           btnText="INSCRIBIRSE"
+          gradient="header-white"
         />
         {/* SECCION TRABAJA EN DOHA */}
         <div
@@ -87,6 +89,7 @@ class DestinoDoha extends Component {
             height="445px"
             borderRadius="8px"
             url="Destino_Doha_Trabaja.jpg"
+            sizeImage="140%"
             isBackground
             float="left"
           />

@@ -14,7 +14,7 @@ const Experiences = props => {
       height="580px"
       position="relative"
       top="48px"
-      isGradient="white"
+      gradient="white"
       style={{ backgroundColor: "red", height: "601px" }}
     >
       <div

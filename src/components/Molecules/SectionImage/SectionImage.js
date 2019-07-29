@@ -11,7 +11,7 @@ const SectionImage = props => {
       height="386px"
       position="relative"
       top="48px"
-      isGradient="black"
+      gradient="black"
     >
       <div
         style={{

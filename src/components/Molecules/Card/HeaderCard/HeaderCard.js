@@ -21,7 +21,7 @@ const HeaderCard = props => {
             </div>
             <Button
               variant="image"
-              isGradient
+              gradient
               width={props.widthButton}
               height={props.heightButton}
               bg={props.imageButton}
@@ -76,7 +76,7 @@ const HeaderCard = props => {
             </div>
             <Button
               variant="image"
-              isGradient
+              gradient
               width={props.widthButton}
               height={props.heightButton}
               bg={props.imageButton}
