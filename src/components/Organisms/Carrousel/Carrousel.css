@@ -65,6 +65,7 @@
 .slick-dots-c li button:focus:before
 {
     opacity: 1;
+    color: #ffc80a;
 }
 .slick-dots-c li button:before
 {
@@ -83,13 +84,13 @@
     text-align: center;
 
     opacity: .25;
-    color: black;
+    color: #000;
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 .slick-dots-c li.slick-active button:before
 {
-    opacity: .75;
-    color: black;
+    opacity: 0.75;
+    color: #ffc80a;
 }
