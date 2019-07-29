@@ -49,12 +49,17 @@ const HeaderCard = props => {
     case "cardCarrousel":
       content = (
         <div className="headerCardCarrousel">
-          <Imagen width="60px" height="60px" isBackground isCircle url={props.url} />
+          <Imagen
+            width="60px"
+            height="60px"
+            isBackground
+            isCircle
+            url={props.url}
+          />
           <Text variant="p1" margin="18px 0 0 0">
             {props.title}
           </Text>
-
-        </div >
+        </div>
       );
       break;
     default:
