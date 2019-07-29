@@ -1,15 +1,23 @@
 import React, { Component } from "react";
 //import Stepper from "../../components/Organisms/Stepper/Stepper"
-import EasySteps from "components/Organisms/EasySteps/EasySteps";
+import Carrousel from "components/Organisms/Carrousel/Carrousel";
 
 
 class TestCharly extends Component {
-    constructor(props) {
-        super(props);
-    }
+
     render() {
         const contain =
-            <EasySteps type={""} data={[{ title: "Inscripcion", image: "Porque_ME.jpg" }, { title: "Recibe ofertas", image: "Home_Header.jpg" },{ title: "Entrevista", image: "Porque_ME.jpg" }, { title: "¡Vuela!", image: "Porque_ME.jpg" }]} />
+            <div style={{ width: "60%", marginLeft: "20%" }}>
+                <Carrousel settings={{
+                    dots: true,
+                    infinite: true,
+                    draggable: true,
+                    speed: 500,
+                    arrows: false,
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }} />
+            </div>
         return contain;
     }
 

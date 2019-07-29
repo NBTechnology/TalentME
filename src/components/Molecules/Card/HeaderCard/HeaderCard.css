@@ -15,3 +15,15 @@
     justify-content: center;
     flex-direction: column
 }
+
+.headerCardCarrousel{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 29px;
+    /* border-bottom: 2px solid #ffc80a; */
+    /* box-shadow: 0px 50px 3px -50px magenta; */
+
+}
+  
