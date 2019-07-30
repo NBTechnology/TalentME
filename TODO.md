@@ -1,12 +1,16 @@
 # Listado de TODOs
 
 ## Button
+
 - [ ] Añadir alpha en props en el img
 
 ## Imagenes
 
-- [ ] Pedir fotos en el formato correcto
-
+- [x] Pedir fotos en el formato correcto
+- [ ] Imagen "Los que ya han ido" Home bg
+- [ ] Iconos inscribirse
+- [ ] Iconos como funciona
 
 ## Info
-- [x] Poner colores aleatorios ->  "#" + Math.floor((Math.random() * 99) + 1) + "" + Math.floor((Math.random() * 99) + 1) + "" + Math.floor((Math.random() * 99) + 1)
+
+- [x] Poner colores aleatorios -> "#" + Math.floor((Math.random() _ 99) + 1) + "" + Math.floor((Math.random() _ 99) + 1) + "" + Math.floor((Math.random() \* 99) + 1)
