@@ -40,6 +40,18 @@ const Card = props => {
         </div>
       );
       break;
+    case "cardRequisite":
+      content = (
+        <div className="cardRequisite">
+          <HeaderCard
+            title={props.title}
+            url={props.url}
+            variant={"cardRequisite"}
+          />
+          <BodyCard text={props.text} variant="cardRequisite" />
+        </div>
+      );
+      break;
     case "cardCarrousel":
       content = (
         <div className="cardCarrousel">
