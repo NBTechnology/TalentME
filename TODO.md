@@ -11,6 +11,10 @@
 - [ ] Iconos inscribirse
 - [ ] Iconos como funciona
 
+## Select
+
+- [ ] Campos select inscribirse
+
 ## Info
 
 - [x] Poner colores aleatorios -> "#" + Math.floor((Math.random() _ 99) + 1) + "" + Math.floor((Math.random() _ 99) + 1) + "" + Math.floor((Math.random() \* 99) + 1)

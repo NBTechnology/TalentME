@@ -2,10 +2,10 @@ import React, { Component } from "react";
 import NavBar from "components/Organisms/NavBar/NavBar";
 import Header from "components/Molecules/Header/Header";
 import Requisites from "components/Organisms/Requisites/Requisites";
-import { textAlign } from "@material-ui/system";
 import Text from "components/Atoms/Text/Text";
 import Footer from "components/Organisms/Footer/Footer";
 import Input from "components/Atoms/Input/Input";
+import Select from "components/Atoms/Select/Select";
 
 class Inscribirse extends Component {
   constructor(props) {
@@ -33,9 +33,43 @@ class Inscribirse extends Component {
             "Saliendo de tu zona de confort, dispuesto a viajar y trabajar en el extranjero.",
           url: "icons/Home_entrevista.svg"
         }
+      ],
+      levelEnglish: "",
+      name: "",
+      surname: "",
+      passport: "",
+      email: "",
+      phone: "",
+      itemsEnglish: [
+        {
+          id: 0,
+          value: "bajo",
+          label: "Nivel bajo"
+        },
+        {
+          id: 1,
+          value: "medio",
+          label: "Nivel medio"
+        },
+        {
+          id: 2,
+          value: "alto",
+          label: "Nivel alto"
+        }
       ]
     };
   }
+
+  inputHandler = event => {
+    this.setState({
+      [event.target.name]: event.target.value
+    });
+  };
+
+  selectHandler = event => {
+    this.setState({ [event.target.name]: event.target.value });
+  };
+
   render() {
     return (
       <div>
@@ -73,11 +107,11 @@ class Inscribirse extends Component {
               label="Nombre"
               margin="normal"
               maxLength="100"
-              name="NameInput"
-              onChange={function onChange() {}}
+              name="name"
+              onChange={this.inputHandler}
               required
               type="text"
-              value=""
+              value={this.state.name}
               variant="outlined"
             />
             <Input
@@ -86,11 +120,11 @@ class Inscribirse extends Component {
               label="Apellidos"
               margin="normal"
               maxLength="100"
-              name="NameInput"
-              onChange={function onChange() {}}
+              name="surname"
+              onChange={this.inputHandler}
               required
               type="text"
-              value=""
+              value={this.state.surname}
               variant="outlined"
             />
             <Input
@@ -99,11 +133,11 @@ class Inscribirse extends Component {
               label="Nº Pasaporte"
               margin="normal"
               maxLength="100"
-              name="NameInput"
-              onChange={function onChange() {}}
+              name="passport"
+              onChange={this.inputHandler}
               required
               type="text"
-              value=""
+              value={this.state.passport}
               variant="outlined"
             />
             <Text
@@ -120,11 +154,11 @@ class Inscribirse extends Component {
               label="Email"
               margin="normal"
               maxLength="100"
-              name="NameInput"
-              onChange={function onChange() {}}
+              name="email"
+              onChange={this.inputHandler}
               required
               type="email"
-              value=""
+              value={this.state.email}
               variant="outlined"
             />
             <Input
@@ -133,11 +167,11 @@ class Inscribirse extends Component {
               label="Teléfono"
               margin="normal"
               maxLength="100"
-              name="NameInput"
-              onChange={function onChange() {}}
+              name="phone"
+              onChange={this.inputHandler}
               required
               type="number"
-              value=""
+              value={this.state.phone}
               variant="outlined"
             />
             <Text
@@ -148,6 +182,26 @@ class Inscribirse extends Component {
             >
               Sobre ti
             </Text>
+            <Select
+              fullWidth
+              variant="outlined"
+              idInput="idEnglish"
+              labelInput="Nivel de Inglés"
+              value={this.state.levelEnglish}
+              handleChange={this.selectHandler}
+              name="levelEnglish"
+              items={this.state.itemsEnglish}
+            />
+            <Select
+              fullWidth
+              variant="outlined"
+              idInput="idEnglish"
+              labelInput="Nivel de Inglés"
+              value={this.state.levelEnglish}
+              handleChange={this.selectHandler}
+              name="levelEnglish"
+              items={this.state.itemsEnglish}
+            />
           </div>
         </div>
         <Footer />
