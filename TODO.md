@@ -18,3 +18,5 @@
 ## Info
 
 - [x] Poner colores aleatorios -> "#" + Math.floor((Math.random() _ 99) + 1) + "" + Math.floor((Math.random() _ 99) + 1) + "" + Math.floor((Math.random() \* 99) + 1)
+
+- [ ] inscribeme va al pop up de la oferta
