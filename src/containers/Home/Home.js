@@ -74,6 +74,7 @@ class Home extends Component {
           title="Vive la experiencia de tu vida"
           btnText="INSCRIBIRSE"
           gradient="header-white"
+          link="/inscribirse"
         />
         <Places
           places={this.state.places}

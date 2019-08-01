@@ -32,6 +32,7 @@ const Header = props => {
           isBold
           fontSize="12px"
           letterSpacing="2.4px"
+          link={props.link}
         >
           {props.btnText}
         </Button>
