@@ -25,18 +25,17 @@ const Header = props => {
         <Text variant="h1" color={props.titleColor} isBold>
           {props.title}
         </Text>
-        {props.btnText && (
-          <Button
-            variant="primary"
-            width="189px"
-            height="51px"
-            isBold
-            fontSize="12px"
-            letterSpacing="2.4px"
-          >
-            {props.btnText}
-          </Button>
-        )}
+        <Button
+          variant="primary"
+          width="189px"
+          height="51px"
+          isBold
+          fontSize="12px"
+          letterSpacing="2.4px"
+          link={props.link}
+        >
+          {props.btnText}
+        </Button>
       </div>
     </Imagen>
   );

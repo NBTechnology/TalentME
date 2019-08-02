@@ -88,7 +88,7 @@ class DestinoAbuDhabi extends Component {
             width="580px"
             height="445px"
             borderRadius="8px"
-            url="Destino_AbuDhabi_Trabaja.jpg"
+            url="Destino_AbuDhabi_trabaja.jpg"
             isBackground
             float="left"
           />

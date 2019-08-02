@@ -60,6 +60,7 @@ const RightNavBar = props => {
         fontSize="12px"
         letterSpacing="2.4px"
         margin="0px 96px 0 0"
+        link="/inscribirse"
       >
         INSCRIBIRSE
       </Button>
