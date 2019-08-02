@@ -19,7 +19,7 @@ const EasyStepWork = props => {
         url={"ComoFunciona" + props.number + ".jpg"}
         isBackground
         float="left"
-        sizeImage="200%"
+        sizeImage="150%"
         bac
       />
       <div
@@ -34,7 +34,9 @@ const EasyStepWork = props => {
         }}
       >
         <Text variant="p1">{props.title}</Text>
-        <Text variant="p3">{props.text}</Text>
+        <Text variant="p3" margin="16px 0 0 0">
+          {props.text}
+        </Text>
       </div>
     </div>
   );

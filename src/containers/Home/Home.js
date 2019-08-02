@@ -83,7 +83,7 @@ class Home extends Component {
           letterSpacing="4px"
           fontSize="20px"
         />
-        <Facilities />
+        <Facilities variant="home" />
 
         {/* Experiences :D */}
         <Experiences />

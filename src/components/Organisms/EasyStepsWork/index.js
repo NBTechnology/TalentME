@@ -1,5 +1,8 @@
 import React from "react";
 import EasyStepWork from "components/Molecules/EasyStepWork";
+import Text from "components/Atoms/Text/Text";
+import Button from "components/Atoms/Button/Button";
+import Footer from "../Footer/Footer";
 
 const EasyStepsWork = props => {
   const steps = [
@@ -7,7 +10,7 @@ const EasyStepsWork = props => {
       id: "step_work_1",
       title: "Inscripción",
       text:
-        "Rellena tus datos en nuestro formularios o inscribite a todas las ofertas que consideres oportunas.\r Si cumples con los requisitos mínimos, pasaras a nuestra base de datos y se te contactará para continuar con el proceso.",
+        "Rellena tus datos en nuestro formularios o inscribite a todas las ofertas que consideres oportunas. Si cumples con los requisitos mínimos, pasaras a nuestra base de datos y se te contactará para continuar con el proceso.",
       number: 1,
       position: "left bottom"
     },
@@ -23,7 +26,7 @@ const EasyStepsWork = props => {
       id: "step_work_3",
       title: "Entrevista",
       text:
-        "Te queremos conocer personalmente. Explicarte todo acerca sobre el puesto que vas a desarrollar.\rEn ciertos casos, tendras entrevista presencial u online con el hotel que te va a contratar.",
+        "Te queremos conocer personalmente. Explicarte todo acerca sobre el puesto que vas a desarrollar. En ciertos casos, tendras entrevista presencial u online con el hotel que te va a contratar.",
       number: 3,
       position: "left bottom"
     },
@@ -48,7 +51,43 @@ const EasyStepsWork = props => {
       />
     );
   });
-  return content;
+  return (
+    <div style={{ position: "relative", top: "48px" }}>
+      <div
+        style={{
+          background: "#F2F2F2",
+          height: "133px",
+          width: "100%",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center"
+        }}
+      >
+        <Text variant="h2">EN 4 SENCILLOS PASOS</Text>
+      </div>
+      {content}
+      <div
+        style={{
+          marginTop: "70px",
+          display: "flex",
+          justifyContent: "center",
+          marginBottom: "98px"
+        }}
+      >
+        <Button
+          variant="primary"
+          width="189px"
+          height="51px"
+          fontSize="16px"
+          isBold
+          letterSpacing="3.2px"
+        >
+          INSCRIBIRSE
+        </Button>
+      </div>
+      <Footer />
+    </div>
+  );
 };
 
 export default EasyStepsWork;
