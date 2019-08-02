@@ -6,6 +6,8 @@ import Text from "components/Atoms/Text/Text";
 import Footer from "components/Organisms/Footer/Footer";
 import Input from "components/Atoms/Input/Input";
 import Select from "components/Atoms/Select/Select";
+import { Button } from "@material-ui/core";
+import CloudUploadIcon from "@material-ui/icons/CloudUpload";
 
 class Inscribirse extends Component {
   constructor(props) {
@@ -196,11 +198,51 @@ class Inscribirse extends Component {
               fullWidth
               variant="outlined"
               idInput="idEnglish"
-              labelInput="Nivel de Inglés"
+              labelInput="Departamento"
               value={this.state.levelEnglish}
               handleChange={this.selectHandler}
               name="levelEnglish"
               items={this.state.itemsEnglish}
+            />
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                alignItems: "center",
+                marginTop: "16px"
+              }}
+            >
+              <Text variant="p3" margin="0 16px 0 0">
+                Sube tu CV
+              </Text>
+              <input
+                accept="image/*"
+                id="raised-button-file"
+                multiple
+                type="file"
+                style={{ display: "none" }}
+              />
+              <label htmlFor="raised-button-file">
+                <Button
+                  raised
+                  component="span"
+                  aria-label="outlined"
+                  variant="outlined"
+                >
+                  <CloudUploadIcon />
+                </Button>
+              </label>
+            </div>
+            <Text variant="p3" margin="16px 0 8px 0">
+              Mensaje
+            </Text>
+            <textarea
+              style={{
+                border: "1px solid #979797",
+                borderRadius: "4px",
+                width: "60%",
+                minHeight: "150px"
+              }}
             />
           </div>
         </div>
