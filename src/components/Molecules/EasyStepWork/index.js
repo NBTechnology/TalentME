@@ -20,6 +20,7 @@ const EasyStepWork = props => {
         isBackground
         float="left"
         sizeImage="200%"
+        bac
       />
       <div
         style={{
