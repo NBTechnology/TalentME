@@ -9,6 +9,7 @@ import DestinoAbuDhabi from "containers/DestinoAbuDhabi/DestinoAbuDhabi";
 import Home from "containers/Home/Home";
 import TestCharly from "containers/TestCharly/TestCharly";
 import Inscribirse from "containers/Inscribirse/Inscribirse";
+import ComoFunciona from "containers/ComoFunciona";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
       <Route path="/doha" exact component={DestinoDoha} />
       <Route path="/abu-dhabi" exact component={DestinoAbuDhabi} />
       <Route path="/inscribirse" exact component={Inscribirse} />
+      <Route path="/como-funciona" exact component={ComoFunciona} />
       {/* <Route path="/testCharly" exact component={TestCharly} /> */}
     </Switch>
   );

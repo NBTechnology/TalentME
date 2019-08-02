@@ -5,11 +5,10 @@ import Text from "components/Atoms/Text/Text";
 import Imagen from "components/Atoms/Imagen/Imagen";
 
 const Experiences = props => {
-  //console.log(this.props.settings);
   const content = (
     <Imagen
       isBackground
-      url="Home_Header.jpg"
+      url="Home_LosQueYaHanIdo.jpg"
       width="100%"
       height="580px"
       position="relative"

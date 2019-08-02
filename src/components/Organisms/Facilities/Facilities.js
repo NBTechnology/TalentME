@@ -38,6 +38,31 @@ const Facilities = props => {
       />
     );
   });
+
+  let title, subTitle, finalButton;
+  switch (props.variant) {
+    case "how_it_works":
+      title = "Cómo funciona";
+      subTitle =
+        "En las ofertas se incluyen todas las facilidades, sin pagar nada.";
+      break;
+    case "home":
+      title = "Con todas las facilidades incluidas";
+      finalButton = (
+        <Button variant="primary" width="220px" height="51px" isBold>
+          COMO FUNCIONA
+        </Button>
+      );
+      break;
+    default:
+      title = "Con todas las facilidades incluidas";
+      finalButton = (
+        <Button variant="primary" width="220px" height="51px" isBold>
+          COMO FUNCIONA
+        </Button>
+      );
+      break;
+  }
   return (
     <div
       style={{
@@ -49,7 +74,8 @@ const Facilities = props => {
       }}
     >
       <div style={{ textAlign: "center" }}>
-        <Text variant="h2">Con todas las facilidades incluidas</Text>
+        <Text variant="h2">{title}</Text>
+        {subTitle && <Text variant="p1" margin="0 0 32px 0">{subTitle}</Text>}
       </div>
       <div
         style={{
@@ -63,9 +89,7 @@ const Facilities = props => {
       <div
         style={{ display: "flex", justifyContent: "center", marginTop: "32px" }}
       >
-        <Button variant="primary" width="220px" height="51px" isBold>
-          COMO FUNCIONA
-        </Button>
+        {finalButton}
       </div>
     </div>
   );
