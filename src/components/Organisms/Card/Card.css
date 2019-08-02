@@ -25,6 +25,15 @@
     padding: 24px 36px;
 }
 
-.cardCarrousel{
+.cardRequisite {
+    width: 295px;
+    height: 325px;
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    padding: 24px 36px;
+}
+
+.cardCarrousel {
     width: 300px;
 }

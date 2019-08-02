@@ -24,10 +24,22 @@ const BodyCard = props => {
         </div>
       );
       break;
+    case "cardRequisite":
+      content = (
+        <div
+          className="bodyCardRequisite"
+          style={{ flex: "1 1 auto", textAlign: "center", marginTop: "16px" }}
+        >
+          <Text variant="p3" padding="0px 0px 0px 0px">
+            {props.text}
+          </Text>
+        </div>
+      );
+      break;
     case "cardFacility":
       content = (
         <div
-          className="bodyCardCarrousel"
+          className="bodyCardFacility"
           style={{ flex: "1 1 auto", textAlign: "center", marginTop: "16px" }}
         >
           <Text variant="p3" padding="0px 0px 0px 0px">

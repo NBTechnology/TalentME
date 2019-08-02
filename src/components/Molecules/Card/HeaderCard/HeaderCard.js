@@ -46,6 +46,16 @@ const HeaderCard = props => {
         </div>
       );
       break;
+    case "cardRequisite":
+      content = (
+        <div className="headerCardRequisites">
+          <Imagen width="80px" height="80px" url={props.url} />
+          <Text variant="p1" margin="18px 0 0 0">
+            {props.title}
+          </Text>
+        </div>
+      );
+      break;
     case "cardCarrousel":
       content = (
         <div className="headerCardCarrousel">
