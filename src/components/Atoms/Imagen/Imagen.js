@@ -66,11 +66,11 @@ const Imagen = props => {
           gradient = "";
           break;
       }
-
+      let backgroundPosition = props.backgroundPosition || "center";
       content = (
         <div
           style={{
-            background: gradient + "url('" + path + "') center no-repeat",
+            background: gradient + "url('" + path + "') " + backgroundPosition+ " no-repeat",
             backgroundSize: size + " auto",
             width: props.width,
             height: props.height,

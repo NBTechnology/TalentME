@@ -6,6 +6,7 @@ import Button from "components/Atoms/Button/Button";
 const Header = props => {
   return (
     <Imagen
+      backgroundPosition = {props.backgroundPosition}
       isBackground
       url={props.image}
       width="100%"
@@ -25,7 +26,7 @@ const Header = props => {
         <Text variant="h1" color={props.titleColor} isBold>
           {props.title}
         </Text>
-        <Button
+        {props.btnText && (<Button
           variant="primary"
           width="189px"
           height="51px"
@@ -36,6 +37,7 @@ const Header = props => {
         >
           {props.btnText}
         </Button>
+        )}
       </div>
     </Imagen>
   );
