@@ -1,6 +1,7 @@
 import React from "react";
 import Text from "components/Atoms/Text/Text";
 import Button from "components/Atoms/Button/Button";
+import { NavLink } from "react-router-dom";
 
 const RightNavBar = props => {
   return (
@@ -20,14 +21,16 @@ const RightNavBar = props => {
       >
         DESTINOS
       </Text>
-      <Text
-        variant="customize"
-        fontSize="12px"
-        letterSpacing="2.88px"
-        margin="0px 23px 0px 0px"
-      >
-        COMO FUNCIONA
-      </Text>
+      <NavLink to="/como-funciona" style={{ textDecoration: "none" }}>
+        <Text
+          variant="customize"
+          fontSize="12px"
+          letterSpacing="2.88px"
+          margin="0px 23px 0px 0px"
+        >
+          COMO FUNCIONA
+        </Text>
+      </NavLink>
       <Text
         variant="customize"
         fontSize="12px"
