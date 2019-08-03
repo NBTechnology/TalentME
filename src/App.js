@@ -9,12 +9,8 @@ import DestinoAbuDhabi from "containers/DestinoAbuDhabi/DestinoAbuDhabi";
 import Home from "containers/Home/Home";
 import TestCharly from "containers/TestCharly/TestCharly";
 import Inscribirse from "containers/Inscribirse/Inscribirse";
-<<<<<<< HEAD
 import ContactUs from "containers/ContactUs/ContactUs";
-
-=======
 import ComoFunciona from "containers/ComoFunciona";
->>>>>>> ba80c4218c985c5f2e28eb58025283f85e66965f
 
 const App = () => {
   return (
@@ -24,11 +20,8 @@ const App = () => {
       <Route path="/doha" exact component={DestinoDoha} />
       <Route path="/abu-dhabi" exact component={DestinoAbuDhabi} />
       <Route path="/inscribirse" exact component={Inscribirse} />
-<<<<<<< HEAD
       <Route path="/contact-us" exact component={ContactUs} />
-=======
       <Route path="/como-funciona" exact component={ComoFunciona} />
->>>>>>> ba80c4218c985c5f2e28eb58025283f85e66965f
       {/* <Route path="/testCharly" exact component={TestCharly} /> */}
     </Switch>
   );
