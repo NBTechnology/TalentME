@@ -39,6 +39,8 @@ const RightNavBar = props => {
       >
         NOSOTROS
       </Text>
+      <NavLink to="/contact-us" style={{ textDecoration: "none" }}>
+
       <Text
         variant="customize"
         fontSize="12px"
@@ -47,6 +49,7 @@ const RightNavBar = props => {
       >
         CONTACTO
       </Text>
+      </NavLink>
       <Text
         variant="customize"
         fontSize="12px"
