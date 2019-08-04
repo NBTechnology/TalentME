@@ -47,10 +47,9 @@ const Offers = props => {
       </Grid>
       {/* </div> */}
       {/* </div> */}
-      <Grid container>
+      <Grid item xs={12} md={3} style={{ marginTop: "60px" }}>
         <Button
           variant="primary"
-          width="270px"
           height="51px"
           fontSize="16px"
           isBold

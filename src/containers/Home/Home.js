@@ -77,30 +77,38 @@ class Home extends Component {
           gradient="header-white"
           link="/inscribirse"
         />
-        <Places
-          places={this.state.places}
-          widthButton="260px"
-          heightButton="108px"
-          letterSpacing="4px"
-          fontSize="20px"
-        />
+        <Grid item xs={12} style={{ marginTop: "48px" }}>
+          <Places
+            places={this.state.places}
+            widthButton="260px"
+            heightButton="108px"
+            letterSpacing="4px"
+            fontSize="20px"
+          />
+        </Grid>
         <Facilities variant="home" />
 
         {/* Experiences :D */}
-        <Experiences />
+        <Grid item xs={12} style={{ marginTop: "48px" }}>
+          <Experiences />
+        </Grid>
         {/* Inicio feature charly */}
-        <EasySteps
-          type={""}
-          data={[
-            { title: "Inscripcion", image: "icons/Home_inscripcion.svg" },
-            { title: "Recibe ofertas", image: "icons/Home_jobs.svg" },
-            { title: "Entrevista", image: "icons/Home_entrevista.svg" },
-            { title: "¡Vuela!", image: "icons/Home_vuela.svg" }
-          ]}
-        />
+        <Grid item xs={12} style={{ marginTop: "48px" }}>
+          <EasySteps
+            type={""}
+            data={[
+              { title: "Inscripcion", image: "icons/Home_inscripcion.svg" },
+              { title: "Recibe ofertas", image: "icons/Home_jobs.svg" },
+              { title: "Entrevista", image: "icons/Home_entrevista.svg" },
+              { title: "¡Vuela!", image: "icons/Home_vuela.svg" }
+            ]}
+          />
+        </Grid>
 
         {/* SECTION OFFERS */}
-        <Offers title="Ofertas" offers={this.state.offers} />
+        <Grid item xs={12} style={{ marginTop: "48px" }}>
+          <Offers title="Ofertas" offers={this.state.offers} />
+        </Grid>
         {/* <div
           style={{
             display: "flex",
