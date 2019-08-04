@@ -18,6 +18,22 @@ const useStyles = makeStyles(theme => ({
       minHeight: "500px",
       height: "80vh"
     }
+  }),
+  backgroundWhite: props => ({
+    background:
+      "linear-gradient(-180deg, rgba(255,255,255,.5) 0%, rgba(255,255,255,.5) 100%), url('" +
+      props.path +
+      "') center center no-repeat",
+    [theme.breakpoints.down("md")]: {
+      backgroundSize: "300% auto",
+      minHeight: "500px",
+      height: "auto"
+    },
+    [theme.breakpoints.up("md")]: {
+      backgroundSize: "100% auto",
+      minHeight: "500px",
+      height: "auto"
+    }
   })
   // buttonImage: props => ({
   //   background:
@@ -137,6 +153,9 @@ const Imagen = props => {
 
   if (props.variant === "header-white") {
     content = <div className={classes.header}> {props.children}</div>;
+  }
+  if (props.variant === "white") {
+    content = <div className={classes.backgroundWhite}> {props.children}</div>;
   }
   return content;
 };
