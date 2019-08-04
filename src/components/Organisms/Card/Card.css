@@ -15,8 +15,7 @@
 }
 
 .cardFacility {
-    width: 295px;
-    height: 325px;
+    min-height: 325px;
     background: #FFFFFF;
     border: 1px solid #000;
     border-radius: 18px;
