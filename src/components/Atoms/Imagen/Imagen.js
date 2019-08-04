@@ -1,6 +1,33 @@
 import React from "react";
+import { makeStyles } from "@material-ui/core";
+
+const useStyles = makeStyles(theme => ({
+  header: props => ({
+    background:
+      "linear-gradient(-180deg, rgba(255, 255, 255, 0.6) 10%, rgba(255, 255, 255, 0) 39%), url('" +
+      props.path +
+      "') center center no-repeat",
+    [theme.breakpoints.down("md")]: {
+      backgroundSize: "300% auto",
+      minHeight: "80vh"
+    },
+    [theme.breakpoints.up("md")]: {
+      backgroundSize: "100% auto",
+      minHeight: "80vh"
+    }
+  })
+  // buttonImage: props => ({
+  //   background:
+  //   "linear-gradient(-180deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%), url('" + props.path +
+  // })
+}));
 
 const Imagen = props => {
+  let newProps = { ...props };
+  if (!props.isUrl) {
+    newProps.path = require("assets/img/" + props.url);
+  }
+  const classes = useStyles(newProps);
   let content;
 
   // url
@@ -70,7 +97,13 @@ const Imagen = props => {
       content = (
         <div
           style={{
-            background: gradient + "url('" + path + "') " + backgroundPosition+ " no-repeat",
+            background:
+              gradient +
+              "url('" +
+              path +
+              "') " +
+              backgroundPosition +
+              " no-repeat",
             backgroundSize: size + " auto",
             width: props.width,
             height: props.height,
@@ -97,6 +130,10 @@ const Imagen = props => {
         </div>
       );
     }
+  }
+
+  if (props.gradient === "header-white") {
+    content = <div className={classes.header} />;
   }
   return content;
 };
