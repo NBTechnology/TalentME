@@ -1,13 +1,12 @@
 .cardOffer {
-    width: 276px;
-    height: 371px;
+    /* width: 276px; */
+    height: 100%;
     background: #FFFFFF;
     box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
     border-radius: 8px;
     display: flex;
     flex-direction: column;
     padding: 24px 36px;
-    margin: 23px
 }
 
 .contentOffer {
@@ -15,8 +14,7 @@
 }
 
 .cardFacility {
-    width: 295px;
-    height: 325px;
+    height: 90%;
     background: #FFFFFF;
     border: 1px solid #000;
     border-radius: 18px;
@@ -26,8 +24,7 @@
 }
 
 .cardRequisite {
-    width: 295px;
-    height: 325px;
+    height: 90%;
     background: #FFFFFF;
     display: flex;
     flex-direction: column;

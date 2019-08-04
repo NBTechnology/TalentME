@@ -6,7 +6,7 @@ import Text from "components/Atoms/Text/Text";
 import Footer from "components/Organisms/Footer/Footer";
 import Input from "components/Atoms/Input/Input";
 import Select from "components/Atoms/Select/Select";
-import { Button } from "@material-ui/core";
+import { Button, Grid } from "@material-ui/core";
 import CloudUploadIcon from "@material-ui/icons/CloudUpload";
 
 class Inscribirse extends Component {
@@ -74,180 +74,198 @@ class Inscribirse extends Component {
 
   render() {
     return (
-      <div>
+      <Grid container component="main">
         <NavBar />
         <Header image="Inscribirse_Header.jpg" gradient="header-white" />
-        <Requisites data={this.state.requisites} />
-        <div style={{ textAlign: "center", marginTop: "42px" }}>
+        <Grid item xs={12} style={{ marginTop: "48px" }}>
+          <Requisites data={this.state.requisites} />
+        </Grid>
+        <Grid item xs={12} style={{ marginTop: "48px", textAlign: "center" }}>
           <Text variant="h2">
             Inscribete a tu nueva experiencia profesional
           </Text>
-        </div>
-        <div style={{ background: "#F2F2F2", paddingBottom: "48px" }}>
-          <div style={{ width: "60%", marginLeft: "20%", paddingTop: "55px" }}>
-            <Text variant="customize" fontSize="22px">
-              Formulario de inscripción
-              <span style={{ color: "red" }}>*</span>
-            </Text>
-          </div>
-          <div
+        </Grid>
+        <Grid item xs={12} style={{ marginTop: "48px" }}>
+          <Grid
+            container
+            justify="center"
             style={{
-              width: "60%",
-              marginLeft: "20%",
-              marginTop: "24px",
-              background: "#FFFFFF",
-              borderRadius: "5px",
-              padding: "16px 24px"
+              background: "#F2F2F2",
+              paddingBottom: "48px"
             }}
           >
-            <Text variant="customize" fontSize="18px" color="#A7A7A7">
-              Datos personales como aparecen en tu pasaporte
-            </Text>
-            <Input
-              fullWidth
-              id="idName"
-              label="Nombre"
-              margin="normal"
-              maxLength="100"
-              name="name"
-              onChange={this.inputHandler}
-              required
-              type="text"
-              value={this.state.name}
-              variant="outlined"
-            />
-            <Input
-              fullWidth
-              id="idApellidos"
-              label="Apellidos"
-              margin="normal"
-              maxLength="100"
-              name="surname"
-              onChange={this.inputHandler}
-              required
-              type="text"
-              value={this.state.surname}
-              variant="outlined"
-            />
-            <Input
-              fullWidth
-              id="idPassport"
-              label="Nº Pasaporte"
-              margin="normal"
-              maxLength="100"
-              name="passport"
-              onChange={this.inputHandler}
-              required
-              type="text"
-              value={this.state.passport}
-              variant="outlined"
-            />
-            <Text
-              variant="customize"
-              fontSize="18px"
-              color="#A7A7A7"
-              margin="24px 0 0 0"
+            <Grid
+              item
+              xs={10}
+              md={8}
+              style={{ textAlign: "center", paddingTop: "55px" }}
             >
-              Datos de contacto para hablar contigo
-            </Text>
-            <Input
-              fullWidth
-              id="idEmail"
-              label="Email"
-              margin="normal"
-              maxLength="100"
-              name="email"
-              onChange={this.inputHandler}
-              required
-              type="email"
-              value={this.state.email}
-              variant="outlined"
-            />
-            <Input
-              fullWidth
-              id="idPhone"
-              label="Teléfono"
-              margin="normal"
-              maxLength="100"
-              name="phone"
-              onChange={this.inputHandler}
-              required
-              type="number"
-              value={this.state.phone}
-              variant="outlined"
-            />
-            <Text
-              variant="customize"
-              fontSize="18px"
-              color="#A7A7A7"
-              margin="24px 0 0 0"
-            >
-              Sobre ti
-            </Text>
-            <Select
-              fullWidth
-              variant="outlined"
-              idInput="idEnglish"
-              labelInput="Nivel de Inglés"
-              value={this.state.levelEnglish}
-              handleChange={this.selectHandler}
-              name="levelEnglish"
-              items={this.state.itemsEnglish}
-            />
-            <Select
-              fullWidth
-              variant="outlined"
-              idInput="idEnglish"
-              labelInput="Departamento"
-              value={this.state.levelEnglish}
-              handleChange={this.selectHandler}
-              name="levelEnglish"
-              items={this.state.itemsEnglish}
-            />
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                alignItems: "center",
-                marginTop: "16px"
-              }}
-            >
-              <Text variant="p3" margin="0 16px 0 0">
-                Sube tu CV
+              <Text variant="customize" fontSize="22px">
+                Formulario de inscripción
+                <span style={{ color: "red" }}>*</span>
               </Text>
-              <input
-                accept="image/*"
-                id="raised-button-file"
-                multiple
-                type="file"
-                style={{ display: "none" }}
-              />
-              <label htmlFor="raised-button-file">
-                <Button
-                  raised
-                  component="span"
-                  aria-label="outlined"
-                  variant="outlined"
-                >
-                  <CloudUploadIcon />
-                </Button>
-              </label>
-            </div>
-            <Text variant="p3" margin="16px 0 8px 0">
-              Mensaje
-            </Text>
-            <textarea
+            </Grid>
+            <Grid
+              item
+              xs={10}
+              md={8}
               style={{
-                border: "1px solid #979797",
-                borderRadius: "4px",
-                width: "60%",
-                minHeight: "150px"
+                marginTop: "24px",
+                background: "#FFFFFF",
+                borderRadius: "5px",
+                padding: "16px 24px"
               }}
-            />
-          </div>
-        </div>
+            >
+              <Text variant="customize" fontSize="18px" color="#A7A7A7">
+                Datos personales como aparecen en tu pasaporte
+              </Text>
+              <Input
+                fullWidth
+                id="idName"
+                label="Nombre"
+                margin="normal"
+                maxLength="100"
+                name="name"
+                onChange={this.inputHandler}
+                required
+                type="text"
+                value={this.state.name}
+                variant="outlined"
+              />
+              <Input
+                fullWidth
+                id="idApellidos"
+                label="Apellidos"
+                margin="normal"
+                maxLength="100"
+                name="surname"
+                onChange={this.inputHandler}
+                required
+                type="text"
+                value={this.state.surname}
+                variant="outlined"
+              />
+              <Input
+                fullWidth
+                id="idPassport"
+                label="Nº Pasaporte"
+                margin="normal"
+                maxLength="100"
+                name="passport"
+                onChange={this.inputHandler}
+                required
+                type="text"
+                value={this.state.passport}
+                variant="outlined"
+              />
+              <Text
+                variant="customize"
+                fontSize="18px"
+                color="#A7A7A7"
+                margin="24px 0 0 0"
+              >
+                Datos de contacto para hablar contigo
+              </Text>
+              <Input
+                fullWidth
+                id="idEmail"
+                label="Email"
+                margin="normal"
+                maxLength="100"
+                name="email"
+                onChange={this.inputHandler}
+                required
+                type="email"
+                value={this.state.email}
+                variant="outlined"
+              />
+              <Input
+                fullWidth
+                id="idPhone"
+                label="Teléfono"
+                margin="normal"
+                maxLength="100"
+                name="phone"
+                onChange={this.inputHandler}
+                required
+                type="number"
+                value={this.state.phone}
+                variant="outlined"
+              />
+              <Text
+                variant="customize"
+                fontSize="18px"
+                color="#A7A7A7"
+                margin="24px 0 0 0"
+              >
+                Sobre ti
+              </Text>
+              <Select
+                fullWidth
+                variant="outlined"
+                idInput="idEnglish"
+                labelInput="Nivel de Inglés"
+                value={this.state.levelEnglish}
+                handleChange={this.selectHandler}
+                name="levelEnglish"
+                items={this.state.itemsEnglish}
+              />
+              <Select
+                fullWidth
+                variant="outlined"
+                idInput="idEnglish"
+                labelInput="Departamento"
+                value={this.state.levelEnglish}
+                handleChange={this.selectHandler}
+                name="levelEnglish"
+                items={this.state.itemsEnglish}
+              />
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  alignItems: "center",
+                  marginTop: "16px"
+                }}
+              >
+                <Text variant="p3" margin="0 16px 0 0">
+                  Sube tu CV
+                </Text>
+                <input
+                  accept="image/*"
+                  id="raised-button-file"
+                  multiple
+                  type="file"
+                  style={{ display: "none" }}
+                />
+                <label htmlFor="raised-button-file">
+                  <Button
+                    raised
+                    component="span"
+                    aria-label="outlined"
+                    variant="outlined"
+                  >
+                    <CloudUploadIcon />
+                  </Button>
+                </label>
+              </div>
+              <Text variant="p3" margin="16px 0 8px 0">
+                Mensaje
+              </Text>
+              <textarea
+                style={{
+                  border: "1px solid #979797",
+                  borderRadius: "4px",
+                  width: "60%",
+                  minHeight: "150px"
+                }}
+              />
+            </Grid>
+          </Grid>
+        </Grid>
+
         <Footer />
-      </div>
+      </Grid>
     );
   }
 }

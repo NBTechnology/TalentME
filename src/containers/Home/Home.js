@@ -11,6 +11,7 @@ import Footer from "components/Organisms/Footer/Footer";
 import Text from "components/Atoms/Text/Text";
 import EasySteps from "components/Organisms/EasySteps/EasySteps";
 import Experiences from "components/Organisms/Experiences/Experiences";
+import { Grid } from "@material-ui/core";
 
 class Home extends Component {
   constructor(props) {
@@ -67,59 +68,50 @@ class Home extends Component {
   }
   render() {
     return (
-      <div>
-        <NavBar />
+      <Grid container component="main">
+        {/* <NavBar /> */}
         <Header
           image="Home_Header.jpg"
-          title="Vive la experiencia de tu vida"
+          // title="Vive la experiencia de tu vida"
           btnText="INSCRIBIRSE"
           gradient="header-white"
           link="/inscribirse"
         />
-        <Places
-          places={this.state.places}
-          widthButton="260px"
-          heightButton="108px"
-          letterSpacing="4px"
-          fontSize="20px"
-        />
+        <Grid item xs={12} style={{ marginTop: "48px" }}>
+          <Places
+            places={this.state.places}
+            widthButton="260px"
+            heightButton="108px"
+            letterSpacing="4px"
+            fontSize="20px"
+          />
+        </Grid>
         <Facilities variant="home" />
 
         {/* Experiences :D */}
-        <Experiences />
+        <Grid item xs={12} style={{ marginTop: "48px" }}>
+          <Experiences />
+        </Grid>
         {/* Inicio feature charly */}
-        <EasySteps
-          type={""}
-          data={[
-            { title: "Inscripcion", image: "icons/Home_inscripcion.svg" },
-            { title: "Recibe ofertas", image: "icons/Home_jobs.svg" },
-            { title: "Entrevista", image: "icons/Home_entrevista.svg" },
-            { title: "¡Vuela!", image: "icons/Home_vuela.svg" }
-          ]}
-        />
+        <Grid item xs={12} style={{ marginTop: "48px" }}>
+          <EasySteps
+            type={""}
+            data={[
+              { title: "Inscripcion", image: "icons/Home_inscripcion.svg" },
+              { title: "Recibe ofertas", image: "icons/Home_jobs.svg" },
+              { title: "Entrevista", image: "icons/Home_entrevista.svg" },
+              { title: "¡Vuela!", image: "icons/Home_vuela.svg" }
+            ]}
+          />
+        </Grid>
 
         {/* SECTION OFFERS */}
-        <Offers title="Ofertas" offers={this.state.offers} />
+        <Grid item xs={12} style={{ marginTop: "48px" }}>
+          <Offers title="Ofertas" offers={this.state.offers} />
+        </Grid>
         <div
           style={{
-            marginTop: "60px",
-            display: "flex",
-            justifyContent: "center"
-          }}
-        >
-          <Button
-            variant="primary"
-            width="270px"
-            height="51px"
-            fontSize="16px"
-            isBold
-            letterSpacing="3.2px"
-          >
-            TODAS LAS OFERTAS
-          </Button>
-        </div>
-        <div
-          style={{
+            width: "100%",
             display: "flex",
             justifyContent: "center",
             flexDirection: "row",
@@ -170,7 +162,7 @@ class Home extends Component {
         </div>
 
         <Footer />
-      </div>
+      </Grid>
     );
   }
 }

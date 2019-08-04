@@ -6,16 +6,7 @@ import Imagen from "components/Atoms/Imagen/Imagen";
 
 const Experiences = props => {
   const content = (
-    <Imagen
-      isBackground
-      url="Home_LosQueYaHanIdo.jpg"
-      width="100%"
-      height="580px"
-      position="relative"
-      top="48px"
-      gradient="white"
-      style={{ backgroundColor: "red", height: "601px" }}
-    >
+    <Imagen isBackground url="Home_LosQueYaHanIdo.jpg" variant="white">
       <div
         style={{ textAlign: "center", marginBottom: "40px", paddingTop: "1px" }}
       >

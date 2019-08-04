@@ -85,7 +85,6 @@ const EasyStepsWork = props => {
           INSCRIBIRSE
         </Button>
       </div>
-      <Footer />
     </div>
   );
 };

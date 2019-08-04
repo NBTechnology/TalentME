@@ -1,37 +1,42 @@
 import React from "react";
 import Button from "components/Atoms/Button/Button";
+import { Grid } from "@material-ui/core";
 
 const Places = props => {
   const places = props.places.map(place => {
     return (
-      <div key={place.id} style={{ marginRight: "16px" }}>
-        <Button
-          variant="image"
-          gradient
-          width={props.widthButton}
-          height={props.heightButton}
-          bg={place.image}
-          isBold
-          letterSpacing={props.letterSpacingButton}
-          fontSize={props.fontSizeButton}
-          link={place.link}
-        >
-          {place.label}
-        </Button>
-      </div>
+      <Grid item xs={6} md={2}>
+        <div key={place.id}>
+          <Button
+            variant="image"
+            gradient
+            // width={props.widthButton}
+            height={props.heightButton}
+            bg={place.image}
+            isBold
+            letterSpacing={props.letterSpacingButton}
+            fontSize={props.fontSizeButton}
+            link={place.link}
+          >
+            {place.label}
+          </Button>
+        </div>
+      </Grid>
     );
   });
   return (
-    <div
+    <Grid container justify="center" spacing={2}>
+      {/* <div
       style={{
         display: "flex",
         flexDirection: "row",
         justifyContent: "center",
         marginTop: "48px"
       }}
-    >
+    > */}
       {places}
-    </div>
+      {/* </div> */}
+    </Grid>
   );
 };
 

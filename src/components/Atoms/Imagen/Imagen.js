@@ -1,6 +1,52 @@
 import React from "react";
+import { makeStyles } from "@material-ui/core";
+
+const useStyles = makeStyles(theme => ({
+  header: props => ({
+    position: "relative",
+    background:
+      "linear-gradient(-180deg, rgba(255, 255, 255, 0.6) 10%, rgba(255, 255, 255, 0) 39%), url('" +
+      props.path +
+      "') center center no-repeat",
+    [theme.breakpoints.down("md")]: {
+      backgroundSize: "300% auto",
+      minHeight: "200px",
+      height: "80vh"
+    },
+    [theme.breakpoints.up("md")]: {
+      backgroundSize: "100% auto",
+      minHeight: "500px",
+      height: "80vh"
+    }
+  }),
+  backgroundWhite: props => ({
+    background:
+      "linear-gradient(-180deg, rgba(255,255,255,.5) 0%, rgba(255,255,255,.5) 100%), url('" +
+      props.path +
+      "') center center no-repeat",
+    [theme.breakpoints.down("md")]: {
+      backgroundSize: "300% auto",
+      minHeight: "500px",
+      height: "auto"
+    },
+    [theme.breakpoints.up("md")]: {
+      backgroundSize: "100% auto",
+      minHeight: "500px",
+      height: "auto"
+    }
+  })
+  // buttonImage: props => ({
+  //   background:
+  //   "linear-gradient(-180deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.5) 100%), url('" + props.path +
+  // })
+}));
 
 const Imagen = props => {
+  let newProps = { ...props };
+  if (!props.isUrl) {
+    newProps.path = require("assets/img/" + props.url);
+  }
+  const classes = useStyles(newProps);
   let content;
 
   // url
@@ -70,7 +116,13 @@ const Imagen = props => {
       content = (
         <div
           style={{
-            background: gradient + "url('" + path + "') " + backgroundPosition+ " no-repeat",
+            background:
+              gradient +
+              "url('" +
+              path +
+              "') " +
+              backgroundPosition +
+              " no-repeat",
             backgroundSize: size + " auto",
             width: props.width,
             height: props.height,
@@ -97,6 +149,13 @@ const Imagen = props => {
         </div>
       );
     }
+  }
+
+  if (props.variant === "header-white") {
+    content = <div className={classes.header}> {props.children}</div>;
+  }
+  if (props.variant === "white") {
+    content = <div className={classes.backgroundWhite}> {props.children}</div>;
   }
   return content;
 };
