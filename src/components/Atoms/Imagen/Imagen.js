@@ -3,17 +3,20 @@ import { makeStyles } from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({
   header: props => ({
+    position: "relative",
     background:
       "linear-gradient(-180deg, rgba(255, 255, 255, 0.6) 10%, rgba(255, 255, 255, 0) 39%), url('" +
       props.path +
       "') center center no-repeat",
     [theme.breakpoints.down("md")]: {
       backgroundSize: "300% auto",
-      minHeight: "80vh"
+      minHeight: "200px",
+      height: "80vh"
     },
     [theme.breakpoints.up("md")]: {
       backgroundSize: "100% auto",
-      minHeight: "80vh"
+      minHeight: "500px",
+      height: "80vh"
     }
   })
   // buttonImage: props => ({
@@ -132,8 +135,8 @@ const Imagen = props => {
     }
   }
 
-  if (props.gradient === "header-white") {
-    content = <div className={classes.header} />;
+  if (props.variant === "header-white") {
+    content = <div className={classes.header}> {props.children}</div>;
   }
   return content;
 };
