@@ -79,7 +79,7 @@ const Facilities = props => {
       <Grid container spacing={4} justify="center">
         {contentFacilities}
       </Grid>
-      <Grid item md={3} justify="center" style={{ marginTop: "24px" }}>
+      <Grid item xs={6} md={3} justify="center" style={{ marginTop: "24px" }}>
         {finalButton}
       </Grid>
     </Grid>

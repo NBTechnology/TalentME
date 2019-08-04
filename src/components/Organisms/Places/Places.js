@@ -5,7 +5,7 @@ import { Grid } from "@material-ui/core";
 const Places = props => {
   const places = props.places.map(place => {
     return (
-      <Grid item md={2}>
+      <Grid item xs={6} md={2}>
         <div key={place.id}>
           <Button
             variant="image"
