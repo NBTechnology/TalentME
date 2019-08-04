@@ -24,7 +24,7 @@
 }
 
 .cardRequisite {
-    min-height: 325px;
+    min-height: 225px;
     background: #FFFFFF;
     display: flex;
     flex-direction: column;
