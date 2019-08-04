@@ -11,6 +11,7 @@ import Footer from "components/Organisms/Footer/Footer";
 import Text from "components/Atoms/Text/Text";
 import EasySteps from "components/Organisms/EasySteps/EasySteps";
 import Experiences from "components/Organisms/Experiences/Experiences";
+import { Grid } from "@material-ui/core";
 
 class Home extends Component {
   constructor(props) {
@@ -67,7 +68,7 @@ class Home extends Component {
   }
   render() {
     return (
-      <div>
+      <Grid container component="main">
         <NavBar />
         <Header
           image="Home_Header.jpg"
@@ -170,7 +171,7 @@ class Home extends Component {
         </div>
 
         <Footer />
-      </div>
+      </Grid>
     );
   }
 }
