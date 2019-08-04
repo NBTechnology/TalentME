@@ -9,6 +9,7 @@ import SectionImage from "components/Molecules/SectionImage/SectionImage";
 import Offers from "components/Organisms/Offers/Offers";
 import Places from "components/Organisms/Places/Places";
 import Footer from "components/Organisms/Footer/Footer";
+import { Grid } from "@material-ui/core";
 
 class DestinoDoha extends Component {
   constructor(props) {
@@ -65,7 +66,7 @@ class DestinoDoha extends Component {
 
   render() {
     return (
-      <div>
+      <Grid container>
         <NavBar />
         {/* SECCION HEADER */}
         <Header
@@ -76,88 +77,78 @@ class DestinoDoha extends Component {
           gradient="header-white"
         />
         {/* SECCION TRABAJA EN DOHA */}
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "center",
-            marginTop: "48px"
-          }}
-        >
-          <Imagen
-            width="580px"
-            height="445px"
-            borderRadius="8px"
-            url="Destino_Doha_Trabaja.jpg"
-            sizeImage="140%"
-            isBackground
-            float="left"
-          />
-          <div style={{ marginLeft: "57px", width: "521px" }}>
-            <Text variant="h2" margin="0px 0px 47px" isBold>
-              Trabaja en Doha
-            </Text>
-            <Text variant="p3" lineHeight="26px" margin="0 0 75px">
-              Oriente Medio representa los más altos estándares de servicio en
-              hospitality en todo el mundo. Su inversión en turismo acelera su
-              rápido desarrollo en todos los aspectos. Sus países, cada vez más
-              liberales, se abren al mundo permitiendo la llegada de millones de
-              visitantes. La arena blanca interminable y los mares color
-              turquesa con sus vistas únicas y atracciones de fama mundial, son
-              las razones por las que se construyen cada vez más cadenas
-              hoteleras de fama internacional.{" "}
-            </Text>
-            <Button
-              variant="icon"
-              width="356px"
-              height="56px"
-              icon={
-                <ArrowForwardRounded
-                  style={{
-                    color: "#FFC80A",
-                    position: "relative",
-                    right: "-30px"
-                  }}
-                />
-              }
-              fontSize="20px"
-              btnBorder="1px solid #FFC80A"
-            >
-              COMO FUNCIONA
-            </Button>
-          </div>
-        </div>
-        {/* SECTION TESTIMONIO */}
-        <SectionImage />
-        {/* SECTION OFFERS */}
-        <Offers title="Ofertas en Doha" offers={this.state.offers} />
-        <div
-          style={{
-            marginTop: "60px",
-            display: "flex",
-            justifyContent: "center"
-          }}
-        >
-          <Button
-            variant="primary"
-            width="270px"
-            height="51px"
-            fontSize="16px"
-            isBold
-            letterSpacing="3.2px"
+        <Grid item xs={12} style={{ marginTop: "48px" }}>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "center"
+            }}
           >
-            TODAS LAS OFERTAS
-          </Button>
-        </div>
-        <Places
-          places={this.state.places}
-          widthButton="260px"
-          heightButton="108px"
-          letterSpacing="4px"
-          fontSize="20px"
-        />
+            <Imagen
+              width="580px"
+              height="445px"
+              borderRadius="8px"
+              url="Destino_Doha_Trabaja.jpg"
+              sizeImage="140%"
+              isBackground
+              float="left"
+            />
+            <div style={{ marginLeft: "57px", width: "521px" }}>
+              <Text variant="h2" margin="0px 0px 47px" isBold>
+                Trabaja en Doha
+              </Text>
+              <Text variant="p3" lineHeight="26px" margin="0 0 75px">
+                Oriente Medio representa los más altos estándares de servicio en
+                hospitality en todo el mundo. Su inversión en turismo acelera su
+                rápido desarrollo en todos los aspectos. Sus países, cada vez
+                más liberales, se abren al mundo permitiendo la llegada de
+                millones de visitantes. La arena blanca interminable y los mares
+                color turquesa con sus vistas únicas y atracciones de fama
+                mundial, son las razones por las que se construyen cada vez más
+                cadenas hoteleras de fama internacional.{" "}
+              </Text>
+              <Button
+                variant="icon"
+                width="356px"
+                height="56px"
+                icon={
+                  <ArrowForwardRounded
+                    style={{
+                      color: "#FFC80A",
+                      position: "relative",
+                      right: "-30px"
+                    }}
+                  />
+                }
+                fontSize="20px"
+                btnBorder="1px solid #FFC80A"
+              >
+                COMO FUNCIONA
+              </Button>
+            </div>
+          </div>
+        </Grid>
+        {/* SECTION TESTIMONIO */}
+        <Grid item xs={12} style={{ marginTop: "48px" }}>
+          <SectionImage />
+        </Grid>
+        {/* SECTION OFFERS */}
+        <Grid item xs={12} style={{ marginTop: "48px" }}>
+          <Offers title="Ofertas en Doha" offers={this.state.offers} />
+        </Grid>
+        <Grid item xs={12} style={{ marginTop: "48px" }}>
+          <Places
+            places={this.state.places}
+            widthButton="260px"
+            heightButton="108px"
+            letterSpacing="4px"
+            fontSize="20px"
+          />
+        </Grid>
         <div
           style={{
+            width: "100%",
             display: "flex",
             justifyContent: "center",
             flexDirection: "row",
@@ -207,7 +198,7 @@ class DestinoDoha extends Component {
           />
         </div>
         <Footer />
-      </div>
+      </Grid>
     );
   }
 }
