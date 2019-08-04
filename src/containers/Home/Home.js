@@ -69,7 +69,7 @@ class Home extends Component {
   render() {
     return (
       <Grid container component="main">
-        <NavBar />
+        {/* <NavBar /> */}
         <Header
           image="Home_Header.jpg"
           title="Vive la experiencia de tu vida"
@@ -101,25 +101,7 @@ class Home extends Component {
 
         {/* SECTION OFFERS */}
         <Offers title="Ofertas" offers={this.state.offers} />
-        <div
-          style={{
-            marginTop: "60px",
-            display: "flex",
-            justifyContent: "center"
-          }}
-        >
-          <Button
-            variant="primary"
-            width="270px"
-            height="51px"
-            fontSize="16px"
-            isBold
-            letterSpacing="3.2px"
-          >
-            TODAS LAS OFERTAS
-          </Button>
-        </div>
-        <div
+        {/* <div
           style={{
             display: "flex",
             justifyContent: "center",
@@ -168,7 +150,7 @@ class Home extends Component {
             url="Porque_ME.jpg"
             isBackground
           />
-        </div>
+        </div> */}
 
         <Footer />
       </Grid>

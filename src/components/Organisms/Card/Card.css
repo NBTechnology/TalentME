@@ -1,13 +1,12 @@
 .cardOffer {
-    width: 276px;
-    height: 371px;
+    /* width: 276px; */
+    min-height: 371px;
     background: #FFFFFF;
     box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
     border-radius: 8px;
     display: flex;
     flex-direction: column;
     padding: 24px 36px;
-    margin: 23px
 }
 
 .contentOffer {
