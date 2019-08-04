@@ -11,6 +11,8 @@ import TestCharly from "containers/TestCharly/TestCharly";
 import Inscribirse from "containers/Inscribirse/Inscribirse";
 import ContactUs from "containers/ContactUs/ContactUs";
 import ComoFunciona from "containers/ComoFunciona";
+import AboutUs from "containers/AboutUs/AboutUs";
+
 
 const App = () => {
   return (
@@ -22,6 +24,8 @@ const App = () => {
       <Route path="/inscribirse" exact component={Inscribirse} />
       <Route path="/contact-us" exact component={ContactUs} />
       <Route path="/como-funciona" exact component={ComoFunciona} />
+      <Route path="/about-us" exact component={AboutUs} />
+
       {/* <Route path="/testCharly" exact component={TestCharly} /> */}
     </Switch>
   );
