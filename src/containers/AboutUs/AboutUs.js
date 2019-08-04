@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import NavBar from "components/Organisms/NavBar/NavBar";
 import Header from "components/Molecules/Header/Header";
 import Text from "components/Atoms/Text/Text";
+import Facilities from "components/Organisms/Facilities/Facilities";
 import Footer from "components/Organisms/Footer/Footer";
 
 class AboutUs extends Component {
@@ -22,7 +23,7 @@ class AboutUs extends Component {
                         que buscan un nuevo reto en su carrera profesional.
                     </Text>
             </div>
-            <div style={{marginTop:"45px"}}></div>
+            <Facilities variant="home" />
             <Footer></Footer>
             </div>
         )
