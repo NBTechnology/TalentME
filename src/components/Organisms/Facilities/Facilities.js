@@ -30,7 +30,7 @@ const Facilities = props => {
   ];
   const contentFacilities = facilities.map(facility => {
     return (
-      <Grid item xs={8} md={3}>
+      <Grid item xs={8} md={4}>
         <Card
           variant="cardFacility"
           key={facility.id}
@@ -76,7 +76,7 @@ const Facilities = props => {
           {subTitle}
         </Text>
       )}
-      <Grid container spacing={4} justify="center">
+      <Grid container xs={10} spacing={3} justify="center">
         {contentFacilities}
       </Grid>
       <Grid item xs={6} md={3} justify="center" style={{ marginTop: "24px" }}>
