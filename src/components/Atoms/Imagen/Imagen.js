@@ -7,7 +7,9 @@ const useStyles = makeStyles(theme => ({
     background:
       "linear-gradient(-180deg, rgba(255, 255, 255, 0.6) 10%, rgba(255, 255, 255, 0) 39%), url('" +
       props.path +
-      "') center center no-repeat",
+      "') " +
+      props.position +
+      " no-repeat",
     [theme.breakpoints.down("md")]: {
       backgroundSize: "300% auto",
       minHeight: "200px",
@@ -23,7 +25,9 @@ const useStyles = makeStyles(theme => ({
     background:
       "linear-gradient(-180deg, rgba(255,255,255,.5) 0%, rgba(255,255,255,.5) 100%), url('" +
       props.path +
-      "') center center no-repeat",
+      "') " +
+      props.position +
+      " no-repeat",
     [theme.breakpoints.down("md")]: {
       backgroundSize: "300% auto",
       minHeight: "500px",
@@ -44,8 +48,10 @@ const useStyles = makeStyles(theme => ({
 const Imagen = props => {
   let newProps = { ...props };
   if (!props.isUrl) {
+    newProps.position = props.position || "center center";
     newProps.path = require("assets/img/" + props.url);
   }
+  console.log(props.position);
   const classes = useStyles(newProps);
   let content;
 
