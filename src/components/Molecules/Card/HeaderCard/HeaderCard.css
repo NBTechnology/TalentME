@@ -33,3 +33,17 @@
     justify-content: center;
     flex-direction: column
 }
+
+.headerCardWithoutBorder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column
+}
+
+.cardWorkerHorizontal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column
+}

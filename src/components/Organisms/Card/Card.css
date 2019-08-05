@@ -34,3 +34,23 @@
 .cardCarrousel {
     width: 300px;
 }
+
+.cardWithoutBorder {
+    display: flex;
+    flex-direction: column;
+    padding: 24px 36px;
+}
+
+.cardWorkerHorizontal {
+    display: flex;
+    flex-direction: row;
+    padding: 24px 36px;
+}
+
+@media (max-width: 960px) {
+    .cardWorkerHorizontal {
+        display: flex;
+        flex-direction: column;
+        padding: 24px 36px;
+    }
+}

@@ -75,6 +75,31 @@ const Card = props => {
         </div>
       );
       break;
+    case "cardWithoutBorder":
+      content = (
+        <div className="cardWithoutBorder">
+          <HeaderCard
+            title={props.title}
+            url={props.url}
+            variant={"cardWithoutBorder"}
+          />
+          <BodyCard variant="cardWithoutBorder" text={props.text} />
+        </div>
+      );
+      break;
+    case "cardWorkerHorizontal":
+      content = (
+        <div className="cardWorkerHorizontal">
+          <HeaderCard url={props.url} variant={"cardWorkerHorizontal"} />
+          <BodyCard
+            variant="cardWorkerHorizontal"
+            title={props.title}
+            position={props.position}
+            text={props.text}
+          />
+        </div>
+      );
+      break;
     default:
       content = (
         <div className="cardOffer">

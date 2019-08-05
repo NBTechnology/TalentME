@@ -56,6 +56,29 @@ const HeaderCard = props => {
         </div>
       );
       break;
+    case "cardWithoutBorder":
+      content = (
+        <div className="headerCardWithoutBorder">
+          <Imagen width="80px" height="80px" url={props.url} />
+          <Text variant="p1" margin="18px 0 0 0">
+            {props.title}
+          </Text>
+        </div>
+      );
+      break;
+    case "cardWorkerHorizontal":
+      content = (
+        <div className="cardWorkerHorizontal">
+          <Imagen
+            width="100px"
+            height="100px"
+            url={props.url}
+            isCircle
+            isBackground
+          />
+        </div>
+      );
+      break;
     case "cardCarrousel":
       content = (
         <div className="headerCardCarrousel">

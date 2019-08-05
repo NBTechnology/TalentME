@@ -34,7 +34,7 @@ class ContactUs extends Component {
 
   render() {
     return (
-      <Grid container component="main" justify="center" spacing={3}>
+      <Grid container component="main" justify="center">
         <NavBar />
         <Header
           image="Contacto_Header.jpg"

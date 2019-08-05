@@ -48,6 +48,44 @@ const BodyCard = props => {
         </div>
       );
       break;
+    case "cardWithoutBorder":
+      content = (
+        <div
+          className="bodyCardWithoutBorder"
+          style={{ flex: "1 1 auto", textAlign: "center", marginTop: "16px" }}
+        >
+          <Text variant="p3" padding="0px 0px 0px 0px">
+            {props.text}
+          </Text>
+        </div>
+      );
+      break;
+
+    case "cardWorkerHorizontal":
+      content = (
+        <div
+          className="bodyCardWorkerHorizontal"
+          style={{ flex: "1 1 auto", marginTop: "16px" }}
+        >
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              flexWrap: "wrap",
+              alignItems: "center"
+            }}
+          >
+            <Text variant="p1">{props.title}</Text>
+            <Text variant="customize" padding="0 16px" color="#2F2F2F">
+              {props.position}
+            </Text>
+          </div>
+          <Text variant="p3" padding="8px 0px 0px 0px">
+            {props.text}
+          </Text>
+        </div>
+      );
+      break;
     default:
       content = (
         <div className="bodyCardOffer" style={{ flex: "1 1 auto" }}>
