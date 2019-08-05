@@ -10,7 +10,7 @@ class ComoFunciona extends Component {
   render() {
     return (
       <Grid container component="main">
-        {/* <NavBar /> */}
+        <NavBar />
         <Header
           image="ComoFunciona_Header.jpg"
           title="Un mundo por explorar"

@@ -10,7 +10,8 @@ const useStyles = makeStyles(theme => ({
     color: "#000",
     "&:hover, &:focus": {
       transition: ".2s all ease-in-out",
-      color: "#fff"
+      color: "#ffc80a",
+      textShadow: "0px 0px 20px rgba(255,200,10,0.74)"
     }
   })
 }));
