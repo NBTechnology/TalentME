@@ -31,24 +31,25 @@ const RightNavBar = props => {
           COMO FUNCIONA
         </Text>
       </NavLink>
-      <Text
-        variant="customize"
-        fontSize="12px"
-        letterSpacing="2.88px"
-        margin="0px 23px 0px 0px"
-      >
-        NOSOTROS
-      </Text>
+      <NavLink to="/about-us" style={{ textDecoration: "none" }}>
+        <Text
+          variant="customize"
+          fontSize="12px"
+          letterSpacing="2.88px"
+          margin="0px 23px 0px 0px"
+        >
+          NOSOTROS
+        </Text>
+      </NavLink>
       <NavLink to="/contact-us" style={{ textDecoration: "none" }}>
-
-      <Text
-        variant="customize"
-        fontSize="12px"
-        letterSpacing="2.88px"
-        margin="0px 23px 0px 0px"
-      >
-        CONTACTO
-      </Text>
+        <Text
+          variant="customize"
+          fontSize="12px"
+          letterSpacing="2.88px"
+          margin="0px 23px 0px 0px"
+        >
+          CONTACTO
+        </Text>
       </NavLink>
       <Text
         variant="customize"
