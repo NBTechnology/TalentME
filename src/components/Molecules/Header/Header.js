@@ -23,10 +23,16 @@ const useStyles = makeStyles(theme => ({
   // })
 }));
 const Header = props => {
+  console.log(props);
   const classes = useStyles(props);
   return (
     <Grid item xs={12}>
-      <Imagen isBackground url={props.image} variant={props.gradient}>
+      <Imagen
+        isBackground
+        url={props.image}
+        variant={props.gradient}
+        position={props.position}
+      >
         <div className={classes.insideHeader}>
           <Text variant="h1" color={props.titleColor} isBold>
             {props.title}
