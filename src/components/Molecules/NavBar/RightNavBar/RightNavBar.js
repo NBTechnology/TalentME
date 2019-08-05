@@ -2,8 +2,20 @@ import React from "react";
 import Text from "components/Atoms/Text/Text";
 import Button from "components/Atoms/Button/Button";
 import { NavLink } from "react-router-dom";
+import { makeStyles } from "@material-ui/core";
 
+const useStyles = makeStyles(theme => ({
+  link: props => ({
+    textDecoration: "none",
+    color: "#000",
+    "&:hover, &:focus": {
+      transition: ".2s all ease-in-out",
+      color: "#fff"
+    }
+  })
+}));
 const RightNavBar = props => {
+  const classes = useStyles(props);
   return (
     <div
       style={{
@@ -21,7 +33,7 @@ const RightNavBar = props => {
       >
         DESTINOS
       </Text>
-      <NavLink to="/como-funciona" style={{ textDecoration: "none" }}>
+      <NavLink to="/como-funciona" className={classes.link}>
         <Text
           variant="customize"
           fontSize="12px"
@@ -31,7 +43,7 @@ const RightNavBar = props => {
           COMO FUNCIONA
         </Text>
       </NavLink>
-      <NavLink to="/about-us" style={{ textDecoration: "none" }}>
+      <NavLink to="/about-us" className={classes.link}>
         <Text
           variant="customize"
           fontSize="12px"
@@ -41,7 +53,7 @@ const RightNavBar = props => {
           NOSOTROS
         </Text>
       </NavLink>
-      <NavLink to="/contact-us" style={{ textDecoration: "none" }}>
+      <NavLink to="/contact-us" className={classes.link}>
         <Text
           variant="customize"
           fontSize="12px"

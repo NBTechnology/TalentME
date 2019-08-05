@@ -76,7 +76,7 @@ const BodyCard = props => {
             }}
           >
             <Text variant="p1">{props.title}</Text>
-            <Text variant="customize" padding="0 16px" color="#2F2F2F">
+            <Text variant="customize" padding="0 16px" weight color="#9FA3A7">
               {props.position}
             </Text>
           </div>

@@ -23,7 +23,8 @@ class AboutUs extends Component {
         {
           title: "Eleonora",
           position: "Recruiting Manager",
-          url: "ComoFunciona_Header.jpg",
+          url: "TeamMates/Eleonora.jpg",
+          backgroundPosition: "top center",
           text:
             "The like button was first announced as a FriendFeed feature on October 30, 2007 and was popularized within its community. Later on the feature was integrated to Facebook before eventually FriendFeed was acquired by Facebook August 10, 2009"
         }

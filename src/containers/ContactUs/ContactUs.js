@@ -46,24 +46,22 @@ class ContactUs extends Component {
         </Grid>
         <Grid item xs={12}>
           <Grid container spacing={3} justify="center">
-            <Grid
-              item
-              xs={12}
-              style={{
-                background: "#F2F2F2",
-                borderRadius: "4px",
-                width: "100%",
-                height: "80px",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center"
-              }}
-            >
-              <Text variant="customize" fontSize="32px">
-                Contacto profesional
-              </Text>
-            </Grid>
             <Grid item xs={12} md={4}>
+              <div
+                style={{
+                  background: "#F2F2F2",
+                  borderRadius: "4px",
+                  width: "100%",
+                  height: "80px",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center"
+                }}
+              >
+                <Text variant="customize" fontSize="32px">
+                  Contacto profesional
+                </Text>
+              </div>
               <Input
                 fullWidth
                 id="idName"

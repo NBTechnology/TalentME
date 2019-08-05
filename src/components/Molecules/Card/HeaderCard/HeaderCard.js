@@ -75,6 +75,7 @@ const HeaderCard = props => {
             url={props.url}
             isCircle
             isBackground
+            backgroundPosition={props.backgroundPosition}
           />
         </div>
       );

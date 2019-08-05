@@ -90,7 +90,11 @@ const Card = props => {
     case "cardWorkerHorizontal":
       content = (
         <div className="cardWorkerHorizontal">
-          <HeaderCard url={props.url} variant={"cardWorkerHorizontal"} />
+          <HeaderCard
+            url={props.url}
+            variant={"cardWorkerHorizontal"}
+            backgroundPosition={props.backgroundPosition}
+          />
           <BodyCard
             variant="cardWorkerHorizontal"
             title={props.title}

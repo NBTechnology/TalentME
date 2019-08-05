@@ -137,6 +137,8 @@ class Home extends Component {
               variant="icon"
               width="356px"
               height="56px"
+              fontSize="20px"
+              btnBorder="1px solid #FFC80A"
               icon={
                 <ArrowForwardRounded
                   style={{
@@ -146,8 +148,6 @@ class Home extends Component {
                   }}
                 />
               }
-              fontSize="20px"
-              btnBorder="1px solid #FFC80A"
             >
               VER MÁS INFORMACIÓN
             </Button>
