@@ -8,7 +8,9 @@ import Footer from "components/Organisms/Footer/Footer";
 import Input from "components/Atoms/Input/Input";
 import { Checkbox, Grid } from "@material-ui/core";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
-
+import LocationOnRounded from "@material-ui/icons/LocationOnRounded";
+import PhoneRounded from "@material-ui/icons/PhoneRounded";
+import EmailRounded from "@material-ui/icons/EmailRounded";
 class ContactUs extends Component {
   constructor(props) {
     super(props);
@@ -32,7 +34,7 @@ class ContactUs extends Component {
 
   render() {
     return (
-      <Grid container component="main" justify="center">
+      <Grid container component="main" justify="center" spacing={3}>
         <NavBar />
         <Header
           image="Contacto_Header.jpg"
@@ -143,6 +145,64 @@ class ContactUs extends Component {
             >
               ENVIAR
             </Button>
+          </div>
+        </Grid>
+        <Grid item xs={12} md={4}>
+          <div
+            style={{
+              background: "#F2F2F2",
+              borderRadius: "4px",
+              display: "flex",
+              flexDirection: "column",
+              padding: "20px"
+            }}
+          >
+            <Text variant="customize" fontSize="32px" textAlign="center">
+              Oficina central
+            </Text>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                padding: "8px",
+                alignItems: "center",
+                marginTop: "16px"
+              }}
+            >
+              <LocationOnRounded
+                style={{ color: "#FFC80A", fontSize: "46px" }}
+              />
+              <Text variant="customize" fontSize="18px" margin="0 16px">
+                Calle Nuñez de Balboa 120, Coworking Cink Emprende, Madrid.
+                España.
+              </Text>
+            </div>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                padding: "8px",
+                alignItems: "center"
+              }}
+            >
+              <PhoneRounded style={{ color: "#FFC80A", fontSize: "46px" }} />
+              <Text variant="customize" fontSize="18px" margin="0 16px">
+                +34 635 891 509
+              </Text>
+            </div>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                padding: "8px",
+                alignItems: "center"
+              }}
+            >
+              <EmailRounded style={{ color: "#FFC80A", fontSize: "46px" }} />
+              <Text variant="customize" fontSize="18px" margin="0 16px">
+                talent@talentme-experience.com
+              </Text>
+            </div>
           </div>
         </Grid>
         <Footer />
