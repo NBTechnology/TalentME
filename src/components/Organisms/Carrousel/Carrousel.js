@@ -14,7 +14,7 @@ const Carrousel = props => {
     page++
   ) {
     contentCarousel.push(
-      <div>
+      <div key="carrousel">
         <div className="carrousel-core">
           {props.data
             .slice(
@@ -24,7 +24,7 @@ const Carrousel = props => {
                 : (idItem = idItem + props.iterator)
             )
             .map(item => {
-              console.log("item", item);
+              // console.log("item", item);
               return (
                 <Card
                   key={item.id + "experience"}

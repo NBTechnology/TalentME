@@ -56,12 +56,13 @@ class Home extends Component {
         }
       ],
       places: [
-        { image: "Boton_DUBAI.jpg", label: "DUBAI", link: "/dubai" },
-        { image: "Boton_DOHA.jpg", label: "DOHA", link: "/doha" },
+        { image: "Boton_DUBAI.jpg", label: "DUBAI", link: "/dubai",id:"place_dubai" },
+        { image: "Boton_DOHA.jpg", label: "DOHA", link: "/doha" , id:"place_doha" },
         {
           image: "Boton_ABU_DHABI.jpg",
           label: "ABU DHABI",
-          link: "/abu-dhabi"
+          link: "/abu-dhabi",
+          id:"place_abudhabi"
         }
       ]
     };

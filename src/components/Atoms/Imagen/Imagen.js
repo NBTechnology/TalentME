@@ -51,7 +51,7 @@ const Imagen = props => {
     newProps.position = props.position || "center center";
     newProps.path = require("assets/img/" + props.url);
   }
-  console.log(props.position);
+  // console.log(props.position);
   const classes = useStyles(newProps);
   let content;
 
@@ -87,7 +87,7 @@ const Imagen = props => {
   }
   // assets
   else {
-    console.log(props);
+    // console.log(props);
     const path = require("assets/img/" + props.url);
     if (props.isBackground) {
       let radius;

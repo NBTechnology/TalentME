@@ -7,9 +7,8 @@ import Button from "components/Atoms/Button/Button";
 const Offers = props => {
   const offers = props.offers.map(offer => {
     return (
-      <Grid item xs={12} sm={6} md={3} justify="center">
+      <Grid item xs={12} sm={6} md={3} key={offer.id}>
         <Card
-          key={offer.id}
           title={offer.title}
           subTitle={offer.subTitle}
           imageButton={offer.image}
@@ -42,7 +41,7 @@ const Offers = props => {
           justifyContent: "space-around"
         }}
       > */}
-      <Grid container xs={10} spacing={4}>
+      <Grid container spacing={4}>
         {offers}
       </Grid>
       {/* </div> */}
