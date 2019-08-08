@@ -46,7 +46,7 @@ const Offers = props => {
       </Grid>
       {/* </div> */}
       {/* </div> */}
-      <Grid item xs={12} md={3} style={{ marginTop: "60px" }}>
+      <Grid item xs={12} md={props.labelButton ? 6:3} style={{ marginTop: "60px" }}>
         <Button
           variant="primary"
           height="51px"
@@ -54,7 +54,7 @@ const Offers = props => {
           isBold
           letterSpacing="3.2px"
         >
-          TODAS LAS OFERTAS
+          {props.labelButton || "TODAS LAS OFERTAS"}
         </Button>
       </Grid>
     </Grid>

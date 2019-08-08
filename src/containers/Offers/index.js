@@ -144,7 +144,7 @@ class OffersComponent extends Component {
                             </Grid>
                         </Grid>
                         <Grid item xs={12} md={10}>
-                            <Offers title="" offers={this.state.offers}/>
+                            <Offers title="" labelButton="QUIERO INSCRIBIRME A OFERTAS" offers={this.state.offers}/>
                         </Grid>
                     </Grid>
                 </Grid>
