@@ -54,7 +54,7 @@ const Button = props => {
       break;
   }
   let contentButton = (
-    <div style={style}>
+    <div style={style} onClick={props.onClick}>
       <Text
         variant={props.textVariant}
         weight={props.isBold}
