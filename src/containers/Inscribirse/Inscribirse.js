@@ -18,22 +18,22 @@ class Inscribirse extends Component {
           id: "requisite0",
           title: "+18 EDAD MINIMA",
           text:
-            "18 años es la edad mínima para trabajar en el Oriente Medio. Te acompañamos en todo.",
-          url: "icons/Home_entrevista.svg"
+            "18 años es la edad mínima para trabajar en el Oriente Medio. Y 21 años es la edad mínima para trabajar sirviendo alcohol. ",
+          url: "icons/Icon_18.svg"
         },
         {
           id: "requisite1",
           title: "NIVEL DE INGLÉS",
           text:
-            "Nivel medio es indispensable para los hoteles con los que colaboramos. Practicarás tu inglés a diario.",
-          url: "icons/Home_entrevista.svg"
+            "Si vas a trabajar en inglés, deberás hablarlo sin dificultad. Realizarás la entrevista con el hotel completamente en inglés.",
+          url: "icons/Icon_English.svg"
         },
         {
           id: "requisite2",
           title: "PROACTIVO",
           text:
-            "Saliendo de tu zona de confort, dispuesto a viajar y trabajar en el extranjero.",
-          url: "icons/Home_entrevista.svg"
+            "Tendrás que salir de tu zona de confort. Dispuesto a viajar y trabajar en el extranjero.",
+          url: "icons/Icon_Proactivo.svg"
         }
       ],
       levelEnglish: "",
@@ -147,11 +147,11 @@ class Inscribirse extends Component {
               />
               <Input
                 fullWidth
-                id="idPassport"
-                label="Nº Pasaporte"
+                id="idAge"
+                label="Año de nacimineto"
                 margin="normal"
                 maxLength="100"
-                name="passport"
+                name="age"
                 onChange={this.inputHandler}
                 required
                 type="text"
@@ -188,7 +188,7 @@ class Inscribirse extends Component {
                 name="phone"
                 onChange={this.inputHandler}
                 required
-                type="number"
+                type="text"
                 value={this.state.phone}
                 variant="outlined"
               />

@@ -97,14 +97,13 @@ class DestinoDubai extends Component {
                 Trabaja en Dubai
               </Text>
               <Text variant="p3" lineHeight="26px" margin="0 0 75px">
-                Oriente Medio representa los más altos estándares de servicio en
-                hospitality en todo el mundo. Su inversión en turismo acelera su
-                rápido desarrollo en todos los aspectos. Sus países, cada vez
-                más liberales, se abren al mundo permitiendo la llegada de
-                millones de visitantes. La arena blanca interminable y los mares
-                color turquesa con sus vistas únicas y atracciones de fama
-                mundial, son las razones por las que se construyen cada vez más
-                cadenas hoteleras de fama internacional.{" "}
+                La ciudad con más hoteles de Oriente Medio. Todas las cadenas 
+                hoteleras están presentes en Dubai, entre ellos algunos de los 
+                mejores del mundo. Es la ciudad con más oportunidades laborales 
+                en el sector. Las posibilidades de crecimiento son altísimas, y 
+                más con vistas a la EXPO que llegará a Dubai en Octubre 2020 y 
+                rozará el lleno en sus hoteles. Conseguir el visado es relativamente 
+                sencillo aquí.
               </Text>
               <Button
                 variant="icon"
@@ -156,17 +155,15 @@ class DestinoDubai extends Component {
         >
           <div style={{ marginRight: "57px", width: "621px" }}>
             <Text variant="h2" margin="0px 0px 46px">
-              ¿Por qué Middle East?
+              ¿Por qué Dubai?
             </Text>
             <Text variant="p3" lineHeight="26px" margin="0px 0px 95px">
-              Oriente Medio representa los más altos estándares de servicio en
-              hospitality en todo el mundo. Su inversión en turismo acelera su
-              rápido desarrollo en todos los aspectos. Sus países, cada vez más
-              liberales, se abren al mundo permitiendo la llegada de millones de
-              visitantes. La arena blanca interminable y los mares color
-              turquesa con sus vistas únicas y atracciones de fama mundial, son
-              las razones por las que se construyen cada vez más cadenas
-              hoteleras de fama internacional.
+            Dubai es gigante, la ciudad más grande Oriente Medio. Recorrerla 
+            de punta a punta supone casi una hora en coche. La ciudad más 
+            alocada y liberal de todas. Tiene infinidad de planes por hacer, 
+            pero principalmente, infinidad de bares, discotecas y beach clubs 
+            en los que salir a pasarlo bien. Dubai se reinventa siempre para 
+            mantener la atención turística mundial.
             </Text>
             <Button
               variant="icon"
@@ -191,7 +188,7 @@ class DestinoDubai extends Component {
             width="580px"
             height="445px"
             borderRadius="8px"
-            url="Porque_ME.jpg"
+            url="why_dubai.jpg"
             isBackground
           />
         </div>

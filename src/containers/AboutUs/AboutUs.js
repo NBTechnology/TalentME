@@ -14,19 +14,33 @@ class AboutUs extends Component {
     this.state = {
       workers: [
         {
-          title: "Carlos Galayo",
-          position: "CEO",
-          url: "ComoFunciona_Header.jpg",
+          title: "ELEONORA DELL’AMICO",
+          position: "",
+          url: "TeamMates/Eleonora.jpg",
+          text:
+            "Lo que me gusta de trabajar en Talent ME es dar la oportunidad a las personas de vivir una experiencia única fuera de su zona de confort. Somos cercanos, jovenes comprometidos y siempre disponibles. Los cambios asustan pero siempre son positivos y Talent Me te ofrece la posibilidad de dar el gran salto."
+        },
+        {
+          title: "CARLOS GALAYO",
+          position: "",
+          url: "TeamMates/Eleonora.jpg",
+          backgroundPosition: "top center",
+          text:
+            "TLa gente que piensa que es un simple trabajo se equivoca. En Talent ME ofrecemos oportunidades no solo profesionales, si no oportunidades que cambiarán tu vida. Necesitas estar mentalizado del cambio, pero una vez lo estés, prepárate para conocer gente maravillosa, aprender y viajar a lugares que nunca hubieras imaginado."
+        },
+        {
+          title: "ISABEL",
+          position: "",
+          url: "TeamMates/TME_Isabel.jpg",
           text:
             "The like button was first announced as a FriendFeed feature on October 30, 2007 and was popularized within its community. Later on the feature was integrated to Facebook before eventually FriendFeed was acquired by Facebook August 10, 2009"
         },
         {
-          title: "Eleonora",
-          position: "Recruiting Manager",
+          title: "JAVI TIRADO",
+          position: "",
           url: "TeamMates/Eleonora.jpg",
-          backgroundPosition: "top center",
           text:
-            "The like button was first announced as a FriendFeed feature on October 30, 2007 and was popularized within its community. Later on the feature was integrated to Facebook before eventually FriendFeed was acquired by Facebook August 10, 2009"
+            "Una vez conoces al candidato ideal, sabes que el hotel va a quererle en su equipo con toda seguridad. Es un placer ver como el hotel y el candidato salen encantados de esta experiencia."
         }
       ]
     };
@@ -44,10 +58,9 @@ class AboutUs extends Component {
             lineHeight="25px"
             textAlign="center"
           >
-            Talent Me es una empresa española de carácter internacional que
-            ofrece la oportunidad de trabajar en Oriente Medio en el sector
-            hospitality a jóvenes que buscan un nuevo reto en su carrera
-            profesional.
+            Talent Me es una agencia de reclutamiento española que ofrece la oportunidad 
+            de trabajar en Oriente Medio en hoteles y restaurantes premium a jóvenes que 
+            buscan un nuevo reto en su carrera profesional.
           </Text>
         </div>
         <CardsAboutUs />
@@ -59,6 +72,14 @@ class AboutUs extends Component {
             <Grid item xs={0} md={12} />
             <Grid item xs={12} md={8}>
               <Card variant="cardWorkerHorizontal" {...this.state.workers[1]} />
+            </Grid>
+            <Grid item xs={0} md={12} />
+            <Grid item xs={12} md={8}>
+              <Card variant="cardWorkerHorizontal" {...this.state.workers[2]} />
+            </Grid>
+            <Grid item xs={0} md={12} />
+            <Grid item xs={12} md={8}>
+              <Card variant="cardWorkerHorizontal" {...this.state.workers[3]} />
             </Grid>
           </Grid>
         </Grid>
@@ -73,7 +94,7 @@ class AboutUs extends Component {
             lineHeight="26px"
             textAlign="center"
           >
-            Los hoteles con los que trabajamos tienen mínimo 5 estrellas
+            Algunas de las cadenas hoteleras con las que colaboramos
           </Text>
           <div
             style={{

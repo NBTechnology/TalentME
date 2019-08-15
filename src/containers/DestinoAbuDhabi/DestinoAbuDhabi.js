@@ -89,7 +89,7 @@ class DestinoAbuDhabi extends Component {
               width="580px"
               height="445px"
               borderRadius="8px"
-              url="Destino_AbuDhabi_Trabaja.jpg"
+              url="Trabaja_Abu_dhabi.jpg"
               isBackground
               float="left"
             />
@@ -98,14 +98,11 @@ class DestinoAbuDhabi extends Component {
                 Trabaja en Abu Dhabi
               </Text>
               <Text variant="p3" lineHeight="26px" margin="0 0 75px">
-                Oriente Medio representa los más altos estándares de servicio en
-                hospitality en todo el mundo. Su inversión en turismo acelera su
-                rápido desarrollo en todos los aspectos. Sus países, cada vez
-                más liberales, se abren al mundo permitiendo la llegada de
-                millones de visitantes. La arena blanca interminable y los mares
-                color turquesa con sus vistas únicas y atracciones de fama
-                mundial, son las razones por las que se construyen cada vez más
-                cadenas hoteleras de fama internacional.{" "}
+              En número de hoteles se sitúa muy por debajo de Dubai. Aún así, trabajar 
+              en Abu Dhabi es un plus para tu CV. Hoteles y restaurantes más entrañables 
+              donde acaparar un mayor conocimiento. La ciudad es la más saneada económicamente 
+              del país, lo que conlleva su potente crecimiento. Los salarios se sitúan algo 
+              por encima que los de Dubai. Relativamente fácil conseguir el visado también en Abu Dhabi. 
               </Text>
               <Button
                 variant="icon"
@@ -157,17 +154,15 @@ class DestinoAbuDhabi extends Component {
         >
           <div style={{ marginRight: "57px", width: "621px" }}>
             <Text variant="h2" margin="0px 0px 46px">
-              ¿Por qué Middle East?
+            ¿Por qué Abu Dhabi?
             </Text>
             <Text variant="p3" lineHeight="26px" margin="0px 0px 95px">
-              Oriente Medio representa los más altos estándares de servicio en
-              hospitality en todo el mundo. Su inversión en turismo acelera su
-              rápido desarrollo en todos los aspectos. Sus países, cada vez más
-              liberales, se abren al mundo permitiendo la llegada de millones de
-              visitantes. La arena blanca interminable y los mares color
-              turquesa con sus vistas únicas y atracciones de fama mundial, son
-              las razones por las que se construyen cada vez más cadenas
-              hoteleras de fama internacional.
+            La capital de los Emiratos Árabes es también tierra de oportunidades. 
+            Más pequeña en tamaño pero mismo potencial de crecimiento. Abu Dhabi 
+            destaca por su gran premio de F1, su impresionante mezquita o el 
+            parque de atracciones Ferrari World. Tendrás desierto y playa a tiro de 
+            piedra, además de infinidad de deportes de agua. Disfrutarás de un buen 
+            ambiente para salir por la noche.
             </Text>
             <Button
               variant="icon"
@@ -192,7 +187,7 @@ class DestinoAbuDhabi extends Component {
             width="580px"
             height="445px"
             borderRadius="8px"
-            url="Porque_ME.jpg"
+            url="why_abudhabi.jpg"
             isBackground
           />
         </div>

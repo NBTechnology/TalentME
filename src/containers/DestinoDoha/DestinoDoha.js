@@ -99,14 +99,13 @@ class DestinoDoha extends Component {
                 Trabaja en Doha
               </Text>
               <Text variant="p3" lineHeight="26px" margin="0 0 75px">
-                Oriente Medio representa los más altos estándares de servicio en
-                hospitality en todo el mundo. Su inversión en turismo acelera su
-                rápido desarrollo en todos los aspectos. Sus países, cada vez
-                más liberales, se abren al mundo permitiendo la llegada de
-                millones de visitantes. La arena blanca interminable y los mares
-                color turquesa con sus vistas únicas y atracciones de fama
-                mundial, son las razones por las que se construyen cada vez más
-                cadenas hoteleras de fama internacional.{" "}
+              Doha es económicamente la ciudad más fuerte y que más crece 
+              a día de hoy en todo Oriente Medio. Las posibilidades de hacer 
+              carrera y crecer son altísimas, principalmente por la inversión 
+              turística en hoteles, que se construyen a contrarreloj con vistas 
+              al Mundial de Futbol de 2022. Los salarios son por lo general más 
+              altos que en Emiratos Árabes. Conseguir el visado aquí requiere 
+              la realización de pruebas médicas previas a viajar.
               </Text>
               <Button
                 variant="icon"
@@ -158,17 +157,14 @@ class DestinoDoha extends Component {
         >
           <div style={{ marginRight: "57px", width: "621px" }}>
             <Text variant="h2" margin="0px 0px 46px">
-              ¿Por qué Middle East?
+              ¿Por qué Doha?
             </Text>
             <Text variant="p3" lineHeight="26px" margin="0px 0px 95px">
-              Oriente Medio representa los más altos estándares de servicio en
-              hospitality en todo el mundo. Su inversión en turismo acelera su
-              rápido desarrollo en todos los aspectos. Sus países, cada vez más
-              liberales, se abren al mundo permitiendo la llegada de millones de
-              visitantes. La arena blanca interminable y los mares color
-              turquesa con sus vistas únicas y atracciones de fama mundial, son
-              las razones por las que se construyen cada vez más cadenas
-              hoteleras de fama internacional.
+            Más acogedora que ninguna otra, Doha es una de las ciudades más 
+            seguras del mundo. La ciudad crece a ritmos agigantados en infraestructuras 
+            y número de hoteles. Sus planes de barco y agua, el desierto, su mercado 
+            tradicional (shooq) y sus numerosos parques y espacios abiertos para practicar 
+            deporte, son algunas de las razones por las que elegir Doha. 
             </Text>
             <Button
               variant="icon"
@@ -193,7 +189,7 @@ class DestinoDoha extends Component {
             width="580px"
             height="445px"
             borderRadius="8px"
-            url="Porque_ME.jpg"
+            url="why_doha.jpg"
             isBackground
           />
         </div>

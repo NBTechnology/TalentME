@@ -98,10 +98,10 @@ class Home extends Component {
           <EasySteps
             type={""}
             data={[
-              { title: "Inscripcion", image: "icons/Home_inscripcion.svg" },
-              { title: "Recibe ofertas", image: "icons/Home_jobs.svg" },
-              { title: "Entrevista", image: "icons/Home_entrevista.svg" },
-              { title: "¡Vuela!", image: "icons/Home_vuela.svg" }
+              { title: "MANDA TU CV", image: "icons/Home_inscripcion.svg" },
+              { title: "RECIBE OFERTAS", image: "icons/Home_jobs.svg" },
+              { title: "ENTREVISTA", image: "icons/Home_entrevista.svg" },
+              { title: "¡VUELA!!", image: "icons/Home_vuela.svg" }
             ]}
           />
         </Grid>
