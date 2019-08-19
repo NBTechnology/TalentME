@@ -12,6 +12,7 @@ const FooterCard = props => {
             width="202px"
             height="47px"
             btnBorder="1px solid #D2D2D2"
+            onClick={() => props.selectOffer(props.idOffer)}
           >
             Inscribeme
           </Button>

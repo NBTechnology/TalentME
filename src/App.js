@@ -7,13 +7,12 @@ import DestinoDubai from "containers/DestinoDubai/DestinoDubai";
 import DestinoDoha from "containers/DestinoDoha/DestinoDoha";
 import DestinoAbuDhabi from "containers/DestinoAbuDhabi/DestinoAbuDhabi";
 import Home from "containers/Home/Home";
-import TestCharly from "containers/TestCharly/TestCharly";
+import Test from "containers/Test";
 import Inscribirse from "containers/Inscribirse/Inscribirse";
 import ContactUs from "containers/ContactUs/ContactUs";
 import ComoFunciona from "containers/ComoFunciona";
 import AboutUs from "containers/AboutUs/AboutUs";
 import Offers from "containers/Offers";
-
 
 const App = () => {
   return (
@@ -28,8 +27,7 @@ const App = () => {
       <Route path="/about-us" exact component={AboutUs} />
       <Route path="/offers" exact component={Offers} />
 
-
-      {/* <Route path="/testCharly" exact component={TestCharly} /> */}
+      <Route path="/test" exact component={Test} />
     </Switch>
   );
 };
