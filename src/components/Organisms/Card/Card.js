@@ -24,7 +24,11 @@ const Card = props => {
             variant="cardOffer"
           />
           <BodyCard variant="cardOffer" text={props.infoOffer} />
-          <FooterCard variant="cardOffer" />
+          <FooterCard
+            variant="cardOffer"
+            selectOffer={props.selectOffer}
+            idOffer={props.idOffer}
+          />
         </div>
       );
       break;
@@ -121,7 +125,7 @@ const Card = props => {
             key={props.key}
           />
           <BodyCard variant="cardOffer" text={props.infoOffer} />
-          <FooterCard />
+          <FooterCard selectOffer={props.selectOffer} idOffer={props.idOffer} />
         </div>
       );
       break;

@@ -15,6 +15,8 @@ const Offers = props => {
           labelButton={offer.place}
           variant="cardOffer"
           infoOffer={offer.infoOffer}
+          selectOffer={props.selectOffer}
+          idOffer={offer.id}
         />
       </Grid>
     );
@@ -46,7 +48,12 @@ const Offers = props => {
       </Grid>
       {/* </div> */}
       {/* </div> */}
-      <Grid item xs={12} md={props.labelButton ? 6:3} style={{ marginTop: "60px" }}>
+      <Grid
+        item
+        xs={12}
+        md={props.labelButton ? 6 : 3}
+        style={{ marginTop: "60px" }}
+      >
         <Button
           variant="primary"
           height="51px"
