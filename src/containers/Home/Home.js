@@ -69,7 +69,7 @@ class Home extends Component {
   render() {
     return (
       <Grid container component="main">
-        <NavBar />
+        {/* <NavBar /> */}
         <Header
           image="Home_Header.jpg"
           // title="Vive la experiencia de tu vida"
@@ -161,7 +161,7 @@ class Home extends Component {
           />
         </div>
 
-        <Footer />
+        {/* <Footer /> */}
       </Grid>
     );
   }

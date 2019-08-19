@@ -53,18 +53,6 @@ const EasyStepsWork = props => {
   });
   return (
     <div style={{ position: "relative", top: "48px" }}>
-      <div
-        style={{
-          background: "#F2F2F2",
-          height: "133px",
-          width: "100%",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center"
-        }}
-      >
-        <Text variant="h2">EN 4 SENCILLOS PASOS</Text>
-      </div>
       {content}
       <div
         style={{
