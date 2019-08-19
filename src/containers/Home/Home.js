@@ -20,48 +20,49 @@ class Home extends Component {
       offers: [
         {
           id: "offer0",
-          title: "Camarero",
+          position: "Camarero",
           subTitle: "Marriot Dubai",
           image: "Boton_DOHA.jpg",
-          label: "DUBAI",
+          place: "DUBAI",
           infoOffer:
             "Idealmente gente joven con ganas de una experiencia única en el mundo. Inglés fluido, con muchas corvas y que las tengan hidratadas para un correcto bien estar."
         },
         {
           id: "offer1",
-          title: "Camarero",
+          position: "Camarero",
           subTitle: "Marriot Dubai",
           image: "Boton_DOHA.jpg",
-          label: "DUBAI",
+          place: "DUBAI",
           infoOffer:
             "Idealmente gente joven con ganas de una experiencia única en el mundo. Inglés fluido, con muchas corvas y que las tengan hidratadas para un correcto bien estar."
         },
         {
           id: "offer2",
-          title: "Camarero",
+          position: "Camarero",
           subTitle: "Marriot Dubai",
           image: "Boton_DOHA.jpg",
-          label: "DUBAI",
+          place: "DUBAI",
           infoOffer:
             "Idealmente gente joven con ganas de una experiencia única en el mundo. Inglés fluido, con muchas corvas y que las tengan hidratadas para un correcto bien estar."
         },
         {
           id: "offer3",
-          title: "Camarero",
+          position: "Camarero",
           subTitle: "Marriot Dubai",
           image: "Boton_DOHA.jpg",
-          label: "DUBAI",
+          place: "DUBAI",
           infoOffer:
             "Idealmente gente joven con ganas de una experiencia única en el mundo. Inglés fluido, con muchas corvas y que las tengan hidratadas para un correcto bien estar."
         }
       ],
       places: [
-        { image: "Boton_DUBAI.jpg", label: "DUBAI", link: "/dubai" },
-        { image: "Boton_DOHA.jpg", label: "DOHA", link: "/doha" },
+        { image: "Boton_DUBAI.jpg", label: "DUBAI", link: "/dubai",id:"place_dubai" },
+        { image: "Boton_DOHA.jpg", label: "DOHA", link: "/doha" , id:"place_doha" },
         {
           image: "Boton_ABU_DHABI.jpg",
           label: "ABU DHABI",
-          link: "/abu-dhabi"
+          link: "/abu-dhabi",
+          id:"place_abudhabi"
         }
       ]
     };
@@ -97,10 +98,10 @@ class Home extends Component {
           <EasySteps
             type={""}
             data={[
-              { title: "Inscripcion", image: "icons/Home_inscripcion.svg" },
-              { title: "Recibe ofertas", image: "icons/Home_jobs.svg" },
-              { title: "Entrevista", image: "icons/Home_entrevista.svg" },
-              { title: "¡Vuela!", image: "icons/Home_vuela.svg" }
+              { title: "MANDA TU CV", image: "icons/Home_inscripcion.svg" },
+              { title: "RECIBE OFERTAS", image: "icons/Home_jobs.svg" },
+              { title: "ENTREVISTA", image: "icons/Home_entrevista.svg" },
+              { title: "¡VUELA!!", image: "icons/Home_vuela.svg" }
             ]}
           />
         </Grid>

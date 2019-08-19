@@ -19,22 +19,22 @@ const Footer = props => {
         >
           <List
             title="TalentMe"
-            items={[{ label: "Nosotros" }, { label: "Contacto" }]}
+            items={[{ label: "Nosotros" , id:"footer_nosotros"}, { label: "Contacto" , id:"footer_contacto"}]}
           />
           <List
             title="Ofertas"
             items={[
-              { label: "Dubai", link: "/dubai" },
-              { label: "Doha", link: "/doha" },
-              { label: "Abu Dhabi", link: "/abu-dhabi" }
+              { label: "Dubai", link: "/dubai" , id:"footer_dubai"},
+              { label: "Doha", link: "/doha" , id:"footer_doha"},
+              { label: "Abu Dhabi", link: "/abu-dhabi" , id:"footer_abudhabi"}
             ]}
           />
           <List
             title="TalentMe"
             items={[
-              { label: "Como funciona" },
-              { label: "FAQ" },
-              { label: "¿Por qué Middle East?" }
+              { label: "Como funciona", id:"footer_funciona" },
+              { label: "FAQ" , id:"footer_faq"},
+              { label: "¿Por qué Middle East?", id:"footer_porque" }
             ]}
           />
           <div>

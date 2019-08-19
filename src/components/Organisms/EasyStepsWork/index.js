@@ -8,9 +8,10 @@ const EasyStepsWork = props => {
   const steps = [
     {
       id: "step_work_1",
-      title: "Inscripción",
+      title: "Manda tu CV - Inscribete",
       text:
-        "Rellena tus datos en nuestro formularios o inscribite a todas las ofertas que consideres oportunas. Si cumples con los requisitos mínimos, pasaras a nuestra base de datos y se te contactará para continuar con el proceso.",
+        "Rellena tus datos en nuestro formulario y envíanos tu currículum actualizado."+
+        "Si cumples con los requisitos mínimos, nos pondremos en contacto contigo para conocer tus intereses y ayudarte a encontrar trabajo en Oriente Medio.",
       number: 1,
       position: "left bottom"
     },
@@ -18,7 +19,9 @@ const EasyStepsWork = props => {
       id: "step_work_2",
       title: "Recibes ofertas",
       text:
-        "Siguiendo tu perfil y tus intereses, te enviamos ofertas que te puedan encajar.",
+        "Una vez hablemos contigo, te enviaremos las ofertas que consideremos encajan mejor con tus objetivos profesionales y tus intereses personales."+
+
+        "Nuestro objetivo será que encuentres la mejor oportunidad laboral.",
       number: 2,
       position: "right bottom"
     },
@@ -26,7 +29,9 @@ const EasyStepsWork = props => {
       id: "step_work_3",
       title: "Entrevista",
       text:
-        "Te queremos conocer personalmente. Explicarte todo acerca sobre el puesto que vas a desarrollar. En ciertos casos, tendras entrevista presencial u online con el hotel que te va a contratar.",
+        "Pondremos en contacto tu talento con las mejores oportunidades profesionales en hospitality."+
+
+        "Realizarás el proceso de selección directamente con los hoteles, y serán ellos quienes decidan si tu próximo destino es Oriente Medio.",
       number: 3,
       position: "left bottom"
     },
@@ -34,7 +39,9 @@ const EasyStepsWork = props => {
       id: "step_work_4",
       title: "Vuela",
       text:
-        "¡ Conseguido ! Hemos conseguido el trabajo y pones rumbo a tu destino. Recuerda, vuelo incluido y sin pagarnos nada en ningún momento.",
+        "¡ Conseguido ! Una vez el hotel descubra tu infinito talento, podrás poner rumbo a tu nuevo destino."+
+
+        "Nosotros te ayudaremos en todo el papeleo necesario, y recuerda, tu vuelo de ida está incluido.",
       number: 4,
       position: "right bottom"
     }

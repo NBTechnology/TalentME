@@ -31,65 +31,65 @@ const Experiences = props => {
           data={[
             {
               id: 0,
-              title: "Mark Holden",
+              title: "Nacho Guirao",
               text:
-                "A major turning point in the history of early philosophical science was the controversial",
+                "\“Dubái es por hoy mi casa y sobre todo mi gente. Expectacular vivencia\”",
               url: "Destino_Doha_Trabaja.jpg"
             },
             {
               id: 1,
-              title: "Mark Holden",
+              title: "Loriana Verdi",
               text:
-                "A major turning point in the history of early philosophical science was the controversial",
+                "\“Los cursos de onboarding son de muy alto nivel, superaron mis expectativas\”",
               url: "Destino_Doha_Trabaja.jpg"
             },
             {
               id: 2,
-              title: "Mark Holden",
+              title: "Nacho Guirao",
               text:
-                "A major turning point in the history of early philosophical science was the controversial",
+                "\“Dubái es por hoy mi casa y sobre todo mi gente. Expectacular vivencia\”",
               url: "Destino_Doha_Trabaja.jpg"
             },
             {
               id: 3,
-              title: "Mark Holden",
+              title: "Loriana Verdi",
               text:
-                "A major turning point in the history of early philosophical science was the controversial",
+                "\“Los cursos de onboarding son de muy alto nivel, superaron mis expectativas\”",
               url: "Destino_Doha_Trabaja.jpg"
             },
             {
               id: 4,
-              title: "Mark Holden",
+              title: "Nacho Guirao",
               text:
-                "A major turning point in the history of early philosophical science was the controversial",
+                "\“Dubái es por hoy mi casa y sobre todo mi gente. Expectacular vivencia\”",
               url: "Destino_Doha_Trabaja.jpg"
             },
             {
               id: 5,
-              title: "Mark Holden",
+              title: "Loriana Verdi",
               text:
-                "A major turning point in the history of early philosophical science was the controversial",
+                "\“Los cursos de onboarding son de muy alto nivel, superaron mis expectativas\”",
               url: "Destino_Doha_Trabaja.jpg"
             },
             {
               id: 6,
-              title: "Mark Holden",
+              title: "Nacho Guirao",
               text:
-                "A major turning point in the history of early philosophical science was the controversial",
+                "\“Dubái es por hoy mi casa y sobre todo mi gente. Expectacular vivencia\”",
               url: "Destino_Doha_Trabaja.jpg"
             },
             {
               id: 7,
-              title: "Mark Holden",
+              title: "Loriana Verdi",
               text:
-                "A major turning point in the history of early philosophical science was the controversial",
+                "\“Los cursos de onboarding son de muy alto nivel, superaron mis expectativas\”",
               url: "Destino_Doha_Trabaja.jpg"
             },
             {
               id: 8,
-              title: "Mark Holden",
+              title: "Nacho Guirao",
               text:
-                "A major turning point in the history of early philosophical science was the controversial",
+                "\“Dubái es por hoy mi casa y sobre todo mi gente. Expectacular vivencia\”",
               url: "Destino_Doha_Trabaja.jpg"
             }
           ]}

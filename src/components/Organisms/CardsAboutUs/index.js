@@ -11,21 +11,21 @@ const CardsAboutUs = props => {
       title: "EXPERIENCIA A TU CV",
       url: "icons/Icon_CV.svg",
       text:
-        "But I must explain to you how all this mistaken idea of denouncing pleasure."
+        "Una experiencia en un hotel 5* del extranjero aportará mucho valor a tu CV, ¡ aprovechalo !"
     },
     {
       id: "about1",
-      title: "CONOCERÁS CULTURA",
+      title: "ÁBRETE AL MUNDO",
       url: "icons/Icon_Map.svg",
       text:
-        "But I must explain to you how all this mistaken idea of denouncing pleasure."
+        "Conocerás una nueva cultura y gente maravillosa. Tendrás la oportunidad de viajar a sitios increíbles."
     },
     {
       id: "about2",
       title: "MEJORAS EL INGLÉS",
       url: "icons/Icon_English.svg",
       text:
-        "But I must explain to you how all this mistaken idea of denouncing pleasure."
+        "Será tu idioma oficial. Trabajarás y vivirás hablando en inglés con compañeros y huespedes."
     }
   ];
   const contentItems = items.map(item => {

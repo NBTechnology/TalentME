@@ -59,7 +59,7 @@ class ContactUs extends Component {
                 }}
               >
                 <Text variant="customize" fontSize="32px">
-                  Contacto profesional
+                  Contacto
                 </Text>
               </div>
               <Input
