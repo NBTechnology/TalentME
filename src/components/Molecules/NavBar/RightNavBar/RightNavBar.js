@@ -64,14 +64,16 @@ const RightNavBar = props => {
           CONTACTO
         </Text>
       </NavLink>
-      <Text
-        variant="customize"
-        fontSize="12px"
-        letterSpacing="2.88px"
-        margin="0px 31px 0px 0px"
-      >
-        OFERTAS
-      </Text>
+      <NavLink to="/offers" className={classes.link}>
+        <Text
+          variant="customize"
+          fontSize="12px"
+          letterSpacing="2.88px"
+          margin="0px 31px 0px 0px"
+        >
+          OFERTAS
+        </Text>
+      </NavLink>
       <Button
         variant="primary"
         width="127px"

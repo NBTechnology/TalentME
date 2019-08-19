@@ -6,33 +6,11 @@ import Footer from "components/Organisms/Footer/Footer";
 import { Grid } from "@material-ui/core";
 import Offers from "components/Organisms/Offers/Offers";
 import Facilities from "components/Organisms/Facilities/Facilities";
-import Dialog from "components/Organisms/Dialog";
 
 class OffersComponent extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      offerSelected: {},
-      open: false,
-      variant: "offer",
-      itemsEnglish: [
-        {
-          id: 0,
-          value: "bajo",
-          label: "Nivel bajo"
-        },
-        {
-          id: 1,
-          value: "medio",
-          label: "Nivel medio"
-        },
-        {
-          id: 2,
-          value: "alto",
-          label: "Nivel alto"
-        }
-      ],
-      checkPolity: false,
       positionOffer: "",
       placeOffer: "",
       itemsPosition: [
@@ -125,57 +103,9 @@ class OffersComponent extends Component {
   selectHandler = event => {
     this.setState({ [event.target.name]: event.target.value });
   };
-
-  selectOffer = id => {
-    const offerSelected = this.state.offers.find(offer => offer.id === id);
-    offerSelected.imageButton = offerSelected.image;
-    offerSelected.labelButton = offerSelected.place;
-    offerSelected.titlePosition = offerSelected.position;
-    offerSelected.subTitlePosition = offerSelected.subTitle;
-    offerSelected.location = offerSelected.place;
-    this.setState({ offerSelected, open: true });
-  };
-
-  /* dialog */
-
-  onClose = () => {
-    this.setState({ open: false, variant: "offer" });
-  };
-
-  handleSubmitOffer = () => {
-    this.setState({ variant: "formOffer" });
-  };
-
-  handleChangePolity = () => {
-    let polity = this.state.checkPolity;
-    this.setState({ checkPolity: !polity });
-  };
-
-  handleSubmitFormOffer = () => {
-    if (this.state.checkPolity) {
-      this.setState({
-        variant: "successOffer"
-      });
-    }
-  };
-
   render() {
     return (
       <Grid container component="main" justify="center">
-        <Dialog
-          open={this.state.open}
-          handleClose={this.onClose}
-          {...this.state.offerSelected}
-          variant={this.state.variant}
-          handleSubmitOffer={this.handleSubmitOffer}
-          inputHandler={this.inputHandler}
-          selectHandler={this.selectHandler}
-          itemsEnglish={this.state.itemsEnglish}
-          levelEnglish={this.state.levelEnglish}
-          checkPolity={this.state.checkPolity}
-          handleChangePolity={this.handleChangePolity}
-          handleSubmitFormOffer={this.handleSubmitFormOffer}
-        />
         <NavBar />
         <Grid
           item
