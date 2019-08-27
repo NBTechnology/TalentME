@@ -12,61 +12,111 @@ import Text from "components/Atoms/Text/Text";
 import EasySteps from "components/Organisms/EasySteps/EasySteps";
 import Experiences from "components/Organisms/Experiences/Experiences";
 import { Grid } from "@material-ui/core";
+import Axios from "core/axios";
 
 class Home extends Component {
   constructor(props) {
     super(props);
+    this.service = new Axios();
     this.state = {
       offers: [
-        {
-          id: "offer0",
-          position: "Camarero",
-          subTitle: "Marriot Dubai",
-          image: "Boton_DOHA.jpg",
-          place: "DUBAI",
-          infoOffer:
-            "Idealmente gente joven con ganas de una experiencia única en el mundo. Inglés fluido, con muchas corvas y que las tengan hidratadas para un correcto bien estar."
-        },
-        {
-          id: "offer1",
-          position: "Camarero",
-          subTitle: "Marriot Dubai",
-          image: "Boton_DOHA.jpg",
-          place: "DUBAI",
-          infoOffer:
-            "Idealmente gente joven con ganas de una experiencia única en el mundo. Inglés fluido, con muchas corvas y que las tengan hidratadas para un correcto bien estar."
-        },
-        {
-          id: "offer2",
-          position: "Camarero",
-          subTitle: "Marriot Dubai",
-          image: "Boton_DOHA.jpg",
-          place: "DUBAI",
-          infoOffer:
-            "Idealmente gente joven con ganas de una experiencia única en el mundo. Inglés fluido, con muchas corvas y que las tengan hidratadas para un correcto bien estar."
-        },
-        {
-          id: "offer3",
-          position: "Camarero",
-          subTitle: "Marriot Dubai",
-          image: "Boton_DOHA.jpg",
-          place: "DUBAI",
-          infoOffer:
-            "Idealmente gente joven con ganas de una experiencia única en el mundo. Inglés fluido, con muchas corvas y que las tengan hidratadas para un correcto bien estar."
-        }
+        // {
+        //   id: "offer0",
+        //   position: "Camarero",
+        //   subTitle: "Marriot Dubai",
+        //   image: "Boton_DOHA.jpg",
+        //   place: "DUBAI",
+        //   infoOffer:
+        //     "Idealmente gente joven con ganas de una experiencia única en el mundo. Inglés fluido, con muchas corvas y que las tengan hidratadas para un correcto bien estar."
+        // },
+        // {
+        //   id: "offer1",
+        //   position: "Camarero",
+        //   subTitle: "Marriot Dubai",
+        //   image: "Boton_DOHA.jpg",
+        //   place: "DUBAI",
+        //   infoOffer:
+        //     "Idealmente gente joven con ganas de una experiencia única en el mundo. Inglés fluido, con muchas corvas y que las tengan hidratadas para un correcto bien estar."
+        // },
+        // {
+        //   id: "offer2",
+        //   position: "Camarero",
+        //   subTitle: "Marriot Dubai",
+        //   image: "Boton_DOHA.jpg",
+        //   place: "DUBAI",
+        //   infoOffer:
+        //     "Idealmente gente joven con ganas de una experiencia única en el mundo. Inglés fluido, con muchas corvas y que las tengan hidratadas para un correcto bien estar."
+        // },
+        // {
+        //   id: "offer3",
+        //   position: "Camarero",
+        //   subTitle: "Marriot Dubai",
+        //   image: "Boton_DOHA.jpg",
+        //   place: "DUBAI",
+        //   infoOffer:
+        //     "Idealmente gente joven con ganas de una experiencia única en el mundo. Inglés fluido, con muchas corvas y que las tengan hidratadas para un correcto bien estar."
+        // }
       ],
       places: [
-        { image: "Boton_DUBAI.jpg", label: "DUBAI", link: "/dubai",id:"place_dubai" },
-        { image: "Boton_DOHA.jpg", label: "DOHA", link: "/doha" , id:"place_doha" },
+        {
+          image: "Boton_DUBAI.jpg",
+          label: "DUBAI",
+          link: "/dubai",
+          id: "place_dubai"
+        },
+        {
+          image: "Boton_DOHA.jpg",
+          label: "DOHA",
+          link: "/doha",
+          id: "place_doha"
+        },
         {
           image: "Boton_ABU_DHABI.jpg",
           label: "ABU DHABI",
           link: "/abu-dhabi",
-          id:"place_abudhabi"
+          id: "place_abudhabi"
         }
       ]
     };
   }
+
+  //   id: "offer3",
+  //   position: "Camarero",
+  //   subTitle: "Marriot Dubai",
+  //   image: "Boton_DOHA.jpg",
+  //   place: "DUBAI",
+  //   infoOffer:
+  //     "Id
+
+  /*
+        {"id":"2",
+        "job":"Camarero2",
+        "location":"Marriot",
+        "placesId":"1",
+        "description":"Idealmente gente joven con ganas de una experiencia \u00fanica en el mundo.
+Ingl\u00e9s fluido, con muchas corvas y que las tengan hidratadas para un correcto bien
+estar.",
+"salary":"2",
+"durationContract":"2",
+"moreInfo":"2",
+"dateEnd":"2019-08-31",
+"isVisible":"1"}]
+        */
+  componentDidMount() {
+    this.service.getOffersVisible("offers").then(response => {
+      let aux = response.data[0];
+      this.service.getPlace(aux.placesId).then(response => {
+        console.log("entro", response.data);
+        aux.position = aux.job;
+        aux.subTitle = aux.location;
+        aux.image = "Boton_" + response.data + ".jpg";
+        aux.place = response.data;
+        aux.infoOffer = aux.description;
+        this.setState({ offers: [aux] });
+      });
+    });
+  }
+
   render() {
     return (
       <Grid container component="main">
