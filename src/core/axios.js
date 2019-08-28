@@ -14,7 +14,7 @@ class axiosClient {
   };
 
   getOffer = (id) => {
-    return this.client.get("offers/getOffers.php", , { id: id });
+    return this.client.get("offers/getOffers.php", { id: id });
   };
 
   getOffers = () => {
