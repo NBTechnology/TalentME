@@ -22,17 +22,17 @@ const HeaderDialog = props => {
             variant="image"
             gradient
             height="61px"
-            bg={props.imageButton}
+            bg={props.image}
             isBold
             letterSpacing="3.6px"
             fontSize="18px"
           >
-            {props.labelButton}
+            {props.name}
           </Button>
         </Grid>,
         <Grid item xs={10} md={6} style={{ paddingLeft: "20px" }}>
-          <Text variant="p1">{props.titlePosition}</Text>
-          <Text variant="p3">{props.subTitlePosition}</Text>
+          <Text variant="p1">{props.job}</Text>
+          <Text variant="p3">{props.location}</Text>
         </Grid>,
         <Grid item xs={2} md={3} />,
         <Grid
@@ -43,7 +43,7 @@ const HeaderDialog = props => {
           style={{ paddingLeft: "20px", paddingTop: "20px" }}
         >
           <Text variant="p3">Localización</Text>
-          <Text variant="p2">{props.location}</Text>
+          <Text variant="p2">{props.name}</Text>
         </Grid>,
         <Grid
           item
@@ -62,7 +62,7 @@ const HeaderDialog = props => {
           style={{ paddingLeft: "20px", paddingTop: "20px" }}
         >
           <Text variant="p3">Contrato</Text>
-          <Text variant="p2">{props.offer}</Text>
+          <Text variant="p2">{props.durationContract}</Text>
         </Grid>
       ];
       break;

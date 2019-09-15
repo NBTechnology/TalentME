@@ -10,49 +10,14 @@ import Offers from "components/Organisms/Offers/Offers";
 import Places from "components/Organisms/Places/Places";
 import Footer from "components/Organisms/Footer/Footer";
 import { Grid } from "@material-ui/core";
+import Axios from "core/axios";
 
 class DestinoDubai extends Component {
   constructor(props) {
     super(props);
+    this.service = new Axios();
     this.state = {
-      offers: [
-        {
-          id: "offer0",
-          position: "Camarero",
-          subTitle: "Marriot Dubai",
-          image: "Boton_DOHA.jpg",
-          place: "DUBAI",
-          infoOffer:
-            "Idealmente gente joven con ganas de una experiencia única en el mundo. Inglés fluido, con muchas corvas y que las tengan hidratadas para un correcto bien estar."
-        },
-        {
-          id: "offer1",
-          position: "Camarero",
-          subTitle: "Marriot Dubai",
-          image: "Boton_DOHA.jpg",
-          place: "DUBAI",
-          infoOffer:
-            "Idealmente gente joven con ganas de una experiencia única en el mundo. Inglés fluido, con muchas corvas y que las tengan hidratadas para un correcto bien estar."
-        },
-        {
-          id: "offer2",
-          position: "Camarero",
-          subTitle: "Marriot Dubai",
-          image: "Boton_DOHA.jpg",
-          place: "DUBAI",
-          infoOffer:
-            "Idealmente gente joven con ganas de una experiencia única en el mundo. Inglés fluido, con muchas corvas y que las tengan hidratadas para un correcto bien estar."
-        },
-        {
-          id: "offer3",
-          position: "Camarero",
-          subTitle: "Marriot Dubai",
-          image: "Boton_DOHA.jpg",
-          place: "DUBAI",
-          infoOffer:
-            "Idealmente gente joven con ganas de una experiencia única en el mundo. Inglés fluido, con muchas corvas y que las tengan hidratadas para un correcto bien estar."
-        }
-      ],
+      offers: [],
       places: [
         { image: "Boton_DOHA.jpg", label: "DOHA", link: "/doha" },
         { image: "Boton_ABU_DHABI.jpg", label: "ABU DHABI", link: "/abu-dhabi" }
@@ -62,6 +27,12 @@ class DestinoDubai extends Component {
 
   componentDidMount() {
     window.scrollTo(0, 0);
+    this.service
+      .getOffersVisibleWithParams({ limit: 4, place: "dubai" })
+      .then(response => {
+        console.log(response.data);
+        this.setState({ offers: response.data });
+      });
   }
 
   render() {
@@ -97,13 +68,13 @@ class DestinoDubai extends Component {
                 Trabaja en Dubai
               </Text>
               <Text variant="p3" lineHeight="26px" margin="0 0 75px">
-                La ciudad con más hoteles de Oriente Medio. Todas las cadenas 
-                hoteleras están presentes en Dubai, entre ellos algunos de los 
-                mejores del mundo. Es la ciudad con más oportunidades laborales 
-                en el sector. Las posibilidades de crecimiento son altísimas, y 
-                más con vistas a la EXPO que llegará a Dubai en Octubre 2020 y 
-                rozará el lleno en sus hoteles. Conseguir el visado es relativamente 
-                sencillo aquí.
+                La ciudad con más hoteles de Oriente Medio. Todas las cadenas
+                hoteleras están presentes en Dubai, entre ellos algunos de los
+                mejores del mundo. Es la ciudad con más oportunidades laborales
+                en el sector. Las posibilidades de crecimiento son altísimas, y
+                más con vistas a la EXPO que llegará a Dubai en Octubre 2020 y
+                rozará el lleno en sus hoteles. Conseguir el visado es
+                relativamente sencillo aquí.
               </Text>
               <Button
                 variant="icon"
@@ -158,12 +129,12 @@ class DestinoDubai extends Component {
               ¿Por qué Dubai?
             </Text>
             <Text variant="p3" lineHeight="26px" margin="0px 0px 95px">
-            Dubai es gigante, la ciudad más grande Oriente Medio. Recorrerla 
-            de punta a punta supone casi una hora en coche. La ciudad más 
-            alocada y liberal de todas. Tiene infinidad de planes por hacer, 
-            pero principalmente, infinidad de bares, discotecas y beach clubs 
-            en los que salir a pasarlo bien. Dubai se reinventa siempre para 
-            mantener la atención turística mundial.
+              Dubai es gigante, la ciudad más grande Oriente Medio. Recorrerla
+              de punta a punta supone casi una hora en coche. La ciudad más
+              alocada y liberal de todas. Tiene infinidad de planes por hacer,
+              pero principalmente, infinidad de bares, discotecas y beach clubs
+              en los que salir a pasarlo bien. Dubai se reinventa siempre para
+              mantener la atención turística mundial.
             </Text>
             <Button
               variant="icon"

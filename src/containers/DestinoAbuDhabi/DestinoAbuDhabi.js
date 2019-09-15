@@ -10,49 +10,14 @@ import Offers from "components/Organisms/Offers/Offers";
 import Places from "components/Organisms/Places/Places";
 import Footer from "components/Organisms/Footer/Footer";
 import { Grid } from "@material-ui/core";
+import Axios from "core/axios";
 
 class DestinoAbuDhabi extends Component {
   constructor(props) {
     super(props);
+    this.service = new Axios();
     this.state = {
-      offers: [
-        {
-          id: "offer0",
-          position: "Camarero",
-          subTitle: "Marriot Dubai",
-          image: "Boton_DOHA.jpg",
-          place: "DUBAI",
-          infoOffer:
-            "Idealmente gente joven con ganas de una experiencia única en el mundo. Inglés fluido, con muchas corvas y que las tengan hidratadas para un correcto bien estar."
-        },
-        {
-          id: "offer1",
-          position: "Camarero",
-          subTitle: "Marriot Dubai",
-          image: "Boton_DOHA.jpg",
-          place: "DUBAI",
-          infoOffer:
-            "Idealmente gente joven con ganas de una experiencia única en el mundo. Inglés fluido, con muchas corvas y que las tengan hidratadas para un correcto bien estar."
-        },
-        {
-          id: "offer2",
-          position: "Camarero",
-          subTitle: "Marriot Dubai",
-          image: "Boton_DOHA.jpg",
-          place: "DUBAI",
-          infoOffer:
-            "Idealmente gente joven con ganas de una experiencia única en el mundo. Inglés fluido, con muchas corvas y que las tengan hidratadas para un correcto bien estar."
-        },
-        {
-          id: "offer3",
-          position: "Camarero",
-          subTitle: "Marriot Dubai",
-          image: "Boton_DOHA.jpg",
-          place: "DUBAI",
-          infoOffer:
-            "Idealmente gente joven con ganas de una experiencia única en el mundo. Inglés fluido, con muchas corvas y que las tengan hidratadas para un correcto bien estar."
-        }
-      ],
+      offers: [],
       places: [
         { image: "Boton_DUBAI.jpg", label: "DUBAI", link: "/dubai" },
         { image: "Boton_DOHA.jpg", label: "DOHA", link: "/doha" }
@@ -62,6 +27,12 @@ class DestinoAbuDhabi extends Component {
 
   componentDidMount() {
     window.scrollTo(0, 0);
+    this.service
+      .getOffersVisibleWithParams({ limit: 4, place: "abu dhabi" })
+      .then(response => {
+        console.log(response.data);
+        this.setState({ offers: response.data });
+      });
   }
 
   render() {
@@ -98,11 +69,13 @@ class DestinoAbuDhabi extends Component {
                 Trabaja en Abu Dhabi
               </Text>
               <Text variant="p3" lineHeight="26px" margin="0 0 75px">
-              En número de hoteles se sitúa muy por debajo de Dubai. Aún así, trabajar 
-              en Abu Dhabi es un plus para tu CV. Hoteles y restaurantes más entrañables 
-              donde acaparar un mayor conocimiento. La ciudad es la más saneada económicamente 
-              del país, lo que conlleva su potente crecimiento. Los salarios se sitúan algo 
-              por encima que los de Dubai. Relativamente fácil conseguir el visado también en Abu Dhabi. 
+                En número de hoteles se sitúa muy por debajo de Dubai. Aún así,
+                trabajar en Abu Dhabi es un plus para tu CV. Hoteles y
+                restaurantes más entrañables donde acaparar un mayor
+                conocimiento. La ciudad es la más saneada económicamente del
+                país, lo que conlleva su potente crecimiento. Los salarios se
+                sitúan algo por encima que los de Dubai. Relativamente fácil
+                conseguir el visado también en Abu Dhabi.
               </Text>
               <Button
                 variant="icon"
@@ -154,15 +127,16 @@ class DestinoAbuDhabi extends Component {
         >
           <div style={{ marginRight: "57px", width: "621px" }}>
             <Text variant="h2" margin="0px 0px 46px">
-            ¿Por qué Abu Dhabi?
+              ¿Por qué Abu Dhabi?
             </Text>
             <Text variant="p3" lineHeight="26px" margin="0px 0px 95px">
-            La capital de los Emiratos Árabes es también tierra de oportunidades. 
-            Más pequeña en tamaño pero mismo potencial de crecimiento. Abu Dhabi 
-            destaca por su gran premio de F1, su impresionante mezquita o el 
-            parque de atracciones Ferrari World. Tendrás desierto y playa a tiro de 
-            piedra, además de infinidad de deportes de agua. Disfrutarás de un buen 
-            ambiente para salir por la noche.
+              La capital de los Emiratos Árabes es también tierra de
+              oportunidades. Más pequeña en tamaño pero mismo potencial de
+              crecimiento. Abu Dhabi destaca por su gran premio de F1, su
+              impresionante mezquita o el parque de atracciones Ferrari World.
+              Tendrás desierto y playa a tiro de piedra, además de infinidad de
+              deportes de agua. Disfrutarás de un buen ambiente para salir por
+              la noche.
             </Text>
             <Button
               variant="icon"

@@ -19,44 +19,7 @@ class Home extends Component {
     super(props);
     this.service = new Axios();
     this.state = {
-      offers: [
-        // {
-        //   id: "offer0",
-        //   position: "Camarero",
-        //   subTitle: "Marriot Dubai",
-        //   image: "Boton_DOHA.jpg",
-        //   place: "DUBAI",
-        //   infoOffer:
-        //     "Idealmente gente joven con ganas de una experiencia única en el mundo. Inglés fluido, con muchas corvas y que las tengan hidratadas para un correcto bien estar."
-        // },
-        // {
-        //   id: "offer1",
-        //   position: "Camarero",
-        //   subTitle: "Marriot Dubai",
-        //   image: "Boton_DOHA.jpg",
-        //   place: "DUBAI",
-        //   infoOffer:
-        //     "Idealmente gente joven con ganas de una experiencia única en el mundo. Inglés fluido, con muchas corvas y que las tengan hidratadas para un correcto bien estar."
-        // },
-        // {
-        //   id: "offer2",
-        //   position: "Camarero",
-        //   subTitle: "Marriot Dubai",
-        //   image: "Boton_DOHA.jpg",
-        //   place: "DUBAI",
-        //   infoOffer:
-        //     "Idealmente gente joven con ganas de una experiencia única en el mundo. Inglés fluido, con muchas corvas y que las tengan hidratadas para un correcto bien estar."
-        // },
-        // {
-        //   id: "offer3",
-        //   position: "Camarero",
-        //   subTitle: "Marriot Dubai",
-        //   image: "Boton_DOHA.jpg",
-        //   place: "DUBAI",
-        //   infoOffer:
-        //     "Idealmente gente joven con ganas de una experiencia única en el mundo. Inglés fluido, con muchas corvas y que las tengan hidratadas para un correcto bien estar."
-        // }
-      ],
+      offers: [],
       places: [
         {
           image: "Boton_DUBAI.jpg",
@@ -103,21 +66,14 @@ estar.",
 "isVisible":"1"}]
         */
   componentDidMount() {
-    this.service.getOffersVisible("offers").then(response => {
-      let aux = response.data[0];
-      this.service.getPlace(aux.placesId).then(response => {
-        console.log("entro", response.data);
-        aux.position = aux.job;
-        aux.subTitle = aux.location;
-        aux.image = "Boton_" + response.data + ".jpg";
-        aux.place = response.data;
-        aux.infoOffer = aux.description;
-        this.setState({ offers: [aux] });
-      });
+    this.service.getOffersVisibleWithParams({ limit: 4 }).then(response => {
+      console.log(response.data);
+      this.setState({ offers: response.data });
     });
   }
 
   render() {
+    console.log(this.state.offers);
     return (
       <Grid container component="main">
         <NavBar />

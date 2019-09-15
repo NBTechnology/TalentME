@@ -8,6 +8,9 @@ import Select from "components/Atoms/Select/Select";
 const BodyDialog = props => {
   let content;
   switch (props.variant) {
+    case "offer":
+      content = <Text variant="p3">{props.body}</Text>;
+      break;
     case "successOffer":
       content = [
         <Text variant="p1">

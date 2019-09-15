@@ -6,10 +6,12 @@ import Footer from "components/Organisms/Footer/Footer";
 import { Grid } from "@material-ui/core";
 import Offers from "components/Organisms/Offers/Offers";
 import Facilities from "components/Organisms/Facilities/Facilities";
+import Axios from "core/axios";
 
 class OffersComponent extends Component {
   constructor(props) {
     super(props);
+    this.service = new Axios();
     this.state = {
       positionOffer: "",
       placeOffer: "",
@@ -57,52 +59,20 @@ class OffersComponent extends Component {
           label: "Abu Dhabi"
         }
       ],
-      offers: [
-        {
-          id: "offer0",
-          position: "Camarero",
-          subTitle: "Marriot Dubai",
-          image: "Boton_DOHA.jpg",
-          place: "DUBAI",
-          offer: "1 año",
-          salary: "15.000€",
-          infoOffer:
-            "Idealmente gente joven con ganas de una experiencia única en el mundo. Inglés fluido, con muchas corvas y que las tengan hidratadas para un correcto bien estar."
-        },
-        {
-          id: "offer1",
-          position: "Camarero",
-          subTitle: "Marriot Dubai",
-          image: "Boton_DOHA.jpg",
-          place: "DUBAI",
-          infoOffer:
-            "Idealmente gente joven con ganas de una experiencia única en el mundo. Inglés fluido, con muchas corvas y que las tengan hidratadas para un correcto bien estar."
-        },
-        {
-          id: "offer2",
-          position: "Camarero",
-          subTitle: "Marriot Dubai",
-          image: "Boton_DOHA.jpg",
-          place: "DUBAI",
-          infoOffer:
-            "Idealmente gente joven con ganas de una experiencia única en el mundo. Inglés fluido, con muchas corvas y que las tengan hidratadas para un correcto bien estar."
-        },
-        {
-          id: "offer3",
-          position: "Camarero",
-          subTitle: "Marriot Dubai",
-          image: "Boton_DOHA.jpg",
-          place: "DUBAI",
-          infoOffer:
-            "Idealmente gente joven con ganas de una experiencia única en el mundo. Inglés fluido, con muchas corvas y que las tengan hidratadas para un correcto bien estar."
-        }
-      ]
+      offers: []
     };
+  }
+
+  componentDidMount() {
+    this.service.getOffersVisibleWithParams({ limit: 8 }).then(response => {
+      this.setState({ offers: response.data });
+    });
   }
 
   selectHandler = event => {
     this.setState({ [event.target.name]: event.target.value });
   };
+
   render() {
     return (
       <Grid container component="main" justify="center">

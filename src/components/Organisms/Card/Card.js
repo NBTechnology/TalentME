@@ -13,17 +13,17 @@ const Card = props => {
             widthButton="85px"
             heightButton="37px"
             sizeTitle="14px"
-            title={props.title}
+            title={props.job}
             sizeSubtitle="12px"
-            subtitle={props.subTitle}
-            imageButton={props.imageButton}
+            subtitle={props.location}
+            imageButton={props.image}
             letterSpacingButton="2.4px"
             fontSizeButton="12px"
-            labelButton={props.labelButton}
+            labelButton={props.name}
             key={props.key}
             variant="cardOffer"
           />
-          <BodyCard variant="cardOffer" text={props.infoOffer} />
+          <BodyCard variant="cardOffer" text={props.description} />
           <FooterCard
             variant="cardOffer"
             selectOffer={props.selectOffer}

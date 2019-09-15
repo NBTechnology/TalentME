@@ -8,6 +8,7 @@ import Dialog from "components/Organisms/Dialog";
 class Offers extends Component {
   constructor(props) {
     super(props);
+    console.log(props);
     this.state = {
       offers: props.offers,
       offerSelected: {},
@@ -30,24 +31,27 @@ class Offers extends Component {
           label: "Nivel alto"
         }
       ],
+      offer: {},
       checkPolity: false
     };
   }
 
   selectOffer = id => {
-    const offerSelected = this.state.offers.find(offer => offer.id === id);
-    offerSelected.imageButton = offerSelected.image;
-    offerSelected.labelButton = offerSelected.place;
-    offerSelected.titlePosition = offerSelected.position;
-    offerSelected.subTitlePosition = offerSelected.subTitle;
-    offerSelected.location = offerSelected.place;
+    const offerSelected = this.props.offers.find(offer => offer.id === id);
+    console.log(offerSelected);
+    // offerSelected.imageButton = offerSelected.image;
+    // offerSelected.labelButton = offerSelected.name;
+    // offerSelected.titlePosition = offerSelected.position;
+    // offerSelected.subTitlePosition = offerSelected.subTitle;
+
+    // offerSelected.location = offerSelected.location;
     this.setState({ offerSelected, open: true });
   };
 
   /* dialog */
 
   onClose = () => {
-    this.setState({ open: false });
+    this.setState({ open: false, variant: "offer" });
   };
 
   handleSubmitOffer = () => {
@@ -55,9 +59,9 @@ class Offers extends Component {
   };
 
   inputHandler = event => {
-    this.setState({
-      [event.target.name]: event.target.value
-    });
+    const offer = { ...this.state.offer };
+    offer[event.target.name] = event.target.value;
+    this.setState({ offer });
   };
 
   handleChangePolity = () => {
@@ -66,13 +70,16 @@ class Offers extends Component {
   };
 
   selectHandler = event => {
+    const offer = { ...this.state.offer };
+    offer[event.target.name] = event.target.value;
     this.setState({
-      [event.target.name]: event.target.value
+      offer
     });
   };
 
   handleSubmitFormOffer = () => {
     if (this.state.checkPolity) {
+      console.log(this.state.offer);
       this.setState({
         variant: "successOffer"
       });
@@ -80,18 +87,29 @@ class Offers extends Component {
   };
 
   render() {
-    let offersContent = this.state.offers.map(offer => {
+    let offersContent = this.props.offers.map(offer => {
+      offer.name = offer.name.toUpperCase();
+      switch (offer.name) {
+        case "DUBAI":
+          offer.image = "Boton_DUBAI.jpg";
+          break;
+        case "DOHA":
+          offer.image = "Boton_DOHA.jpg";
+          break;
+        case "ABU DHABI":
+          offer.image = "Boton_ABU_DHABI.jpg";
+          break;
+        default:
+          break;
+      }
       return (
         <Grid item xs={12} sm={6} md={3} key={offer.id}>
           <Card
-            title={offer.position}
-            subTitle={offer.subTitle}
-            imageButton={offer.image}
-            labelButton={offer.place}
             variant="cardOffer"
             infoOffer={offer.infoOffer}
             selectOffer={this.selectOffer}
             idOffer={offer.id}
+            {...offer}
           />
         </Grid>
       );
@@ -109,13 +127,13 @@ class Offers extends Component {
         <Dialog
           open={this.state.open}
           handleClose={this.onClose}
-          {...this.state.offerSelected}
+          offerSelected={this.state.offerSelected}
           variant={this.state.variant}
           handleSubmitOffer={this.handleSubmitOffer}
           inputHandler={this.inputHandler}
           selectHandler={this.selectHandler}
           itemsEnglish={this.state.itemsEnglish}
-          levelEnglish={this.state.levelEnglish}
+          levelEnglish={this.state.offer.levelEnglish}
           checkPolity={this.state.checkPolity}
           handleChangePolity={this.handleChangePolity}
           handleSubmitFormOffer={this.handleSubmitFormOffer}

@@ -12,15 +12,16 @@ const DialogComponent = props => {
       content = [
         <HeaderDialog
           variant="offer"
-          imageButton={props.imageButton}
-          labelButton={props.labelButton}
-          titlePosition={props.titlePosition}
-          subTitlePosition={props.subTitlePosition}
-          location={props.location}
-          salary={props.salary}
-          offer={props.offer}
+          // imageButton={props.imageButton}
+          // labelButton={props.labelButton}
+          // titlePosition={props.titlePosition}
+          // subTitlePosition={props.subTitlePosition}
+          // location={props.location}
+          // salary={props.salary}
+          // offer={props.offer}
+          {...props.offerSelected}
         />,
-        <BodyDialog variant="offer" body={props.body} />,
+        <BodyDialog variant="offer" body={props.offerSelected.description} />,
         <FooterDialog
           variant="offer"
           onSubmit={props.handleSubmitOffer}

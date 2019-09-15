@@ -3,8 +3,9 @@ import axios from "axios";
 class axiosClient {
   constructor() {
     this.client = axios.create({
-      baseURL: "http://apitalent.nbtech.es/"
+      baseURL: "http://localhost/api/"
     });
+    // axios.defaults.headers.common["Content-type"] = "application/json";
   }
 
   //OFFERS
@@ -13,7 +14,11 @@ class axiosClient {
   };
 
   getOffers = url => {
-    return this.client.get(url);
+    return this.client.get("/offers/getOffers.php");
+  };
+
+  getOffersVisibleWithParams = data => {
+    return this.client.post("offers/getOffersOnlyVisiblesWithParams.php", data);
   };
 
   getOffersVisible = () => {
@@ -22,7 +27,7 @@ class axiosClient {
 
   //PLACES
   getPlace = id => {
-    return this.client.get("places/getPlace.php", { id: id });
+    return this.client.post("places/getPlace.php", { id: id });
   };
 
   // get = url => {
