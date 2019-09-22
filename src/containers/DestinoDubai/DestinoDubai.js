@@ -27,12 +27,12 @@ class DestinoDubai extends Component {
 
   componentDidMount() {
     window.scrollTo(0, 0);
-    this.service
-      .getOffersVisibleWithParams({ limit: 4, place: "dubai" })
-      .then(response => {
-        console.log(response.data);
-        this.setState({ offers: response.data });
-      });
+    // this.service
+    //   .getOffersVisibleWithParams({ limit: 4, place: "dubai" })
+    //   .then(response => {
+    //     console.log(response.data);
+    //     this.setState({ offers: response.data });
+    //   });
   }
 
   render() {
@@ -45,7 +45,24 @@ class DestinoDubai extends Component {
           title="La magia de Dubai"
           btnText="INSCRIBIRSE"
           gradient="header-white"
-        />
+          position="center top"
+        >
+          <Text variant="h1" color="#000" isBold>
+            La magia <br />
+            de Dubai
+          </Text>
+          <Button
+            variant="primary"
+            width="189px"
+            height="51px"
+            isBold
+            fontSize="12px"
+            letterSpacing="2.4px"
+            link="/inscribirse"
+          >
+            INSCRIBIRSE
+          </Button>
+        </Header>
         {/* SECCION TRABAJA EN DUBAI */}
         <Grid item xs={12} style={{ marginTop: "48px" }}>
           <div
@@ -91,6 +108,7 @@ class DestinoDubai extends Component {
                 }
                 fontSize="20px"
                 btnBorder="1px solid #FFC80A"
+                link="/como-funciona"
               >
                 COMO FUNCIONA
               </Button>
@@ -102,10 +120,10 @@ class DestinoDubai extends Component {
           <SectionImage />
         </Grid>
         {/* SECTION OFFERS */}
-        <Grid item xs={12} style={{ marginTop: "48px" }}>
+        {/* <Grid item xs={12} style={{ marginTop: "48px" }}>
           <Offers title="Ofertas en Dubai" offers={this.state.offers} />
-        </Grid>
-        <Grid item xs={12} style={{ marginTop: "48px" }}>
+        </Grid> */}
+        <Grid item xs={12} style={{ marginTop: "64px" }}>
           <Places
             places={this.state.places}
             widthButton="260px"

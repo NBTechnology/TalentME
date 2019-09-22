@@ -33,24 +33,7 @@ const Header = props => {
         variant={props.gradient}
         position={props.position}
       >
-        <div className={classes.insideHeader}>
-          <Text variant="h1" color={props.titleColor} isBold>
-            {props.title}
-          </Text>
-          {props.btnText && (
-            <Button
-              variant="primary"
-              width="189px"
-              height="51px"
-              isBold
-              fontSize="12px"
-              letterSpacing="2.4px"
-              link={props.link}
-            >
-              {props.btnText}
-            </Button>
-          )}
-        </div>
+        <div className={classes.insideHeader}>{props.children}</div>
       </Imagen>
     </Grid>
   );

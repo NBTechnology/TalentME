@@ -64,7 +64,7 @@ const RightNavBar = props => {
           CONTACTO
         </Text>
       </NavLink>
-      <NavLink to="/offers" className={classes.link}>
+      {/* <NavLink to="/offers" className={classes.link}>
         <Text
           variant="customize"
           fontSize="12px"
@@ -73,7 +73,7 @@ const RightNavBar = props => {
         >
           OFERTAS
         </Text>
-      </NavLink>
+      </NavLink> */}
       <Button
         variant="primary"
         width="127px"

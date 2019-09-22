@@ -6,6 +6,7 @@ import Facilities from "components/Organisms/Facilities/Facilities";
 import { Grid } from "@material-ui/core";
 import Footer from "components/Organisms/Footer/Footer";
 import Text from "components/Atoms/Text/Text";
+import Button from "components/Atoms/Button/Button";
 
 class ComoFunciona extends Component {
   render() {
@@ -17,7 +18,12 @@ class ComoFunciona extends Component {
           title="Un mundo por explorar"
           titleColor="#fff"
           gradient="header-white"
-        />
+        >
+          <Text variant="h1" color="#fff" isBold>
+            Un mundo <br />
+            por explorar
+          </Text>
+        </Header>
         <Grid item xs={12} style={{ marginTop: "48px" }}>
           <Facilities variant="how_it_works" />
         </Grid>

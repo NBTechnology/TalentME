@@ -92,12 +92,14 @@ const Card = props => {
       );
       break;
     case "cardWorkerHorizontal":
+      console.log(props.sizeImage);
       content = (
         <div className="cardWorkerHorizontal">
           <HeaderCard
             url={props.url}
             variant={"cardWorkerHorizontal"}
             backgroundPosition={props.backgroundPosition}
+            sizeImage={props.sizeImage}
           />
           <BodyCard
             variant="cardWorkerHorizontal"

@@ -67,6 +67,7 @@ const HeaderCard = props => {
       );
       break;
     case "cardWorkerHorizontal":
+      console.log(props.sizeImage);
       content = (
         <div className="cardWorkerHorizontal">
           <Imagen
@@ -76,6 +77,7 @@ const HeaderCard = props => {
             isCircle
             isBackground
             backgroundPosition={props.backgroundPosition}
+            sizeImage={props.sizeImage}
           />
         </div>
       );

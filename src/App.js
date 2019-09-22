@@ -25,9 +25,8 @@ const App = () => {
       <Route path="/contact-us" exact component={ContactUs} />
       <Route path="/como-funciona" exact component={ComoFunciona} />
       <Route path="/about-us" exact component={AboutUs} />
-      <Route path="/offers" exact component={Offers} />
-
-      <Route path="/test" exact component={Test} />
+      {/* <Route path="/offers" exact component={Offers} /> */}
+      {/* <Route path="/test" exact component={Test} /> */}
     </Switch>
   );
 };

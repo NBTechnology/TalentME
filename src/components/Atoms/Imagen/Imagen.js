@@ -94,12 +94,11 @@ const Imagen = props => {
       let size;
       if (props.isCircle) {
         radius = props.width;
-        size = "200%";
+        size = props.sizeImage || "200%";
       } else {
         radius = props.borderRadius;
         size = props.sizeImage || "100%";
       }
-
       let gradient;
       switch (props.gradient) {
         case "black":

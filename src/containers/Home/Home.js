@@ -66,10 +66,10 @@ estar.",
 "isVisible":"1"}]
         */
   componentDidMount() {
-    this.service.getOffersVisibleWithParams({ limit: 4 }).then(response => {
-      console.log(response.data);
-      this.setState({ offers: response.data });
-    });
+    // this.service.getOffersVisibleWithParams({ limit: 4 }).then(response => {
+    //   console.log(response.data);
+    //   this.setState({ offers: response.data });
+    // });
   }
 
   render() {
@@ -77,13 +77,43 @@ estar.",
     return (
       <Grid container component="main">
         <NavBar />
-        <Header
-          image="Home_Header.jpg"
-          // title="Vive la experiencia de tu vida"
-          btnText="INSCRIBIRSE"
-          gradient="header-white"
-          link="/inscribirse"
-        />
+        <Header image="Home_Header.jpg" gradient="header-white">
+          <Text variant="h1" color="#000" isBold>
+            Vive la experiencia <br />
+            de tu vida
+          </Text>
+          <Text variant="p1" color="#fff">
+            La oportunidad de conseguir trabajo en los mejores hoteles y <br />
+            restaurantes de Oriente Medio.
+          </Text>
+          <div
+            style={{ display: "flex", flexFlow: "row wrap", marginTop: "16px" }}
+          >
+            <Button
+              variant="primary"
+              width="189px"
+              height="51px"
+              isBold
+              fontSize="12px"
+              letterSpacing="2.4px"
+              link="/inscribirse"
+            >
+              INSCRIBIRSE
+            </Button>
+            <Button
+              variant="primary"
+              width="189px"
+              height="51px"
+              isBold
+              fontSize="12px"
+              letterSpacing="2.4px"
+              link="/offers"
+              margin="0 0 0 16px"
+            >
+              OFERTAS
+            </Button>
+          </div>
+        </Header>
         <Grid item xs={12} style={{ marginTop: "48px" }}>
           <Places
             places={this.state.places}
@@ -113,9 +143,9 @@ estar.",
         </Grid>
 
         {/* SECTION OFFERS */}
-        <Grid item xs={12} style={{ marginTop: "48px" }}>
+        {/* <Grid item xs={12} style={{ marginTop: "48px" }}>
           <Offers title="Ofertas" offers={this.state.offers} />
-        </Grid>
+        </Grid> */}
         <div
           style={{
             width: "100%",
@@ -140,7 +170,7 @@ estar.",
               las razones por las que se construyen cada vez más cadenas
               hoteleras de fama internacional.
             </Text>
-            <Button
+            {/* <Button
               variant="icon"
               width="356px"
               height="56px"
@@ -157,7 +187,7 @@ estar.",
               }
             >
               VER MÁS INFORMACIÓN
-            </Button>
+            </Button> */}
           </div>
           <Imagen
             width="580px"
@@ -168,7 +198,7 @@ estar.",
           />
         </div>
 
-        {/* <Footer /> */}
+        <Footer />
       </Grid>
     );
   }

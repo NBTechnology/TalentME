@@ -51,7 +51,13 @@ const Facilities = props => {
     case "home":
       title = "Con todas las facilidades incluidas";
       finalButton = (
-        <Button variant="primary" height="51px" margin="40px 0 0 0" isBold>
+        <Button
+          variant="primary"
+          height="51px"
+          margin="40px 0 0 0"
+          isBold
+          link="/como-funciona"
+        >
           COMO FUNCIONA
         </Button>
       );

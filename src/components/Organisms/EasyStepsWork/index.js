@@ -76,6 +76,7 @@ const EasyStepsWork = props => {
           fontSize="16px"
           isBold
           letterSpacing="3.2px"
+          link="/inscribirse"
         >
           INSCRIBIRSE
         </Button>

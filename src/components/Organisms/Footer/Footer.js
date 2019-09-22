@@ -3,7 +3,9 @@ import List from "components/Molecules/List/List";
 import Imagen from "components/Atoms/Imagen/Imagen";
 import Text from "components/Atoms/Text/Text";
 import { Grid } from "@material-ui/core";
-
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import InstagramIcon from "@material-ui/icons/Instagram";
+import FacebookIcon from "@material-ui/icons/Facebook";
 const Footer = props => {
   return (
     <Grid item xs={12}>
@@ -11,7 +13,7 @@ const Footer = props => {
         <div
           style={{
             display: "flex",
-            flexDirection: "row",
+            flexFlow: "row wrap",
             justifyContent: "space-between",
             width: "70%",
             marginLeft: "15%"
@@ -19,26 +21,49 @@ const Footer = props => {
         >
           <List
             title="TalentMe"
-            items={[{ label: "Nosotros" , id:"footer_nosotros"}, { label: "Contacto" , id:"footer_contacto"}]}
+            items={[
+              { label: "Nosotros", id: "footer_nosotros", link: "/about-us" },
+              { label: "Contacto", id: "footer_contacto", link: "/contact-us" }
+            ]}
           />
           <List
             title="Ofertas"
             items={[
-              { label: "Dubai", link: "/dubai" , id:"footer_dubai"},
-              { label: "Doha", link: "/doha" , id:"footer_doha"},
-              { label: "Abu Dhabi", link: "/abu-dhabi" , id:"footer_abudhabi"}
+              { label: "Dubai", link: "/dubai", id: "footer_dubai" },
+              { label: "Doha", link: "/doha", id: "footer_doha" },
+              { label: "Abu Dhabi", link: "/abu-dhabi", id: "footer_abudhabi" }
             ]}
           />
           <List
             title="TalentMe"
             items={[
-              { label: "Como funciona", id:"footer_funciona" },
-              { label: "FAQ" , id:"footer_faq"},
-              { label: "¿Por qué Middle East?", id:"footer_porque" }
+              {
+                label: "Como funciona",
+                id: "footer_funciona",
+                link: "/como-funciona"
+              }
+              // { label: "FAQ", id: "footer_faq" }
+              // { label: "¿Por qué Middle East?", id: "footer_porque" }
             ]}
           />
           <div>
-            <List title="Nuestras Redes" items={[]} />
+            <List
+              title="Nuestras Redes"
+              items={[
+                {
+                  icon: <FacebookIcon fontSize="large" />,
+                  link: "https://www.facebook.com/TalentMiddleEast"
+                },
+                {
+                  icon: <InstagramIcon fontSize="large" />,
+                  link: "https://www.instagram.com/talentme_experience/"
+                },
+                {
+                  icon: <LinkedInIcon fontSize="large" />,
+                  link: "https://www.linkedin.com/in/eloquencetalent/"
+                }
+              ]}
+            />
           </div>
         </div>
         <hr
