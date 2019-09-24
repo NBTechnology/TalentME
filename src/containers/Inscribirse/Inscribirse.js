@@ -6,12 +6,15 @@ import Text from "components/Atoms/Text/Text";
 import Footer from "components/Organisms/Footer/Footer";
 import Input from "components/Atoms/Input/Input";
 import Select from "components/Atoms/Select/Select";
-import { Button, Grid } from "@material-ui/core";
+import { Button, Grid, Checkbox } from "@material-ui/core";
 import CloudUploadIcon from "@material-ui/icons/CloudUpload";
+import ButtonLibrary from "components/Atoms/Button/Button";
+import axiosClient from "core/axios";
 
 class Inscribirse extends Component {
   constructor(props) {
     super(props);
+    this.service = new axiosClient();
     this.state = {
       requisites: [
         {
@@ -39,7 +42,7 @@ class Inscribirse extends Component {
       levelEnglish: "",
       name: "",
       surname: "",
-      passport: "",
+      age: "",
       email: "",
       phone: "",
       itemsEnglish: [
@@ -58,9 +61,18 @@ class Inscribirse extends Component {
           value: "alto",
           label: "Nivel alto"
         }
-      ]
+      ],
+      file: ""
     };
   }
+
+  handleChange = name => event => {
+    this.setState({ [name]: event.target.checked });
+  };
+
+  inputFileHandler = event => {
+    this.setState({ file: event.target.files[0] });
+  };
 
   inputHandler = event => {
     this.setState({
@@ -70,6 +82,18 @@ class Inscribirse extends Component {
 
   selectHandler = event => {
     this.setState({ [event.target.name]: event.target.value });
+  };
+
+  registerIn = () => {
+    this.service
+      .registerOffer({
+        name: this.state.name,
+        file: this.state.file
+      })
+      .then(response => {
+        console.log(response);
+      });
+    console.log(this.state);
   };
 
   render() {
@@ -148,14 +172,14 @@ class Inscribirse extends Component {
               <Input
                 fullWidth
                 id="idAge"
-                label="Año de nacimineto"
+                label="Año de nacimiento"
                 margin="normal"
                 maxLength="100"
                 name="age"
                 onChange={this.inputHandler}
                 required
-                type="text"
-                value={this.state.passport}
+                type="number"
+                value={this.state.age}
                 variant="outlined"
               />
               <Text
@@ -210,7 +234,7 @@ class Inscribirse extends Component {
                 name="levelEnglish"
                 items={this.state.itemsEnglish}
               />
-              <Select
+              {/* <Select
                 fullWidth
                 variant="outlined"
                 idInput="idEnglish"
@@ -219,7 +243,7 @@ class Inscribirse extends Component {
                 handleChange={this.selectHandler}
                 name="levelEnglish"
                 items={this.state.itemsEnglish}
-              />
+              /> */}
               <div
                 style={{
                   display: "flex",
@@ -237,6 +261,7 @@ class Inscribirse extends Component {
                   multiple
                   type="file"
                   style={{ display: "none" }}
+                  onChange={this.inputFileHandler}
                 />
                 <label htmlFor="raised-button-file">
                   <Button
@@ -260,6 +285,34 @@ class Inscribirse extends Component {
                   minHeight: "150px"
                 }}
               />
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "flex-start"
+                }}
+              >
+                <Checkbox
+                  checked={this.state.checkPolity}
+                  onChange={this.handleChange("checkPolity")}
+                  color="default"
+                  value="checkPolity"
+                />
+                <Text variant="customize" fontSize="12px">
+                  Acepto la politica de privacidad
+                </Text>
+              </div>
+              <ButtonLibrary
+                variant="primary"
+                width="100%"
+                height="38px"
+                fontSize="10px"
+                isBold
+                letterSpacing="2px"
+                onClick={this.registerIn}
+              >
+                INSCRIBIRSE
+              </ButtonLibrary>
             </Grid>
           </Grid>
         </Grid>

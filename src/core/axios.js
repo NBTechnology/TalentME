@@ -3,7 +3,8 @@ import axios from "axios";
 class axiosClient {
   constructor() {
     this.client = axios.create({
-      baseURL: "http://localhost/api/"
+      // baseURL: "http://localhost/api/"
+      baseURL: "https://apitalent.nbtech.es/"
     });
     // axios.defaults.headers.common["Content-type"] = "application/json";
   }
@@ -103,6 +104,18 @@ class axiosClient {
 
   updatePlaces = (id, name) => {
     return this.client.get("places/postPlace.php", { id: id, name: name });
+  };
+
+  registerOffer = data => {
+    const formData = new FormData();
+
+    formData.append("avatar", data.file);
+
+    return this.client.post("offers/registerOffer.php", formData, {
+      headers: {
+        "content-type": "multipart/form-data"
+      }
+    });
   };
 
   // get = url => {
