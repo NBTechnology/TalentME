@@ -256,7 +256,7 @@ class Inscribirse extends Component {
                   Sube tu CV
                 </Text>
                 <input
-                  accept="image/*"
+                  // accept="*"
                   id="raised-button-file"
                   multiple
                   type="file"
