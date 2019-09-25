@@ -20,6 +20,7 @@ const Button = props => {
   switch (props.variant) {
     case "primary":
       style.background = props.btnBackground ? props.btnBackground : "#FFC80A";
+      style.background = props.disabled ? "#a0a0a0" : style.background;
       if (props.btnBorderRadius) style.borderRadius = props.btnBorderRadius;
       break;
     case "secondary":
@@ -54,7 +55,7 @@ const Button = props => {
       break;
   }
   let contentButton = (
-    <div style={style} onClick={props.onClick}>
+    <div style={style} onClick={props.disabled ? null : props.onClick}>
       <Text
         variant={props.textVariant}
         weight={props.isBold}

@@ -45,6 +45,7 @@ class Inscribirse extends Component {
       age: "",
       email: "",
       phone: "",
+      message: "",
       itemsEnglish: [
         {
           id: 0,
@@ -62,7 +63,8 @@ class Inscribirse extends Component {
           label: "Nivel alto"
         }
       ],
-      file: ""
+      file: "",
+      checkPolity: false
     };
   }
 
@@ -88,10 +90,22 @@ class Inscribirse extends Component {
     this.service
       .registerOffer({
         name: this.state.name,
+        surname: this.state.surname,
+        age: this.state.age,
+        email: this.state.email,
+        phone: this.state.phone,
+        levelEnglish: this.state.levelEnglish,
+        message: this.state.message,
         file: this.state.file
       })
       .then(response => {
         console.log(response);
+        if (response.status === 200) {
+          window.location = "/";
+        }
+      })
+      .catch(err => {
+        alert("Error al enviar");
       });
     console.log(this.state);
   };
@@ -284,6 +298,9 @@ class Inscribirse extends Component {
                   width: "60%",
                   minHeight: "150px"
                 }}
+                name="message"
+                value={this.state.message}
+                onChange={this.inputHandler}
               />
               <div
                 style={{
@@ -310,6 +327,17 @@ class Inscribirse extends Component {
                 isBold
                 letterSpacing="2px"
                 onClick={this.registerIn}
+                disabled={
+                  this.state.checkPolity &&
+                  this.state.name !== "" &&
+                  this.state.surname !== "" &&
+                  this.state.phone !== "" &&
+                  this.state.age !== "" &&
+                  this.state.email !== "" &&
+                  this.state.levelEnglish !== ""
+                    ? false
+                    : true
+                }
               >
                 INSCRIBIRSE
               </ButtonLibrary>
