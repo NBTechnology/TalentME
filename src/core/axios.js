@@ -4,7 +4,7 @@ class axiosClient {
   constructor() {
     this.client = axios.create({
       // baseURL: "http://localhost/api/"
-      baseURL: "https://apitalent.nbtech.es/"
+      baseURL: process.env.REACT_APP_API_URL
     });
     // axios.defaults.headers.common["Content-type"] = "application/json";
   }
@@ -110,6 +110,13 @@ class axiosClient {
     const formData = new FormData();
 
     formData.append("avatar", data.file);
+    formData.append("name", data.name);
+    formData.append("surname", data.surname);
+    formData.append("age", data.age);
+    formData.append("email", data.email);
+    formData.append("phone", data.phone);
+    formData.append("levelEnglish", data.levelEnglish);
+    formData.append("message", data.message);
 
     return this.client.post("offers/registerOffer.php", formData, {
       headers: {
