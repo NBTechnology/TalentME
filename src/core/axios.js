@@ -118,6 +118,12 @@ class axiosClient {
     });
   };
 
+  //JOBS
+  getJobs = () => {
+    return this.client.get("jobs/getJobss.php");
+  };
+
+
   // get = url => {
   //   return Auth.currentSession().then(response => {
   //     return this.client.get(url, {
