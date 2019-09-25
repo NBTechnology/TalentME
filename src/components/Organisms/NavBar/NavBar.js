@@ -285,7 +285,7 @@ export default function PrimarySearchAppBar() {
                         CONTACTO
                       </Text>
                     </NavLink>
-                    {/* <NavLink to="/offers" className={classes.link}>
+                    <NavLink to="/offers" className={classes.link}>
                       <Text
                         variant="customize"
                         fontSize="12px"
@@ -294,7 +294,7 @@ export default function PrimarySearchAppBar() {
                       >
                         OFERTAS
                       </Text>
-                    </NavLink> */}
+                    </NavLink>
                     <Button
                       variant="primary"
                       width="127px"

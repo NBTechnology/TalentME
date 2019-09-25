@@ -30,8 +30,8 @@ const SelectComponent = props => {
   let items = props.items
     ? props.items.map(item => {
         return (
-          <MenuItem key={item.id} value={item.value}>
-            {item.label}
+          <MenuItem key={item.id} value={item.id}>
+            {item.name}
           </MenuItem>
         );
       })
