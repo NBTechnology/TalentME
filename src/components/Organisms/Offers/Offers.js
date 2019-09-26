@@ -103,7 +103,7 @@ class Offers extends Component {
           break;
       }
       return (
-        <Grid item xs={12} sm={6} md={3} key={offer.id}>
+        <Grid item xs={12} sm={6} md={3} key={offer.id} style={{marginTop:"32px"}}>
           <Card
             variant="cardOffer"
             infoOffer={offer.infoOffer}

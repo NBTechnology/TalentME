@@ -100,7 +100,7 @@ estar.",
             >
               INSCRIBIRSE
             </Button>
-            <Button
+            {/* <Button
               variant="primary"
               width="189px"
               height="51px"
@@ -111,7 +111,7 @@ estar.",
               margin="0 0 0 16px"
             >
               OFERTAS
-            </Button>
+            </Button> */}
           </div>
         </Header>
         <Grid item xs={12} style={{ marginTop: "48px" }}>

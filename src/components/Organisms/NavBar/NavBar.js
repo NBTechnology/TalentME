@@ -219,9 +219,9 @@ export default function PrimarySearchAppBar() {
         <Toolbar>
           <div className={classes.sectionDesktop}>
             <Grid container justify="center">
-              <Grid item xs={10}>
+              <Grid item xs={11}>
                 <Grid container>
-                  <Grid item md={4} lg={6}>
+                  <Grid item md={4} lg={4}>
                     <Link to="/" style={{ textDecoration: "none" }}>
                       <Imagen
                         url="oficial_talentme_black.png"
@@ -233,7 +233,7 @@ export default function PrimarySearchAppBar() {
                   <Grid
                     item
                     md={8}
-                    lg={6}
+                    lg={8}
                     style={{
                       display: "flex",
                       flexDirection: "row",
@@ -285,7 +285,7 @@ export default function PrimarySearchAppBar() {
                         CONTACTO
                       </Text>
                     </NavLink>
-                    <NavLink to="/offers" className={classes.link}>
+                    {/* <NavLink to="/offers" className={classes.link}>
                       <Text
                         variant="customize"
                         fontSize="12px"
@@ -294,7 +294,7 @@ export default function PrimarySearchAppBar() {
                       >
                         OFERTAS
                       </Text>
-                    </NavLink>
+                    </NavLink> */}
                     <Button
                       variant="primary"
                       width="127px"
