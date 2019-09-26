@@ -1,14 +1,56 @@
 .cardOffer {
-    width: 276px;
-    height: 371px;
+    /* width: 276px; */
+    height: 100%;
     background: #FFFFFF;
     box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
     border-radius: 8px;
-    display:flex;
-    flex-direction:column;
-    padding: 24px 36px
+    display: flex;
+    flex-direction: column;
+    padding: 24px 36px;
 }
 
 .contentOffer {
     flex: 1 1 auto;
+}
+
+.cardFacility {
+    height: 90%;
+    background: #FFFFFF;
+    border: 1px solid #000;
+    border-radius: 18px;
+    display: flex;
+    flex-direction: column;
+    padding: 24px 36px;
+}
+
+.cardRequisite {
+    height: 90%;
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    padding: 24px 36px;
+}
+
+.cardCarrousel {
+    width: 300px;
+}
+
+.cardWithoutBorder {
+    display: flex;
+    flex-direction: column;
+    padding: 24px 36px;
+}
+
+.cardWorkerHorizontal {
+    display: flex;
+    flex-direction: row;
+    padding: 24px 36px;
+}
+
+@media (max-width: 960px) {
+    .cardWorkerHorizontal {
+        display: flex;
+        flex-direction: column;
+        padding: 24px 36px;
+    }
 }

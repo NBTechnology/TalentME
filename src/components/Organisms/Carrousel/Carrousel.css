@@ -1,0 +1,95 @@
+.carrousel-core {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+.slick-dotted.slick-slider {
+    margin-bottom: 30px;
+}
+
+/* Bottom cambia la distancia de los puntitos */
+.slick-dots-c {
+    position: absolute;
+    bottom: 0px;
+
+    display: block;
+
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+    list-style: none;
+
+    text-align: center;
+}
+
+.slick-dots-c li {
+    position: relative;
+
+    display: inline-block;
+
+    width: 20px;
+    height: 20px;
+    margin: 0 5px;
+    padding: 0;
+
+    cursor: pointer;
+}
+
+.slick-dots-c li button {
+    font-size: 0;
+    line-height: 0;
+
+    display: block;
+
+    width: 20px;
+    height: 20px;
+    padding: 5px;
+
+    cursor: pointer;
+
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: transparent;
+}
+
+.slick-dots-c li button:hover,
+.slick-dots-c li button:focus {
+    outline: none;
+}
+
+.slick-dots-c li button:hover:before,
+.slick-dots-c li button:focus:before {
+    opacity: 1;
+    color: #ffc80a;
+}
+
+.slick-dots-c li button:before {
+    font-family: 'slick';
+    font-size: 6px;
+    line-height: 20px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 20px;
+    height: 20px;
+
+    content: '•';
+    text-align: center;
+
+    opacity: .25;
+    color: #000;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-dots-c li.slick-active button:before {
+    opacity: 0.75;
+    color: #ffc80a;
+}

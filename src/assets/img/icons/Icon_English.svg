@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 104 104" style="enable-background:new 0 0 104 104;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FBC52B;}
+	.st1{clip-path:url(#SVGID_2_);}
+	.st2{clip-path:url(#SVGID_4_);}
+	.st3{fill:#FFFFFF;}
+	.st4{fill:#B11B2E;}
+	.st5{filter:url(#Adobe_OpacityMaskFilter);}
+	.st6{filter:url(#Adobe_OpacityMaskFilter_1_);}
+	.st7{mask:url(#SVGID_5_);fill:url(#SVGID_6_);}
+	.st8{fill:url(#SVGID_7_);}
+</style>
+<g id="ëÎÓÈ_1">
+	<g>
+		<g>
+			<g>
+				<path class="st0" d="M51.76,4.49c-27.14,0-49.13,18.78-49.13,41.94c0,11.57,5.49,22.05,14.37,29.64l-6.87,21.37l20.31-13.21
+					c6.45,2.66,13.68,4.14,21.32,4.14c27.14,0,49.13-18.78,49.13-41.94C100.89,23.27,78.89,4.49,51.76,4.49z"/>
+				<g>
+					<defs>
+						<ellipse id="SVGID_1_" cx="51.46" cy="46.62" rx="45.14" ry="38.53"/>
+					</defs>
+					<clipPath id="SVGID_2_">
+						<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+					</clipPath>
+					<g class="st1">
+						<g>
+							<defs>
+								<polygon id="SVGID_3_" points="47.62,6.71 43.36,6.71 34.86,6.71 30.61,6.71 -0.07,6.71 -0.07,38.64 -0.07,43.25 
+									-0.07,52.46 -0.07,57.07 -0.07,85.71 30.61,85.71 34.86,85.71 43.36,85.71 47.62,85.71 103.21,85.71 103.21,57.07 
+									103.21,52.46 103.21,43.25 103.21,38.64 103.21,6.71 								"/>
+							</defs>
+							<use xlink:href="#SVGID_3_"  style="overflow:visible;fill:#17297A;"/>
+							<clipPath id="SVGID_4_">
+								<use xlink:href="#SVGID_3_"  style="overflow:visible;"/>
+							</clipPath>
+							<g class="st2">
+								<g>
+									<polygon class="st3" points="108.64,-2.55 119.63,5.32 -6.76,95.85 -17.75,87.97 									"/>
+									<polygon class="st4" points="49.11,46.65 113.22,0.73 110.47,-1.24 46.36,44.68 									"/>
+									<polygon class="st4" points="-11.34,92.57 -8.59,94.53 53.69,49.93 50.94,47.96 									"/>
+								</g>
+								<g>
+									<polygon class="st3" points="119.63,87.97 108.64,95.85 -17.75,5.32 -6.76,-2.55 									"/>
+									<polygon class="st4" points="50.94,45.34 115.05,91.25 117.8,89.29 53.69,43.37 									"/>
+									<polygon class="st4" points="-13.17,2.05 -15.92,4.01 46.36,48.62 49.11,46.65 									"/>
+								</g>
+							</g>
+						</g>
+						<g>
+							<rect x="43.16" y="6.71" class="st3" width="16.81" height="79"/>
+							<rect x="-0.07" y="36.99" class="st3" width="103.28" height="18.43"/>
+							<rect x="46.76" y="6.71" class="st4" width="9.61" height="79"/>
+							<rect x="-0.07" y="40.94" class="st4" width="103.28" height="10.53"/>
+						</g>
+					</g>
+				</g>
+			</g>
+		</g>
+	</g>
+	<defs>
+		<filter id="Adobe_OpacityMaskFilter" filterUnits="userSpaceOnUse" x="14.92" y="16.21" width="73.19" height="62.47">
+			<feFlood  style="flood-color:white;flood-opacity:1" result="back"/>
+			<feBlend  in="SourceGraphic" in2="back" mode="normal"/>
+		</filter>
+	</defs>
+	<mask maskUnits="userSpaceOnUse" x="14.92" y="16.21" width="73.19" height="62.47" id="SVGID_5_">
+		<g class="st5">
+			<defs>
+				<filter id="Adobe_OpacityMaskFilter_1_" filterUnits="userSpaceOnUse" x="14.92" y="16.21" width="73.19" height="62.47">
+					<feFlood  style="flood-color:white;flood-opacity:1" result="back"/>
+					<feBlend  in="SourceGraphic" in2="back" mode="normal"/>
+				</filter>
+			</defs>
+			<mask maskUnits="userSpaceOnUse" x="14.92" y="16.21" width="73.19" height="62.47" id="SVGID_5_">
+				<g class="st6">
+				</g>
+			</mask>
+			<linearGradient id="SVGID_6_" gradientUnits="userSpaceOnUse" x1="9.0362" y1="14.0894" x2="89.7027" y2="77.4226">
+				<stop  offset="0.3712" style="stop-color:#000000"/>
+				<stop  offset="0.3766" style="stop-color:#FFFFFF"/>
+				<stop  offset="1" style="stop-color:#000000"/>
+			</linearGradient>
+			<ellipse class="st7" cx="51.52" cy="47.44" rx="36.59" ry="31.23"/>
+		</g>
+	</mask>
+	<linearGradient id="SVGID_7_" gradientUnits="userSpaceOnUse" x1="9.0362" y1="14.0894" x2="89.7027" y2="77.4226">
+		<stop  offset="0.3712" style="stop-color:#E6E6E6"/>
+		<stop  offset="0.3766" style="stop-color:#FFFFFF"/>
+		<stop  offset="1" style="stop-color:#FFFFFF"/>
+	</linearGradient>
+	<ellipse class="st8" cx="51.52" cy="47.44" rx="36.59" ry="31.23"/>
+</g>
+</svg>
