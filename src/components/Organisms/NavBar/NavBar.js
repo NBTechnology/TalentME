@@ -110,12 +110,12 @@ const useStyles = makeStyles(theme => ({
   },
   link: props => ({
     textDecoration: "none",
-    color: "#000",
-    "&:hover, &:focus": {
-      transition: ".2s all ease-in-out",
-      color: "#ffc80a",
-      textShadow: "0px 0px 20px rgba(255,200,10,0.74)"
-    }
+    color: "#000"
+    // "&:hover, &:focus": {
+    //   transition: ".2s all ease-in-out",
+    //   color: "#ffc80a",
+    //   textShadow: "0px 0px 20px rgba(255,200,10,0.74)"
+    // }
   })
 }));
 
@@ -241,10 +241,7 @@ export default function PrimarySearchAppBar() {
                       justifyContent: "space-between"
                     }}
                   >
-                    <div
-                      onClick={handleProfileMenuOpen}
-                      onMouseEnter={handleProfileMenuOpen}
-                    >
+                    <NavLink className={classes.link} onClick={handleProfileMenuOpen}>
                       <Text
                         variant="customize"
                         fontSize="12px"
@@ -254,7 +251,7 @@ export default function PrimarySearchAppBar() {
                       >
                         DESTINOS
                       </Text>
-                    </div>
+                      </NavLink>
                     <NavLink to="/como-funciona" className={classes.link}>
                       <Text
                         variant="customize"

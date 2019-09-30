@@ -88,7 +88,7 @@ class Offers extends Component {
 
   render() {
     let offersContent = this.props.offers.map(offer => {
-      offer.name = offer.name.toUpperCase();
+      offer.name = offer.placeName.toUpperCase();
       switch (offer.name) {
         case "DUBAI":
           offer.image = "Boton_DUBAI.jpg";
