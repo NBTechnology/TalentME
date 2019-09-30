@@ -93,7 +93,6 @@ class OffersComponent extends Component {
   }
 
   selectHandler = async event => {
-    console.log("Asdf:", event.target.value);
     await this.setState({ [event.target.name]: event.target.value });
     //
     this.getOffers();
