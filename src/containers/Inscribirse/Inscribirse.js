@@ -48,19 +48,16 @@ class Inscribirse extends Component {
       message: "",
       itemsEnglish: [
         {
-          id: 0,
-          value: "bajo",
-          label: "Nivel bajo"
+          id: "Nivel bajo",
+          name: "Nivel bajo"
         },
         {
-          id: 1,
-          value: "medio",
-          label: "Nivel medio"
+          id: "Nivel medio",
+          name: "Nivel medio"
         },
         {
-          id: 2,
-          value: "alto",
-          label: "Nivel alto"
+          id: "Nivel alto",
+          name: "Nivel alto"
         }
       ],
       file: "",
