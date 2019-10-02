@@ -13,7 +13,7 @@ const Card = props => {
             widthButton="85px"
             heightButton="37px"
             sizeTitle="14px"
-            title={props.job}
+            title={props.jobName}
             sizeSubtitle="12px"
             subtitle={props.location}
             imageButton={props.image}

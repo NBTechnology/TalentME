@@ -31,7 +31,7 @@ const HeaderDialog = props => {
           </Button>
         </Grid>,
         <Grid item xs={10} md={6} style={{ paddingLeft: "20px" }}>
-          <Text variant="p1">{props.job}</Text>
+          <Text variant="p1">{props.jobName}</Text>
           <Text variant="p3">{props.location}</Text>
         </Grid>,
         <Grid item xs={2} md={3} />,

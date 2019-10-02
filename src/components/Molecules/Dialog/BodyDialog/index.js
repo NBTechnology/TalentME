@@ -9,7 +9,17 @@ const BodyDialog = props => {
   let content;
   switch (props.variant) {
     case "offer":
-      content = <Text variant="p3">{props.body}</Text>;
+      content = (
+        <div>
+          <Text variant="p3">{props.body}</Text>
+          {props.moreInfo && (
+            <div>
+              <hr />
+              <Text variant="p3">{props.moreInfo}</Text>
+            </div>
+          )}
+        </div>
+      );
       break;
     case "successOffer":
       content = [
