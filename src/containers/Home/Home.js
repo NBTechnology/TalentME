@@ -75,7 +75,7 @@ estar.",
   render() {
     console.log(this.state.offers);
     return (
-      <Grid container component="main">
+      <Grid container component="main" justify="center">
         <NavBar />
         <Header image="Home_Header.jpg" gradient="header-white">
           <Text variant="h1" color="#000" isBold>
@@ -123,8 +123,9 @@ estar.",
             fontSize="20px"
           />
         </Grid>
-        <Facilities variant="home" />
-
+        <Grid item xs={12} md={10}>
+          <Facilities variant="home" />
+        </Grid>
         {/* Experiences :D */}
         <Grid item xs={12} style={{ marginTop: "48px" }}>
           <Experiences />
@@ -146,31 +147,25 @@ estar.",
         {/* <Grid item xs={12} style={{ marginTop: "48px" }}>
           <Offers title="Ofertas" offers={this.state.offers} />
         </Grid> */}
-        <div
-          style={{
-            width: "100%",
-            display: "flex",
-            justifyContent: "center",
-            flexDirection: "row",
-            marginTop: "56px",
-            marginBottom: "67px"
-          }}
-        >
-          <div style={{ marginRight: "57px", width: "621px" }}>
-            <Text variant="h2" margin="0px 0px 46px">
-              ¿Por qué Middle East?
-            </Text>
-            <Text variant="p3" lineHeight="26px" margin="0px 0px 95px">
-              Oriente Medio representa los más altos estándares de servicio en
-              hospitality en todo el mundo. Su inversión en turismo acelera su
-              rápido desarrollo en todos los aspectos. Sus países, cada vez más
-              liberales, se abren al mundo permitiendo la llegada de millones de
-              visitantes. La arena blanca interminable y los mares color
-              turquesa con sus vistas únicas y atracciones de fama mundial, son
-              las razones por las que se construyen cada vez más cadenas
-              hoteleras de fama internacional.
-            </Text>
-            {/* <Button
+        <Grid item xs={10} style={{ marginTop: "48px" }}>
+          <Grid container>
+            <Grid item xs={12}>
+              <Text variant="h2" margin="0px 0px 46px" textAlign="center">
+                ¿Por qué Middle East?
+              </Text>
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <Text variant="p3" lineHeight="26px" margin="0px 0px 95px">
+                Oriente Medio representa los más altos estándares de servicio en
+                hospitality en todo el mundo. Su inversión en turismo acelera su
+                rápido desarrollo en todos los aspectos. Sus países, cada vez
+                más liberales, se abren al mundo permitiendo la llegada de
+                millones de visitantes. La arena blanca interminable y los mares
+                color turquesa con sus vistas únicas y atracciones de fama
+                mundial, son las razones por las que se construyen cada vez más
+                cadenas hoteleras de fama internacional.
+              </Text>
+              {/* <Button
               variant="icon"
               width="356px"
               height="56px"
@@ -188,17 +183,21 @@ estar.",
             >
               VER MÁS INFORMACIÓN
             </Button> */}
-          </div>
-          <Imagen
-            width="580px"
-            height="445px"
-            borderRadius="8px"
-            url="Porque_ME.jpg"
-            isBackground
-          />
-        </div>
-
-        <Footer />
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <Imagen
+                width="100%"
+                height="400px"
+                borderRadius="8px"
+                url="Porque_ME.jpg"
+                isBackground
+              />
+            </Grid>
+          </Grid>
+        </Grid>
+        <Grid item xs={12} style={{ marginTop: "48px" }}>
+          <Footer />
+        </Grid>
       </Grid>
     );
   }

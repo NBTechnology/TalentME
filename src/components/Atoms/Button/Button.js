@@ -61,6 +61,7 @@ const Button = props => {
         weight={props.isBold}
         fontSize={props.fontSize}
         letterSpacing={props.letterSpacing}
+        textAlign="center"
       >
         {props.children}
       </Text>
@@ -69,7 +70,7 @@ const Button = props => {
   );
 
   let finalButton = props.link ? (
-    <Link to={props.link} style={{ textDecoration: "none" }}>
+    <Link to={props.link} style={{ textDecoration: "none", color: "#000" }}>
       {contentButton}
     </Link>
   ) : (
