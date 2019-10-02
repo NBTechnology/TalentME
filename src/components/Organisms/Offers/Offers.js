@@ -16,19 +16,16 @@ class Offers extends Component {
       variant: "offer",
       itemsEnglish: [
         {
-          id: 0,
-          value: "bajo",
-          label: "Nivel bajo"
+          id: "Nivel bajo",
+          name: "Nivel bajo"
         },
         {
-          id: 1,
-          value: "medio",
-          label: "Nivel medio"
+          id: "Nivel medio",
+          name: "Nivel medio"
         },
         {
-          id: 2,
-          value: "alto",
-          label: "Nivel alto"
+          id: "Nivel alto",
+          name: "Nivel alto"
         }
       ],
       offer: {},
@@ -39,12 +36,6 @@ class Offers extends Component {
   selectOffer = id => {
     const offerSelected = this.props.offers.find(offer => offer.id === id);
     console.log(offerSelected);
-    // offerSelected.imageButton = offerSelected.image;
-    // offerSelected.labelButton = offerSelected.name;
-    // offerSelected.titlePosition = offerSelected.position;
-    // offerSelected.subTitlePosition = offerSelected.subTitle;
-
-    // offerSelected.location = offerSelected.location;
     this.setState({ offerSelected, open: true });
   };
 
@@ -55,7 +46,9 @@ class Offers extends Component {
   };
 
   handleSubmitOffer = () => {
-    this.setState({ variant: "formOffer" });
+    const offer = {};
+    offer.id = this.state.offerSelected.id;
+    this.setState({ variant: "formOffer", offer });
   };
 
   inputHandler = event => {
@@ -79,6 +72,7 @@ class Offers extends Component {
 
   handleSubmitFormOffer = () => {
     if (this.state.checkPolity) {
+      console.log("offer form");
       console.log(this.state.offer);
       this.setState({
         variant: "successOffer"
@@ -103,7 +97,14 @@ class Offers extends Component {
           break;
       }
       return (
-        <Grid item xs={12} sm={6} md={3} key={offer.id} style={{marginTop:"32px"}}>
+        <Grid
+          item
+          xs={12}
+          sm={6}
+          md={3}
+          key={offer.id}
+          style={{ marginTop: "32px" }}
+        >
           <Card
             variant="cardOffer"
             infoOffer={offer.infoOffer}

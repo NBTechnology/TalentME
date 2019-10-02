@@ -10,18 +10,12 @@ const DialogComponent = props => {
   switch (props.variant) {
     case "offer":
       content = [
-        <HeaderDialog
+        <HeaderDialog variant="offer" {...props.offerSelected} />,
+        <BodyDialog
           variant="offer"
-          // imageButton={props.imageButton}
-          // labelButton={props.labelButton}
-          // titlePosition={props.titlePosition}
-          // subTitlePosition={props.subTitlePosition}
-          // location={props.location}
-          // salary={props.salary}
-          // offer={props.offer}
-          {...props.offerSelected}
+          body={props.offerSelected.description}
+          moreInfo={props.offerSelected.moreInfo}
         />,
-        <BodyDialog variant="offer" body={props.offerSelected.description} />,
         <FooterDialog
           variant="offer"
           onSubmit={props.handleSubmitOffer}
