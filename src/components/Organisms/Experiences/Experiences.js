@@ -1,0 +1,103 @@
+import React from "react";
+
+import Carrousel from "../Carrousel/Carrousel";
+import Text from "components/Atoms/Text/Text";
+import Imagen from "components/Atoms/Imagen/Imagen";
+
+const Experiences = props => {
+  const content = (
+    <Imagen isBackground url="Home_LosQueYaHanIdo.jpg" variant="white">
+      <div
+        style={{ textAlign: "center", marginBottom: "40px", paddingTop: "1px" }}
+      >
+        <Text variant="h2">Los que ya han ido</Text>
+        <Text variant="p2">
+          Más de 140 personas han disfrutado con éxito esta experiencia
+        </Text>
+      </div>
+      <div style={{ width: "60%", marginLeft: "20%" }}>
+        <Carrousel
+          settings={{
+            dots: true,
+            infinite: true,
+            draggable: true,
+            speed: 500,
+            arrows: false,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dotsClass: "slick-dots-c"
+          }}
+          iterator={3}
+          data={[
+            {
+              id: 0,
+              title: "Nacho Guirao",
+              text:
+                "\“Dubái es por hoy mi casa y sobre todo mi gente. Expectacular vivencia\”",
+              url: "Destino_Doha_Trabaja.jpg"
+            },
+            {
+              id: 1,
+              title: "Loriana Verdi",
+              text:
+                "\“Los cursos de onboarding son de muy alto nivel, superaron mis expectativas\”",
+              url: "Destino_Doha_Trabaja.jpg"
+            },
+            {
+              id: 2,
+              title: "Nacho Guirao",
+              text:
+                "\“Dubái es por hoy mi casa y sobre todo mi gente. Expectacular vivencia\”",
+              url: "Destino_Doha_Trabaja.jpg"
+            },
+            {
+              id: 3,
+              title: "Loriana Verdi",
+              text:
+                "\“Los cursos de onboarding son de muy alto nivel, superaron mis expectativas\”",
+              url: "Destino_Doha_Trabaja.jpg"
+            },
+            {
+              id: 4,
+              title: "Nacho Guirao",
+              text:
+                "\“Dubái es por hoy mi casa y sobre todo mi gente. Expectacular vivencia\”",
+              url: "Destino_Doha_Trabaja.jpg"
+            },
+            {
+              id: 5,
+              title: "Loriana Verdi",
+              text:
+                "\“Los cursos de onboarding son de muy alto nivel, superaron mis expectativas\”",
+              url: "Destino_Doha_Trabaja.jpg"
+            },
+            {
+              id: 6,
+              title: "Nacho Guirao",
+              text:
+                "\“Dubái es por hoy mi casa y sobre todo mi gente. Expectacular vivencia\”",
+              url: "Destino_Doha_Trabaja.jpg"
+            },
+            {
+              id: 7,
+              title: "Loriana Verdi",
+              text:
+                "\“Los cursos de onboarding son de muy alto nivel, superaron mis expectativas\”",
+              url: "Destino_Doha_Trabaja.jpg"
+            },
+            {
+              id: 8,
+              title: "Nacho Guirao",
+              text:
+                "\“Dubái es por hoy mi casa y sobre todo mi gente. Expectacular vivencia\”",
+              url: "Destino_Doha_Trabaja.jpg"
+            }
+          ]}
+        />
+      </div>
+    </Imagen>
+  );
+  return content;
+};
+
+export default Experiences;

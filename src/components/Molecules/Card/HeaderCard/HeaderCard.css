@@ -1,0 +1,49 @@
+.headerCardOffer hr {
+    margin-top: 32px;
+    border: 1px solid #DBDBDB
+}
+
+.headerCardContentOffer {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between
+}
+
+.headerCardFacilities {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column
+}
+
+.headerCardCarrousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 29px;
+    /* border-bottom: 2px solid #ffc80a; */
+    /* box-shadow: 0px 50px 3px -50px magenta; */
+
+}
+
+.headerCardRequisites {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column
+}
+
+.headerCardWithoutBorder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column
+}
+
+.cardWorkerHorizontal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column
+}
