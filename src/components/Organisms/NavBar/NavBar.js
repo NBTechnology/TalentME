@@ -1,29 +1,3 @@
-// import React from "react";
-// import LeftNavBar from "components/Molecules/NavBar/LeftNavBar/LeftNavBar";
-// import RightNavBar from "components/Molecules/NavBar/RightNavBar/RightNavBar";
-
-// const NavBar = props => {
-//   return (
-//     <div
-//       style={{
-//         display: "flex",
-//         flexDirection: "row",
-//         position: "absolute",
-//         top: "35px",
-//         left: "160px",
-//         right: "156px",
-//         justifyContent: "space-between",
-//         zIndex: "999"
-//       }}
-//     >
-//       <LeftNavBar />
-//       <RightNavBar />
-//     </div>
-//   );
-// };
-
-// export default NavBar;
-
 import React from "react";
 import { fade, makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
@@ -45,6 +19,7 @@ import { Link, NavLink } from "react-router-dom";
 import { Grid } from "@material-ui/core";
 import Text from "components/Atoms/Text/Text";
 import Button from "components/Atoms/Button/Button";
+import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
 
 const useStyles = makeStyles(theme => ({
   grow: {
@@ -154,7 +129,6 @@ export default function PrimarySearchAppBar() {
       transformOrigin={{ vertical: "center", horizontal: "center" }}
       open={isMenuOpen}
       onClose={handleMenuClose}
-      // onMouseLeave={handleMenuClose}
       style={{ marginTop: "26px" }}
     >
       <MenuItem component={Link} to="/abu-dhabi">
@@ -241,17 +215,26 @@ export default function PrimarySearchAppBar() {
                       justifyContent: "space-between"
                     }}
                   >
-                    <NavLink className={classes.link} onClick={handleProfileMenuOpen}>
+                    <NavLink
+                      className={classes.link}
+                      onClick={handleProfileMenuOpen}
+                      style={{
+                        display: "flex",
+                        flexDirection: "row",
+                        alignItems: "center"
+                      }}
+                    >
                       <Text
                         variant="customize"
                         fontSize="12px"
                         letterSpacing="2.88px"
-                        margin="0px 23px 0px 0px"
                         color="#000"
+                        margin={isMenuOpen ? "0px 24px 0px 0px" : "0px"}
                       >
                         DESTINOS
                       </Text>
-                      </NavLink>
+                      {!isMenuOpen && <KeyboardArrowDownIcon />}
+                    </NavLink>
                     <NavLink to="/como-funciona" className={classes.link}>
                       <Text
                         variant="customize"

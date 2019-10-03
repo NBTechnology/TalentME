@@ -3,7 +3,7 @@ import Stepper from "components/Molecules/Stepper";
 import Text from "components/Atoms/Text/Text";
 import Button from "components/Atoms/Button/Button";
 import Imagen from "components/Atoms/Imagen/Imagen";
-import { makeStyles } from "@material-ui/core";
+import { makeStyles, Grid } from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({
   stepper: props => ({
@@ -16,10 +16,10 @@ const useStyles = makeStyles(theme => ({
     justifyContent: "center",
     zIndex: "2",
     [theme.breakpoints.up("md")]: {
-      marginTop: "-70px"
+      marginTop: "-68px"
     },
     [theme.breakpoints.down("md")]: {
-      marginTop: "-92px"
+      marginTop: "-76px"
     }
   })
 }));
@@ -31,9 +31,11 @@ const EasySteps = props => {
       <Text variant="h2" weight>
         4 sencillos pasos
       </Text>
-      <div className={classes.stepper}>
-        <Stepper type={props.type} data={props.data} />
-      </div>
+      <Grid container justify="center">
+        <Grid item xs={12} md={8}>
+          <Stepper type={props.type} data={props.data} />
+        </Grid>
+      </Grid>
       <div className={classes.imageBackground}>
         <Imagen
           style={{ zIndex: "2", opacity: "0.65", filter: "alpha(opacity=50)" }}
