@@ -138,7 +138,7 @@ estar.",
               { title: "MANDA TU CV", image: "icons/Home_inscripcion.svg" },
               { title: "RECIBE OFERTAS", image: "icons/Home_jobs.svg" },
               { title: "ENTREVISTA", image: "icons/Home_entrevista.svg" },
-              { title: "¡VUELA!!", image: "icons/Home_vuela.svg" }
+              { title: "¡VUELA!", image: "icons/Home_vuela.svg" }
             ]}
           />
         </Grid>
@@ -147,10 +147,10 @@ estar.",
         {/* <Grid item xs={12} style={{ marginTop: "48px" }}>
           <Offers title="Ofertas" offers={this.state.offers} />
         </Grid> */}
-        <Grid item xs={10} style={{ marginTop: "48px" }}>
+        <Grid item xs={10} style={{ marginTop: "64px" }}>
           <Grid container>
             <Grid item xs={12}>
-              <Text variant="h2" margin="0px 0px 46px" textAlign="center">
+              <Text variant="h2" textAlign="center">
                 ¿Por qué Middle East?
               </Text>
             </Grid>

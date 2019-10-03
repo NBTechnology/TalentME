@@ -3,6 +3,7 @@ import Text from "components/Atoms/Text/Text";
 import Button from "components/Atoms/Button/Button";
 import { NavLink } from "react-router-dom";
 import { makeStyles } from "@material-ui/core";
+import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
 
 const useStyles = makeStyles(theme => ({
   link: props => ({
@@ -32,7 +33,7 @@ const RightNavBar = props => {
         letterSpacing="2.88px"
         margin="0px 23px 0px 0px"
       >
-        DESTINOS
+        DESTINOS {<KeyboardArrowDownIcon />}
       </Text>
       <NavLink to="/como-funciona" className={classes.link}>
         <Text
