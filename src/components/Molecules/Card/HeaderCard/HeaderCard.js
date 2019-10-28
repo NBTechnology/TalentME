@@ -91,6 +91,8 @@ const HeaderCard = props => {
             isBackground
             isCircle
             url={props.url}
+            backgroundPosition="top center"
+            sizeImage="150%"
           />
           <Text variant="p1" margin="18px 0 0 0">
             {props.title}
