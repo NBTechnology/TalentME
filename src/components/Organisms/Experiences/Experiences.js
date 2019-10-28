@@ -38,21 +38,21 @@ const Experiences = props => {
                 title: "Nacho Guirao",
                 text:
                   "“Dubái es por hoy mi casa y sobre todo mi gente. Expectacular vivencia”",
-                url: "experience/exp_nacho.JPG"
+                url: "Experiences/Nacho_200.png"
               },
               {
                 id: 1,
                 title: "Loriana Verdi",
                 text:
                   "“Los cursos de onboarding son de muy alto nivel, superaron mis expectativas”",
-                url: "experience/exp_loriana.jpeg"
+                url: "Experiences/Loriana_200.png"
               },
               {
                 id: 2,
                 title: "Pepe Lago",
                 text:
                   "“Gracias a esta experiencia he podido desarrollar mi carrera como bartender.”",
-                url: "experience/exp_pepe.jpeg"
+                url: "Experiences/Pepe_200.png"
               }
               // {
               //   id: 3,
